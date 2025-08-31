@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ site.Title }}</title>
+	{{ $Reset  := resources.Get "css/reset.css"  }}
+	{{ $Core   := resources.Get "css/core.css"   }}
+	{{ $Header := resources.Get "css/header.css" }}
+	{{ $Home   := resources.Get "css/home.css"   }}
+	{{ $Post   := resources.Get "css/post.css"   }}
+	{{ $Footer := resources.Get "css/footer.css" }}
+	{{ $Bundle := slice $Reset $Core $Header $Home $Post $Footer | resources.Concat "css/Bundle.css" | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $Bundle.RelPermalink }}" integrity="{{ $Bundle.Data.Integrity }}">
+</head>
+
+
+<body class=" {{- if eq site.Params.defaultTheme `dark` -}} {{- print " dark" }} {{- end -}} ">
+	<script> (localStorage.getItem("pref-theme")==="dark") && document.body.classList.add("dark") </script>
+	<header>
+		{{ partial "header.html" . }}
+	</header>
+	<main>
+		{{ block "main" . }}{{ end }}
+	</main>
+	<footer>
+		{{ partial "footer.html" . }}
+	</footer>
+	<script>
+		document.getElementById("theme-toggle").addEventListener("click", () => {
+			if (document.body.className.includes("dark")) {
+				document.body.classList.remove('dark');
+				localStorage.setItem("pref-theme", 'light');
+			} else {
+				document.body.classList.add('dark');
+				localStorage.setItem("pref-theme", 'dark');
+			}
+		})
+	</script>
+</body>
+</html>

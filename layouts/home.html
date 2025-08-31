@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="post-list">
+	{{ range site.RegularPages }}
+	<a class="list-item" href="{{ .RelPermalink }}">
+		<span class="title" >{{ .LinkTitle }}</span>
+		<span class="date">{{ .Date | time.Format "2006-01-02" }}</span>
+	</a>
+	{{ end }}
+</div>
+{{ end }}

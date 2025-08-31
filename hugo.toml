@@ -1,0 +1,15 @@
+baseURL = 'https://Kingtuo123.com/'
+title = "札记"
+disableKinds = ["taxonomy", "term", "section"]
+
+[params]
+	defaultTheme = "light"
+
+[markup]
+	[markup.goldmark]
+		[markup.goldmark.renderer]
+			unsafe = true
+	[markup.tableOfContents]
+		endLevel = 4
+		ordered = false
+		startLevel = 2

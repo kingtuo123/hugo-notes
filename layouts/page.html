@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="post-content">
+	<div class="post-title">
+		<h1>{{ .Title }}</h1>
+		{{ $date := .Date | time.Format "2006-01-02" }}
+		{{ $dateHuman := .Date | time.Format "2006 年 1 月 2 日" }}
+		<time datetime="{{ $date }}">{{ $dateHuman }}</time>
+	</div>
+
+	{{ if .Params.toc }}
+	<aside class="toc">
+		<div id="toc-toggle">
+			<svg class="toc-icon" viewBox="0 0 1024 1024" fill="currentColor" stroke="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6088" width="24" height="24"><path d="M425.153 276.799a36.409 36.409 0 0 0-58.789 28.738V718.22a36.409 36.409 0 0 0 58.837 28.69l266.902-206.705a36.215 36.215 0 0 0-0.049-57.43L425.153 276.8z" p-id="6089"></path></svg>
+			<span class="toc-title" >目录</span>
+		</div>
+		<div class="toc-content">
+			{{ .TableOfContents }}
+		</div>
+	</aside>
+	<script>
+		document.getElementById("toc-toggle").addEventListener("click", () => {
+			document.getElementById("toc-toggle").classList.toggle("open")
+		})
+	</script>
+	{{ end }}
+
+	{{ .Content }}
+</div>
+{{ end }}

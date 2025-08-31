@@ -1,0 +1,111 @@
+
+main .post-content {
+	max-width: 1024px;
+	width: 100%;
+	margin: 0 auto;
+	height: 100%;
+	padding: 60px 0;
+	transition: background 0.5s ease;
+}
+
+main .post-content h1,h2,h3,h4,h5,td,p,time {
+	color: var(--text-primary);
+	transition: color 0.5s ease;
+}
+
+main .post-title {
+	margin-bottom: 60px;
+}
+
+main .post-content aside {
+	transition: background-color 0.5s ease;
+	background-color: var(--post-toc-bg);
+	padding: 0px;
+	border-radius: 10px;
+
+}
+
+.post-content .toc {
+	overflow: hidden;
+}
+
+#toc-toggle {
+	line-height: 30px;
+	padding: 10px 20px 10px 10px;
+	color: var(--text-primary);
+	cursor: zoom-in;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	user-select: none;
+	transition: color 0.5s ease;
+}
+
+#toc-toggle .toc-title {
+	padding-left: 5px;
+}
+
+
+#toc-toggle.open {
+	cursor: zoom-out;
+}
+
+#toc-toggle .toc-icon {
+	height: 24px;
+	transition: transform 0.5s ease;
+}
+
+#toc-toggle.open .toc-icon {
+	transform: rotate(90deg);
+}
+
+
+.post-content .toc-content {
+	display: none;
+}
+
+
+#toc-toggle.open ~ .toc-content {
+	display: block;
+	transition: color 0.5s ease;
+}
+
+
+#TableOfContents ul {
+	margin-left: 40px;
+	margin-bottom: 20px;
+}
+
+#TableOfContents a {
+	padding: 2px 5px;
+	border-radius: 5px;
+	transition: background-color 0.5s ease;
+}
+
+#TableOfContents a:hover {
+	background-color: var(--post-toc-hover-bg);
+}
+
+
+#TableOfContents ul > li > ul {
+	margin-left: 50px;
+}
+
+
+
+
+.post-content time {
+	opacity: 0.9;
+}
+
+.post-content h1 {
+	font-size: 40px;
+	font-weight: 700;
+}
+
+
+.post-content .highlight code {
+	display: grid;
+	overflow-x: auto;
+	word-break: break-all;
+}
