@@ -5,9 +5,9 @@
 	--header-swith-size: 24px;
 	--home-list-gap: 10px;
 
-	--text-primary: #475258;
 
 	--bg: #fdf6e3;
+	--text-primary: #5C6A72;
 
 	--header-bg: #EFEBD4;
 	--header-logo-color: #8DA101;
@@ -15,7 +15,7 @@
 	--header-theme-toggle-hover-bg: #8DA101;
 
 	--home-list-bg: #EFEBD4;
-	--home-list-title-fg: #475258;
+	--home-list-title-fg: #5C6A72;
 	--home-list-date-fg: #A6B0A0;
 	--home-list-hover-bg: #8DA101;
 	--home-list-title-hover-fg: #F4F0D9;
@@ -23,8 +23,15 @@
 
 
 	--post-toc-bg: #EFEBD4;
-	--post-toc-hover-bg: #BEC5B2;
-	--post-toc-hover-fg: #F4F0D9;
+	--post-toc-hover-bg: #E0DCC7;
+	--post-toc-hover-fg: #3A94C5;
+
+
+	--post-h2: #3A94C5;
+	--post-h3: #8DA101;
+	--post-h4: #F57D26;
+	--post-code-fg: #F85552;
+	--post-code-bg: #FAEDCD;
 
 
 	--footer-fg: #A6B0A0;
@@ -49,8 +56,15 @@
 	--home-list-date-hover-fg: #232A2E;
 
 	--post-toc-bg: #232A2E;
-	--post-toc-hover-bg: #425047;
-	--post-toc-hover-fg: #232A2E;
+	--post-toc-hover-bg: #3A515D;
+	--post-toc-hover-fg: #7FBBB3;
+
+
+	--post-h2: #7FBBB3;
+	--post-h3: #A7C080;
+	--post-h4: #E69875;
+	--post-code-fg: #E67E80;
+	--post-code-bg: #343F44;
 
 
 	--footer-fg: #7A8478;

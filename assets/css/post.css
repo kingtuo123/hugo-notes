@@ -4,17 +4,13 @@ main .post-content {
 	width: 100%;
 	margin: 0 auto;
 	height: 100%;
-	padding: 60px 0;
+	padding: 30px 0;
 	transition: background 0.5s ease;
 }
 
-main .post-content h1,h2,h3,h4,h5,td,p,time {
-	color: var(--text-primary);
-	transition: color 0.5s ease;
-}
 
 main .post-title {
-	margin-bottom: 60px;
+	margin-bottom: 30px;
 }
 
 main .post-content aside {
@@ -22,6 +18,7 @@ main .post-content aside {
 	background-color: var(--post-toc-bg);
 	padding: 0px;
 	border-radius: 10px;
+	margin-bottom: 30px;
 
 }
 
@@ -67,28 +64,30 @@ main .post-content aside {
 
 #toc-toggle.open ~ .toc-content {
 	display: block;
-	transition: color 0.5s ease;
+	/*transition: color 0.5s ease;*/
 }
 
 
 #TableOfContents ul {
-	margin-left: 40px;
+	margin-left: 35px;
 	margin-bottom: 20px;
 }
 
 #TableOfContents a {
+	user-select: none;
 	padding: 2px 5px;
 	border-radius: 5px;
-	transition: background-color 0.5s ease;
+	/*transition: background-color 0.5s ease;*/
 }
 
 #TableOfContents a:hover {
 	background-color: var(--post-toc-hover-bg);
+	color: var(--post-toc-hover-fg);
 }
 
 
 #TableOfContents ul > li > ul {
-	margin-left: 50px;
+	margin-left: 35px;
 }
 
 
@@ -98,14 +97,92 @@ main .post-content aside {
 	opacity: 0.9;
 }
 
-.post-content h1 {
-	font-size: 40px;
-	font-weight: 700;
+.post-content p,time,td {
+	color: var(--text-primary);
+	transition: color 0.5s ease;
 }
 
+.post-content h1 {
+	font-size: 2rem;
+	font-weight: 600;
+	color: var(--text-primary);
+	transition: color 0.5s ease;
+}
+
+.post-content h2 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--post-h2);
+	margin-top: 30px;
+	margin-bottom: 20px;
+	transition: color 0.5s ease;
+}
+
+.post-content h3 {
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: var(--post-h3);
+	margin-top: 30px;
+	margin-bottom: 20px;
+	transition: color 0.5s ease;
+}
+
+.post-content h4 {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--post-h4);
+	margin-top: 30px;
+	margin-bottom: 20px;
+	transition: color 0.5s ease;
+}
+
+.post-content h5, h6 {
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: var(--text-primary);
+	margin-top: 30px;
+	margin-bottom: 20px;
+	transition: color 0.5s ease;
+}
+
+.post-content code:not(.highlight code) {
+	font-size: 15px;
+	padding: 1px 5px;
+	color: var(--post-code-fg);
+	background-color: var(--post-code-bg);
+	border-radius: 5px;
+	transition: all 0.5s ease;
+}
 
 .post-content .highlight code {
 	display: grid;
 	overflow-x: auto;
 	word-break: break-all;
+}
+
+.post-content th, td {
+	line-height: 2.5;
+    border: none; /* 移除所有边框 */
+    border-bottom: 1px solid #e0e0e0; /* 只设置底部边框 */
+}
+
+.post-content .table-container table{
+	display: table;
+}
+
+.post-content .table-container {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	overflow-x: scroll;
+	margin: -5px 0px 0px 0px;
+}
+
+.post-content .table-container::-webkit-scrollbar {
+  width: 0px; /* 垂直滚动条宽度 */
+  height: 0px; /* 水平滚动条高度 */
+}
+
+.no-thead thead {
+	display: none;
 }

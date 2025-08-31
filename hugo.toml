@@ -1,5 +1,5 @@
 baseURL = 'https://Kingtuo123.com/'
-title = "札记"
+title = "夜不能寐"
 disableKinds = ["taxonomy", "term", "section"]
 
 [params]

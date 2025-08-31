@@ -9,7 +9,7 @@ main {
 
 main .post-list {
 	display: flex;
-	max-width: 600px;
+	max-width: 700px;
     flex-direction: column;
 	gap: var(--home-list-gap);
 	margin: 60px auto;
@@ -24,7 +24,7 @@ main .list-item {
 	display: flex;
 	justify-content: space-between;
     align-items: center;
-	padding: 5px 15px;
+	padding: 10px 25px;
 	border-radius: 25px;
 	transition: background 0.5s ease;
 }
@@ -35,21 +35,25 @@ main .list-item:hover {
 
 main .list-item:hover > .title {
 	color: var(--home-list-title-hover-fg);
+	transform: scale(1.05); /* 放大但不影响布局 */
 }
 
 main .list-item:hover > .date {
 	color: var(--home-list-date-hover-fg);
+	transform: scale(1.05); /* 放大但不影响布局 */
 }
 
 main .title {
 	color: var(--home-list-title-fg);
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 400;
 	transition: color 0.5s ease;
 	max-width: 70%;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	display: inline-block;
+	transition: all 0.5s ease;
 }
 
 main .date  {
@@ -57,7 +61,8 @@ main .date  {
 	white-space: nowrap;
 	font-size: 15px;
 	font-weight: 400;
-	transition: color 0.5s ease;
+	display: inline-block;
+	transition: all 0.5s ease;
 }
 
 

@@ -1,3 +1,4 @@
 resources/
 public/
 content/
+.hugo_build.lock
