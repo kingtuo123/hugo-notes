@@ -37,6 +37,7 @@
 	--post-strong-fg: #F57D26;
 	--post-quote-border-fg: #93b259;
 	--post-quote-bg: #EFEBD4;
+	--post-selection-bg: #93b259;
 
 
 	--footer-fg: #A6B0A0;
@@ -75,6 +76,7 @@
 	--post-strong-fg: #E69875;
 	--post-quote-border-fg: #A7c080;
 	--post-quote-bg: #343F44;
+	--post-selection-bg: #A7C080;
 
 
 	--footer-fg: #7A8478;
