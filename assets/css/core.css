@@ -25,13 +25,18 @@
 	--post-toc-bg: #EFEBD4;
 	--post-toc-hover-bg: #E0DCC7;
 	--post-toc-hover-fg: #3A94C5;
-
-
 	--post-h2: #3A94C5;
 	--post-h3: #8DA101;
 	--post-h4: #F57D26;
 	--post-code-fg: #F85552;
 	--post-code-bg: #FAEDCD;
+	--post-border-fg: #E6E2CC;
+	--post-highlight-bg: #2D353B;
+	--post-link-fg: #3A94C5;
+	--post-link-hover-bg: #E9F0E9;
+	--post-strong-fg: #F57D26;
+	--post-quote-border-fg: #93b259;
+	--post-quote-bg: #EFEBD4;
 
 
 	--footer-fg: #A6B0A0;
@@ -56,15 +61,20 @@
 	--home-list-date-hover-fg: #232A2E;
 
 	--post-toc-bg: #232A2E;
-	--post-toc-hover-bg: #3A515D;
+	--post-toc-hover-bg: #3D484D;
 	--post-toc-hover-fg: #7FBBB3;
-
-
 	--post-h2: #7FBBB3;
 	--post-h3: #A7C080;
 	--post-h4: #E69875;
 	--post-code-fg: #E67E80;
 	--post-code-bg: #343F44;
+	--post-border-fg: #3D484D;
+	--post-highlight-bg: #232A2E;
+	--post-link-fg: #7FBBB3;
+	--post-link-hover-bg: #3A515D;
+	--post-strong-fg: #E69875;
+	--post-quote-border-fg: #A7c080;
+	--post-quote-bg: #343F44;
 
 
 	--footer-fg: #7A8478;
@@ -79,14 +89,17 @@ html {
 */
 
 html, body {
+	font-family: "LXGW WenKai Medium", BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+	font-weight: normal;
 	font-size: 17px;
-	font-weight: 400;
-	line-height: 1.6;
+	line-height: 1.65;
 	color: var(--text-primary);
-	font-family:'LXGW Bright';
 	display: flex;
     flex-direction: column;
 	min-height: 100vh;
 	width: 100%;
+	transition: color 0.5s ease;
 }
+
+
 

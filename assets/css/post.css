@@ -1,19 +1,31 @@
-
-main .post-content {
+.post-content {
 	max-width: 1024px;
 	width: 100%;
 	margin: 0 auto;
 	height: 100%;
 	padding: 30px 0;
-	transition: background 0.5s ease;
 }
 
 
-main .post-title {
+
+
+
+/* 文章标题 */
+.post-title {
 	margin-bottom: 30px;
 }
 
-main .post-content aside {
+.post-content time {
+	color: var(--text-primary);
+	transition: color 0.5s ease;
+}
+
+
+
+
+
+/* 目录 */
+.post-content aside {
 	transition: background-color 0.5s ease;
 	background-color: var(--post-toc-bg);
 	padding: 0px;
@@ -42,7 +54,6 @@ main .post-content aside {
 	padding-left: 5px;
 }
 
-
 #toc-toggle.open {
 	cursor: zoom-out;
 }
@@ -56,35 +67,30 @@ main .post-content aside {
 	transform: rotate(90deg);
 }
 
-
 .post-content .toc-content {
 	display: none;
 }
-
 
 #toc-toggle.open ~ .toc-content {
 	display: block;
 	/*transition: color 0.5s ease;*/
 }
 
-
 #TableOfContents ul {
 	margin-left: 35px;
 	margin-bottom: 20px;
+	transition: color 0.5s ease;
 }
 
 #TableOfContents a {
 	user-select: none;
 	padding: 2px 5px;
 	border-radius: 5px;
-	/*transition: background-color 0.5s ease;*/
 }
 
 #TableOfContents a:hover {
 	background-color: var(--post-toc-hover-bg);
-	color: var(--post-toc-hover-fg);
 }
-
 
 #TableOfContents ul > li > ul {
 	margin-left: 35px;
@@ -93,25 +99,42 @@ main .post-content aside {
 
 
 
-.post-content time {
-	opacity: 0.9;
+
+/* 文章内的元素样式 */
+.post-content a:not(.anchor):not(.toc a) {
+	color: var(--post-link-fg);
+	transition: color 0.5s ease;
+	padding: 2px 5px;
+	border-radius: 5px;
 }
 
-.post-content p,time,td {
-	color: var(--text-primary);
-	transition: color 0.5s ease;
+.post-content a:not(.anchor):not(.toc a):not(blockquote a):hover {
+	background-color: var(--post-link-hover-bg);
+}
+
+a.anchor {
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+a.anchor:hover {
+	opacity: 1;
+}
+
+.post-content ul:not(.toc ul) {
+	margin-left: 16px;
 }
 
 .post-content h1 {
 	font-size: 2rem;
-	font-weight: 600;
+	font-weight: Bold;
 	color: var(--text-primary);
 	transition: color 0.5s ease;
 }
 
 .post-content h2 {
 	font-size: 1.5rem;
-	font-weight: 600;
+	font-weight: normal;
 	color: var(--post-h2);
 	margin-top: 30px;
 	margin-bottom: 20px;
@@ -120,7 +143,7 @@ main .post-content aside {
 
 .post-content h3 {
 	font-size: 1.3rem;
-	font-weight: 600;
+	font-weight: normal;
 	color: var(--post-h3);
 	margin-top: 30px;
 	margin-bottom: 20px;
@@ -129,7 +152,7 @@ main .post-content aside {
 
 .post-content h4 {
 	font-size: 1.2rem;
-	font-weight: 600;
+	font-weight: normal;
 	color: var(--post-h4);
 	margin-top: 30px;
 	margin-bottom: 20px;
@@ -138,32 +161,19 @@ main .post-content aside {
 
 .post-content h5, h6 {
 	font-size: 1.1rem;
-	font-weight: 600;
+	font-weight: normal;
 	color: var(--text-primary);
 	margin-top: 30px;
 	margin-bottom: 20px;
 	transition: color 0.5s ease;
 }
 
-.post-content code:not(.highlight code) {
-	font-size: 15px;
-	padding: 1px 5px;
-	color: var(--post-code-fg);
-	background-color: var(--post-code-bg);
-	border-radius: 5px;
-	transition: all 0.5s ease;
-}
-
-.post-content .highlight code {
-	display: grid;
-	overflow-x: auto;
-	word-break: break-all;
-}
-
 .post-content th, td {
-	line-height: 2.5;
-    border: none; /* 移除所有边框 */
-    border-bottom: 1px solid #e0e0e0; /* 只设置底部边框 */
+	color: var(--text-primary);
+	line-height: 2.1;
+    border: none;
+    border-bottom: 1px solid var(--post-border-fg);
+	transition: all 0.5s ease;
 }
 
 .post-content .table-container table{
@@ -175,14 +185,79 @@ main .post-content aside {
 	white-space: nowrap;
 	overflow: hidden;
 	overflow-x: scroll;
-	margin: -5px 0px 0px 0px;
+	margin: 5px 0px 10px 0px;
 }
 
 .post-content .table-container::-webkit-scrollbar {
-  width: 0px; /* 垂直滚动条宽度 */
-  height: 0px; /* 水平滚动条高度 */
-}
+	display: none;
+} 
 
 .no-thead thead {
 	display: none;
+}
+
+.post-content code:not(.highlight code):not(blockquote code) {
+	font-family: "LXGW WenKai Mono Medium", 'JetBrainsMonoNL NF', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
+	font-size: 16px;
+	padding: 1px 5px;
+	color: var(--post-code-fg);
+	background-color: var(--post-code-bg);
+	border-radius: 5px;
+	transition: all 0.5s ease;
+}
+
+.post-content .highlight pre {
+	border-radius: 10px;
+	margin: 10px 0;
+}
+
+.highlight code::-webkit-scrollbar {
+	display: none;
+} 
+
+.post-content .highlight code {
+	display: grid;
+	overflow-x: auto;
+	word-break: break-all;
+	padding: 10px;
+	border-radius: 10px;
+	font-family: 'JetBrainsMonoNL NF', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace',"LXGW WenKai Medium";
+	font-size: 15px;
+	line-height: 1.5;
+	background-color: var(--post-highlight-bg);
+}
+
+.post-content strong:not(table strong){
+	color: var(--post-strong-fg);
+	transition: color 0.5s ease;
+}
+
+.post-content img {
+	border-radius: 10px;
+	margin: 10px 0;
+}
+.dark .post-content img {
+  filter: brightness(70%);
+  transition: filter 0.5s ease;
+} 
+
+.post-content blockquote {
+	border-left: 5px solid var(--post-quote-border-fg);
+	border-radius: 10px;
+	margin: 15px 0;
+	padding: 10px 10px 10px 20px;
+	background-color: var(--post-quote-bg);
+	transition: background-color 0.5s ease;
+}
+
+.post-content blockquote code{
+	font-family: "LXGW WenKai Mono Medium", 'JetBrainsMonoNL NF', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
+	font-size: 16px;
+	color: var(--post-code-fg);
+}
+
+.post-content hr {
+	border: 0px;
+	height: 1px;
+	background: var(--post-border-fg);
 }
