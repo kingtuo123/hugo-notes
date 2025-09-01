@@ -18,8 +18,8 @@
 	--home-list-title-fg: #5C6A72;
 	--home-list-date-fg: #A6B0A0;
 	--home-list-hover-bg: #8DA101;
-	--home-list-title-hover-fg: #F4F0D9;
-	--home-list-date-hover-fg: #F4F0D9;
+	--home-list-title-hover-fg: #8DA101;
+	--home-list-date-hover-fg: #8DA101;
 
 
 	--post-toc-bg: #EFEBD4;
@@ -57,11 +57,11 @@
 	--home-list-title-fg: #d3c6aa;
 	--home-list-date-fg: #7A8478;
 	--home-list-hover-bg: #A7C080;
-	--home-list-title-hover-fg: #232A2E;
-	--home-list-date-hover-fg: #232A2E;
+	--home-list-title-hover-fg: #A7C080;
+	--home-list-date-hover-fg: #A7C080;
 
 	--post-toc-bg: #232A2E;
-	--post-toc-hover-bg: #3D484D;
+	--post-toc-hover-bg: #343F44;
 	--post-toc-hover-fg: #7FBBB3;
 	--post-h2: #7FBBB3;
 	--post-h3: #A7C080;

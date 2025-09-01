@@ -15,7 +15,7 @@ main .post-list {
 	margin: 60px auto;
 	background: var(--home-list-bg);
 	border-radius: 40px;
-	transition: all 0.5s ease;
+	transition: background 0.5s ease;
 	padding: 20px 20px;
 }
 
@@ -27,34 +27,57 @@ main .list-item {
 	padding: 10px 25px;
 	border-radius: 25px;
 	transition: background 0.5s ease;
+	user-select: none;
 }
 
+/*
 main .list-item:hover {
 	background: var(--home-list-hover-bg);
 }
+*/
 
 main .list-item:hover > .title {
 	color: var(--home-list-title-hover-fg);
-	transform: scale(1.05); /* 放大但不影响布局 */
+	font-weight: Bold;
+/*	transform: scale(1.05);  放大但不影响布局 */
 }
 
 main .list-item:hover > .date {
 	color: var(--home-list-date-hover-fg);
-	transform: scale(1.05); /* 放大但不影响布局 */
+	font-weight: Bold;
+/*	transform: scale(1.05); 放大但不影响布局 */
+}
+
+main .list-item:hover > span.title::before {
+	opacity: 1;
 }
 
 main .title {
 	color: var(--home-list-title-fg);
 	font-size: 18px;
 	font-weight: 400;
-	transition: color 0.5s ease;
+	transition: color 0.2s ease;
 	max-width: 70%;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: inline-block;
-	transition: all 0.5s ease;
+	margin-left: -16px;
+	-webkit-user-drag: none;
 }
+
+main .title::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+	margin-bottom: 2px;
+    background-color: var(--home-list-title-hover-fg);
+    border-radius: 50%;
+    margin-right: 8px;
+	opacity: 0;
+}
+
 
 main .date  {
 	color: var(--home-list-date-fg);
@@ -62,7 +85,7 @@ main .date  {
 	font-size: 15px;
 	font-weight: 400;
 	display: inline-block;
-	transition: all 0.5s ease;
+	transition: color 0.2s ease;
 }
 
 
