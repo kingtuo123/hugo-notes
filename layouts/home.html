@@ -1,4 +1,5 @@
 {{ define "main" }}
+<input type="text" id="search-input" placeholder="搜点什么吗？">
 <div class="post-list">
 	{{ range site.RegularPages }}
 	<a class="list-item" draggable="false" href="{{ .RelPermalink }}">
@@ -7,4 +8,44 @@
 	</a>
 	{{ end }}
 </div>
+<script>
+	const listItems   = document.querySelectorAll('a.list-item');
+	const titlesArray = [];
+	const titleElements = document.querySelectorAll('a.list-item span.title');
+	// 将获取的所有标题字符串处理后存入数组
+	titleElements.forEach(function(element) {
+		titlesArray.push( element.textContent.replaceAll(' ', '').replaceAll('-', '').toLowerCase() );
+	});
+
+	// 通过判断标题是否包含输入的字符串，实现简单的搜索
+	const searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('input', searchResult);
+    function searchResult() {
+		const inputValue = searchInput.value.replaceAll(' ', '').replaceAll('-', '').toLowerCase();
+		titlesArray.forEach((title, i, array) => {
+			if (title.includes(inputValue)){
+				listItems[i].style.display = "flex";
+			}else{
+				listItems[i].style.display = "none";
+			}
+		});
+	}
+
+	// 按下 ESC 键清除输入
+	searchInput.addEventListener('keydown', function(e) {
+		if (e.keyCode === 27) { // 检查是否按下ESC键 (keyCode 27)
+			this.value = '';    // 清除输入框的值
+			this.blur();        // 移除输入框的焦点（取消选中）
+			searchResult();
+		}
+	});
+
+	// 失去焦点 500ms 后清除输入
+	searchInput.addEventListener('blur', function() {
+		setTimeout(() => {
+			this.value = '';
+			searchResult();
+		}, 500);
+	});
+</script>
 {{ end }}

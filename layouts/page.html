@@ -18,8 +18,9 @@
 		</div>
 	</aside>
 	<script>
-		document.getElementById("toc-toggle").addEventListener("click", () => {
-			document.getElementById("toc-toggle").classList.toggle("open")
+		const toc = document.getElementById("toc-toggle");
+			toc.addEventListener("click", () => {
+			toc.classList.toggle("open")
 		})
 	</script>
 	{{ end }}

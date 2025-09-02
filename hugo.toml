@@ -1,9 +1,10 @@
 baseURL = 'https://Kingtuo123.com/'
-title = "夜不能寐"
+title = "Nobody's Blog"
 disableKinds = ["taxonomy", "term", "section"]
 
 [params]
 	defaultTheme = "light"
+	headerTitle = "夜不能寐"
 
 [markup]
 	[markup.goldmark]

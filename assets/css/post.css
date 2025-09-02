@@ -256,6 +256,10 @@ a.anchor:hover {
 	color: var(--post-code-fg);
 }
 
+.post-content blockquote a:hover {
+	font-weight: Bold;
+}
+
 .post-content hr {
 	border: 0px;
 	height: 1px;
