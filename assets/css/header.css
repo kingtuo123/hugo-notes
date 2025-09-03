@@ -13,8 +13,8 @@ header .nav {
 }
 
 header .logo {
-	color: var(--header-logo-color);
-	font-size: 30px;
+	color: var(--header-title-fg);
+	font-size: 25px;
 	font-weight: 800;
 	line-height: var(--header-height);
 	margin: auto 10px;
@@ -53,7 +53,7 @@ header .logo {
 
 #theme-toggle {
 	margin: 5px;
-	color: var(--header-logo-color);
+	color: var(--header-theme-toggle-fg);
 	width: var(--header-height);
 	height: var(--header-height);
 	cursor: pointer;
@@ -71,8 +71,8 @@ header .logo {
 
 header .toggle-wrapper {
 	position: relative;
-	width: var(--header-swith-size);
-	height: var(--header-swith-size);
-	margin: calc( (var(--header-height) - var(--header-swith-size)) / 2 ) ;
+	width: var(--header-theme-toggle-icon-size);
+	height: var(--header-theme-toggle-icon-size);
+	margin: calc( (var(--header-height) - var(--header-theme-toggle-icon-size)) / 2 ) ;
 	border-radius: 100%;
 }

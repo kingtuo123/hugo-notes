@@ -25,17 +25,20 @@
 
 
 /* 目录 */
-.post-content aside {
+.post-content .toc {
 	transition: background-color 0.5s ease;
 	background-color: var(--post-toc-bg);
-	padding: 0px;
+	padding-left: 5px;
 	border-radius: 10px;
 	margin-bottom: 30px;
-
-}
-
-.post-content .toc {
-	overflow: hidden;
+	/*
+	position: fixed;
+	right: 30px;
+	height: 800px;
+	width: 350px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	*/
 }
 
 #toc-toggle {
@@ -51,7 +54,7 @@
 }
 
 #toc-toggle .toc-title {
-	padding-left: 5px;
+	padding-left: 10px;
 }
 
 #toc-toggle.open {
@@ -67,18 +70,17 @@
 	transform: rotate(90deg);
 }
 
-.post-content .toc-content {
+#TableOfContents {
+	padding-bottom: 15px;
 	display: none;
 }
 
-#toc-toggle.open ~ .toc-content {
+#toc-toggle.open ~ #TableOfContents {
 	display: block;
-	/*transition: color 0.5s ease;*/
 }
 
 #TableOfContents ul {
 	margin-left: 35px;
-	margin-bottom: 20px;
 	transition: color 0.5s ease;
 }
 
@@ -136,8 +138,8 @@ a.anchor:hover {
 	font-size: 1.5rem;
 	font-weight: normal;
 	color: var(--post-h2);
-	margin-top: 30px;
-	margin-bottom: 20px;
+	margin-top: 40px;
+	margin-bottom: 15px;
 	transition: color 0.5s ease;
 }
 
@@ -146,7 +148,7 @@ a.anchor:hover {
 	font-weight: normal;
 	color: var(--post-h3);
 	margin-top: 30px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	transition: color 0.5s ease;
 }
 
@@ -154,8 +156,8 @@ a.anchor:hover {
 	font-size: 1.2rem;
 	font-weight: normal;
 	color: var(--post-h4);
-	margin-top: 30px;
-	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-bottom: 5px;
 	transition: color 0.5s ease;
 }
 
@@ -163,8 +165,8 @@ a.anchor:hover {
 	font-size: 1.1rem;
 	font-weight: normal;
 	color: var(--text-primary);
-	margin-top: 30px;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 0px;
 	transition: color 0.5s ease;
 }
 
@@ -221,7 +223,7 @@ a.anchor:hover {
 	word-break: break-all;
 	padding: 10px;
 	border-radius: 10px;
-	font-family: 'JetBrainsMonoNL NF', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace',"LXGW WenKai Medium";
+	font-family: 'Maple Mono CN', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
 	font-size: 15px;
 	line-height: 1.5;
 	background-color: var(--post-highlight-bg);
@@ -236,6 +238,7 @@ a.anchor:hover {
 	border-radius: 10px;
 	margin: 10px 0;
 }
+
 .dark .post-content img {
   filter: brightness(70%);
   transition: filter 0.5s ease;
@@ -252,7 +255,6 @@ a.anchor:hover {
 
 .post-content blockquote code{
 	font-family: "LXGW WenKai Mono Medium", 'JetBrainsMonoNL NF', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
-	font-size: 16px;
 	color: var(--post-code-fg);
 }
 

@@ -95,9 +95,10 @@ main .date  {
 	padding: 8px 15px;
 	border: 2px solid var(--home-search-border-fg);
 	border-radius: 50px;
-	width: 400px;
+	width: 300px;
 	max-width: 90%;
 	margin: 50px auto 30px auto;
+	text-align: center;
 	transition: all 0.5s ease;
 }
 
@@ -109,9 +110,6 @@ main .date  {
 #search-input::placeholder {
 	color: var(--home-search-placeholder-fg);
 	transition: color 0.5s ease;
+	user-select: none;
 }
 
-#search-input::-moz-placeholder {
-	color: var(--home-search-placeholder-fg);
-	transition: color 0.5s ease;
-}

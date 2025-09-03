@@ -2,14 +2,15 @@
 
 	--header-height: 50px;
 	--header-nav-width: 1024px;
-	--header-swith-size: 24px;
+	--header-theme-toggle-icon-size: 25px;
 
 
 	--bg: #fdf6e3;
 	--text-primary: #5C6A72;
 
 	--header-bg: #EFEBD4;
-	--header-logo-color: #8DA101;
+	--header-title-fg: #8DA101;
+	--header-theme-toggle-fg: #8DA101;
 	--header-theme-toggle-hover-fg: #F4F0D9;
 	--header-theme-toggle-hover-bg: #8DA101;
 
@@ -45,7 +46,7 @@
 	--footer-fg: #A6B0A0;
 	--footer-bg: #fdf6e3;
 	--footer-link-hover-fg: #93b259;
-	--footer-gotop-bg: #93b259;
+	--footer-gotop-bg: #E6E2CC;
 	--footer-gotop-hover-bg: #93b259;
 }
 
@@ -54,7 +55,8 @@
 	--text-primary: #d3c6aa;
 
 	--header-bg: #232A2E;
-	--header-logo-color: #A7C080;
+	--header-title-fg: #A7C080;
+	--header-theme-toggle-fg: #A7C080;
 	--header-theme-toggle-hover-fg: #232A2E;
 	--header-theme-toggle-hover-bg: #A7C080;
 
@@ -90,7 +92,7 @@
 	--footer-fg: #7A8478;
 	--footer-bg: #2D353B;
 	--footer-link-hover-fg: #A7C080;
-	--footer-gotop-bg: #475258;
+	--footer-gotop-bg: #3D484D;
 	--footer-gotop-hover-bg: #A7C080;
 
 }
@@ -107,6 +109,7 @@ html, body {
 	font-size: 17px;
 	line-height: 1.65;
 	color: var(--text-primary);
+	background: #000000;
 	display: flex;
     flex-direction: column;
 	min-height: 100vh;

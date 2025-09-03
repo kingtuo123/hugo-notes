@@ -1,5 +1,5 @@
 {{ define "main" }}
-<input type="text" id="search-input" placeholder="搜点什么吗？">
+<input type="text" id="search-input" placeholder="搜点什么" autofocus>
 <div class="post-list">
 	{{ range site.RegularPages }}
 	<a class="list-item" draggable="false" href="{{ .RelPermalink }}">
@@ -8,11 +8,16 @@
 	</a>
 	{{ end }}
 </div>
+
+
+
+
+
 <script>
 	const listItems   = document.querySelectorAll('a.list-item');
 	const titlesArray = [];
 	const titleElements = document.querySelectorAll('a.list-item span.title');
-	// 将获取的所有标题字符串处理后存入数组
+	// 将获取的所有标题存入数组
 	titleElements.forEach(function(element) {
 		titlesArray.push( element.textContent.replaceAll(' ', '').replaceAll('-', '').toLowerCase() );
 	});
@@ -35,13 +40,16 @@
 	searchInput.addEventListener('keydown', function(e) {
 		if (e.keyCode === 27) { // 检查是否按下ESC键 (keyCode 27)
 			this.value = '';    // 清除输入框的值
-			this.blur();        // 移除输入框的焦点（取消选中）
+			this.blur();        // 移除输入框的焦点
 			searchResult();
 		}
 	});
 
-	// 失去焦点 500ms 后清除输入
+	// 失去焦点 500ms 后清除输入，只对鼠标点击后清除输入
 	searchInput.addEventListener('blur', function() {
+		if ('ontouchstart' in window) { // 排除触摸屏操作的设备
+			return 0;
+		}
 		setTimeout(() => {
 			this.value = '';
 			searchResult();
