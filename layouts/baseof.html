@@ -16,7 +16,8 @@
 	{{ $Post   := resources.Get "css/post.css"   }}
 	{{ $Footer := resources.Get "css/footer.css" }}
 	{{ $Synax  := resources.Get "css/synax-everforest-medium-dark.css" }}
-	{{ $Bundle := slice $Reset $Core $Header $Home $Post $Footer $Synax | resources.Concat "css/Bundle.css" | minify | fingerprint }}
+	{{ $Custom := resources.Get "css/custom.css" }}
+	{{ $Bundle := slice $Reset $Core $Header $Home $Post $Footer $Synax $Custom| resources.Concat "css/Bundle.css" | minify | fingerprint }}
 	<link rel="stylesheet" href="{{ $Bundle.RelPermalink }}" integrity="{{ $Bundle.Data.Integrity }}">
 
     {{- partial "extend_head.html" . }}
@@ -41,7 +42,7 @@
 		<div class="title">
 			<a href="/" draggable="false">{{ site.Params.headerTitle }}</a>
 		</div>
-		<div id="theme-toggle">
+		<div id="theme-toggle" accesskey="t">
 			<div class="toggle-wrapper">
 				<svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 					<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
