@@ -221,7 +221,7 @@ a.anchor:hover {
 }
 
 .table-container::-webkit-scrollbar-thumb {
-	background: var(--post-horizontal-scroll-bar-fg);
+	background: var(--post-border-fg);
     border-radius: 10px;
     border: 5px solid var(--bg);
 }
@@ -238,7 +238,7 @@ a.anchor:hover {
 /* 非高亮代码：`code` */
 .post-content code:not(.highlight code):not(blockquote code) {
 	font-family: "LXGW WenKai Mono Medium", 'JetBrainsMonoNL NF', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
-	font-size: 16px;
+	font-size: 17px;
 	padding: 1px 5px;
 	color: var(--post-code-fg);
 	background-color: var(--post-code-bg);
@@ -256,14 +256,17 @@ a.anchor:hover {
 }
 
 .post-content pre {
-	font-family: 'Maple Mono CN', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
-	font-size: 15px;
-	line-height: 1.5;
+	line-height: 1.4;
     padding: 10px;
 	background-color: var(--post-highlight-bg);
     border-radius: 10px;
     overflow-x: auto;
     word-break: break-all;
+}
+
+.post-content code {
+	font-family: 'Maple Mono CN', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
+	font-size: 15px;
 }
 
 .post-content pre::-webkit-scrollbar {
@@ -306,8 +309,8 @@ a.anchor:hover {
 }
 
 .dark .post-content img {
-  filter: brightness(70%);
-  transition: filter 0.5s ease;
+	filter: brightness(70%);
+	transition: filter 0.5s ease;
 } 
 
 
@@ -319,7 +322,7 @@ a.anchor:hover {
 	border-left: 5px solid var(--post-quote-border-fg);
 	border-radius: 10px;
 	margin: 15px 0;
-	padding: 10px 10px 10px 20px;
+	padding: 10px 10px 10px 15px;
 	background-color: var(--post-quote-bg);
 	transition: background-color 0.5s ease;
 }
