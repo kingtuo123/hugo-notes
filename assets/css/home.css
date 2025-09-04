@@ -95,12 +95,14 @@ main .date  {
 	max-width: 90%;
 	margin: 50px auto 30px auto;
 	text-align: center;
+    font: inherit;
 	transition: all 0.5s ease;
 }
 
 
 #search-input:focus {
 	border: 2px solid var(--home-search-border-focus-fg);
+	outline: none;
 	transform: scale(1.05);
 }
 

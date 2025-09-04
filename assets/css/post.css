@@ -195,10 +195,12 @@ a.anchor:hover {
 	line-height: 2.1;
     border: none;
     border-bottom: 1px solid var(--post-border-fg);
+	padding-right: 10px;
 	transition: all 0.5s ease;
 }
 
 .post-content table{
+	width: 100%;
 	display: table;
 }
 
@@ -211,20 +213,17 @@ a.anchor:hover {
 
 .table-container::-webkit-scrollbar {
     height: 15px;
-	transition: all 0.5s ease;
 }
 
 .table-container::-webkit-scrollbar-track {
     background: var(--bg);
     border-radius: 10px;
-	transition: all 0.5s ease;
 }
 
 .table-container::-webkit-scrollbar-thumb {
 	background: var(--post-horizontal-scroll-bar-fg);
     border-radius: 10px;
     border: 5px solid var(--bg);
-	transition: all 0.5s ease;
 }
 
 .table-container::-webkit-scrollbar-thumb:hover {
@@ -252,6 +251,10 @@ a.anchor:hover {
 
 
 /* 语法高亮的代码：```lang  */
+.post-content .highlight {
+	margin: 10px 0;
+}
+
 .post-content pre {
 	font-family: 'Maple Mono CN', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
 	font-size: 15px;
