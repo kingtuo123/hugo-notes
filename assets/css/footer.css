@@ -12,9 +12,11 @@ footer {
 	user-select: none;
 }
 
+
 footer a:hover {
 	color: var(--footer-link-hover-fg);
 }
+
 
 #back-to-top {
 	position: fixed;
@@ -35,18 +37,23 @@ footer a:hover {
 }
 
 
-#back-to-top:hover  {
-	color: var(--footer-gotop-hover-bg);
-	transform: translateY(-5px);
-}
-
 #back-to-top.show {
 	opacity: 1;
 	visibility: visible;
 }
 
 
-@media (max-width: 768px) {
+/* 屏幕宽度 > 900 */
+@media (min-width: 900px) {
+	#back-to-top:hover  {
+		color: var(--footer-gotop-hover-bg);
+		transform: translateY(-5px);
+	}
+}
+
+
+/* 屏幕宽度 < 900 */
+@media (max-width: 900px) {
 	#back-to-top {
 		bottom: 20px;
 		right: 20px;

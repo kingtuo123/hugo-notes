@@ -12,7 +12,9 @@
 /* LineHighlight */ .chroma .hl { background-color: #3c474d }
 /* LineNumbersTable */ .chroma .lnt { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color: #7a8478 }
 /* LineNumbers */ .chroma .ln { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color: #7a8478 }
-/* Line */ .chroma .line { display:flex; }
+
+/* Line */ /*.chroma .line { display:flex; }*/
+
 /* Keyword */ .chroma .k { color: #e69875; }
 /* KeywordConstant */ .chroma .kc { color: #e69875; }
 /* KeywordDeclaration */ .chroma .kd { color: #e69875; }

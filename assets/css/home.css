@@ -13,7 +13,6 @@ main .post-list {
     flex-direction: column;
 	gap: 0;
 	margin: 0px auto;
-	/*background: var(--home-list-bg);*/
 	border-radius: 10px;
 	transition: background 0.5s ease;
 	padding: 0px 0px;
@@ -30,27 +29,23 @@ main .list-item {
 	user-select: none;
 }
 
-/*
-main .list-item:hover {
-	background: var(--home-list-hover-bg);
-}
-*/
 
 main .list-item:hover > .title {
 	color: var(--home-list-title-hover-fg);
-	font-weight: Bold;
-/*	transform: scale(1.05);  放大但不影响布局 */
 }
+
 
 main .list-item:hover > .date {
 	color: var(--home-list-date-hover-fg);
-	font-weight: Bold;
-/*	transform: scale(1.05); 放大但不影响布局 */
 }
 
-main .list-item:hover > span.title::before {
-	opacity: 1;
+
+@media screen and (min-width: 900px) {
+	main .list-item:hover > span.title::before {
+		opacity: 1;
+	}
 }
+
 
 main .title {
 	color: var(--home-list-title-fg);
@@ -65,6 +60,7 @@ main .title {
 	margin-left: -16px;
 	-webkit-user-drag: none;
 }
+
 
 main .title::before {
     content: "";
@@ -102,14 +98,15 @@ main .date  {
 	transition: all 0.5s ease;
 }
 
+
 #search-input:focus {
 	border: 2px solid var(--home-search-border-focus-fg);
 	transform: scale(1.05);
 }
+
 
 #search-input::placeholder {
 	color: var(--home-search-placeholder-fg);
 	transition: color 0.5s ease;
 	user-select: none;
 }
-

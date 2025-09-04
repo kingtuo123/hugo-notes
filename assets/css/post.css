@@ -14,7 +14,7 @@
 .post-title {
 	margin-bottom: 30px;
 }
-
+/* 文章标题下方的时间 */
 .post-content time {
 	color: var(--text-primary);
 	transition: color 0.5s ease;
@@ -24,7 +24,7 @@
 
 
 
-/* 目录 */
+/* 目录：总的框架 */
 .post-content .toc {
 	transition: background-color 0.5s ease;
 	background-color: var(--post-toc-bg);
@@ -41,12 +41,17 @@
 	*/
 }
 
+
+
+
+
+/* 目录：按钮，控制目录展开 */
 #toc-toggle {
-	line-height: 30px;
-	padding: 10px 20px 10px 10px;
+	padding: 10px;
 	color: var(--text-primary);
 	cursor: zoom-in;
-	font-weight: 600;
+	font-weight: Bold;
+	line-height: 30px;
 	display: flex;
 	align-items: center;
 	user-select: none;
@@ -54,7 +59,7 @@
 }
 
 #toc-toggle .toc-title {
-	padding-left: 10px;
+	padding-left: 5px;
 }
 
 #toc-toggle.open {
@@ -62,7 +67,7 @@
 }
 
 #toc-toggle .toc-icon {
-	height: 24px;
+	height: 25px;
 	transition: transform 0.2s ease;
 }
 
@@ -70,6 +75,11 @@
 	transform: rotate(90deg);
 }
 
+
+
+
+
+/* 目录：列表 */
 #TableOfContents {
 	padding-bottom: 15px;
 	display: none;
@@ -81,7 +91,6 @@
 
 #TableOfContents ul {
 	margin-left: 35px;
-	transition: color 0.5s ease;
 }
 
 #TableOfContents a {
@@ -95,7 +104,7 @@
 	background-color: var(--post-toc-hover-bg);
 }
 
-#TableOfContents ul > li > ul {
+#TableOfContents ul  li  ul {
 	margin-left: 35px;
 }
 
@@ -103,7 +112,9 @@
 
 
 
-/* 文章内的元素样式 */
+/*************    以下是文章正文中的内容样式    **************/
+
+/* 链接 */
 .post-content a:not(.anchor):not(.toc a) {
 	color: var(--post-link-fg);
 	transition: color 0.5s ease;
@@ -123,10 +134,20 @@ a.anchor:hover {
 	opacity: 1;
 }
 
+
+
+
+
+/* 列表 */
 .post-content ul:not(.toc ul) {
 	margin: 10px 0 13px 16px;
 }
 
+
+
+
+
+/* 标题 h1-h6 */
 .post-content h1 {
 	font-size: 2rem;
 	font-weight: Bold;
@@ -170,6 +191,11 @@ a.anchor:hover {
 	transition: color 0.5s ease;
 }
 
+
+
+
+
+/* 表格 */
 .post-content th, td {
 	color: var(--text-primary);
 	line-height: 2.1;
@@ -184,20 +210,38 @@ a.anchor:hover {
 
 .post-content .table-container {
 	width: 100%;
-	white-space: nowrap;
-	overflow: hidden;
 	overflow-x: scroll;
 	margin: 5px 0px 10px 0px;
 }
 
-.post-content .table-container::-webkit-scrollbar {
-	display: none;
-} 
+.table-container::-webkit-scrollbar {
+    height: 15px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: var(--bg);
+    border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+	background: var(--post-horizontal-scroll-bar-fg);
+    border-radius: 10px;
+    border: 5px solid var(--bg);
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+	background: var(--post-horizontal-scroll-bar-hover-fg);
+}
 
 .no-thead thead {
 	display: none;
 }
 
+
+
+
+
+/* 非高亮代码：`code` */
 .post-content code:not(.highlight code):not(blockquote code) {
 	font-family: "LXGW WenKai Mono Medium", 'JetBrainsMonoNL NF', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
 	font-size: 16px;
@@ -208,32 +252,56 @@ a.anchor:hover {
 	transition: all 0.5s ease;
 }
 
-.post-content .highlight pre {
-	border-radius: 10px;
-	margin: 10px 0;
-}
 
-.highlight code::-webkit-scrollbar {
-	display: none;
-} 
 
-.post-content .highlight code {
-	display: grid;
-	overflow-x: auto;
-	word-break: break-all;
-	padding: 10px;
-	border-radius: 10px;
+
+
+/* 语法高亮的代码：```lang  */
+.post-content pre {
 	font-family: 'Maple Mono CN', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
 	font-size: 15px;
 	line-height: 1.5;
+    padding: 10px;
 	background-color: var(--post-highlight-bg);
+    border-radius: 10px;
+    overflow-x: auto;
+    word-break: break-all;
 }
 
+.post-content pre::-webkit-scrollbar {
+	height: 15px;
+}
+
+.post-content pre::-webkit-scrollbar-track {
+	margin: 0px 5px;
+	border-radius: 10px;
+}
+
+.post-content pre::-webkit-scrollbar-thumb {
+	background: var(--post-horizontal-scroll-bar-fg);
+	border-radius: 10px;
+	border: 5px solid var(--post-highlight-bg);
+}
+
+.post-content pre::-webkit-scrollbar-thumb:hover {
+	background: var(--post-horizontal-scroll-bar-hover-fg);
+}
+
+
+
+
+
+/* 粗体字 */
 .post-content strong:not(table strong){
 	color: var(--post-strong-fg);
 	transition: color 0.5s ease;
 }
 
+
+
+
+
+/* 图片 */
 .post-content img {
 	border-radius: 10px;
 	margin: 10px 0;
@@ -244,6 +312,11 @@ a.anchor:hover {
   transition: filter 0.5s ease;
 } 
 
+
+
+
+
+/* 提示 notice */
 .post-content blockquote {
 	border-left: 5px solid var(--post-quote-border-fg);
 	border-radius: 10px;
@@ -262,6 +335,11 @@ a.anchor:hover {
 	font-weight: Bold;
 }
 
+
+
+
+
+/* 分割线 */
 .post-content hr {
 	border: 0px;
 	height: 1px;
@@ -269,6 +347,10 @@ a.anchor:hover {
 }
 
 
+
+
+
+/* 鼠标选中的文字 */
 ::selection {
 	color: var(--bg);
 	background: var(--post-selection-bg);

@@ -5,6 +5,7 @@
 	--header-theme-toggle-icon-size: 25px;
 
 
+
 	--bg: #fdf6e3;
 	--text-primary: #5C6A72;
 
@@ -41,6 +42,8 @@
 	--post-quote-border-fg: #93b259;
 	--post-quote-bg: #EFEBD4;
 	--post-selection-bg: #93b259;
+	--post-horizontal-scroll-bar-fg: #3D484D;
+	--post-horizontal-scroll-bar-hover-fg: #A7C080;
 
 
 	--footer-fg: #A6B0A0;
@@ -87,6 +90,8 @@
 	--post-quote-border-fg: #A7c080;
 	--post-quote-bg: #343F44;
 	--post-selection-bg: #A7C080;
+	--post-horizontal-scroll-bar-fg: #343F44;
+	--post-horizontal-scroll-bar-hover-fg: #A7C080;
 
 
 	--footer-fg: #7A8478;
