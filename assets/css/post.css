@@ -238,7 +238,6 @@ a.anchor:hover {
 /* 非高亮代码：`code` */
 .post-content code:not(.highlight code):not(blockquote code) {
 	font-family: "LXGW WenKai Mono Medium", 'JetBrainsMonoNL NF', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
-	font-size: 17px;
 	padding: 1px 5px;
 	color: var(--post-code-fg);
 	background-color: var(--post-code-bg);
@@ -264,7 +263,7 @@ a.anchor:hover {
     word-break: break-all;
 }
 
-.post-content code {
+.post-content pre code {
 	font-family: 'Maple Mono CN', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
 	font-size: 15px;
 }
