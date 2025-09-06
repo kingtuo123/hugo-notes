@@ -29,6 +29,7 @@ header .title {
 /* 图标最外层的框架，作用于 header 中的 flex 布局*/
 #theme-toggle {
 	margin: 5px;
+	background-color: var(--header-bg);
 	color: var(--header-theme-toggle-fg);
 	width: var(--header-height);
 	height: var(--header-height);
