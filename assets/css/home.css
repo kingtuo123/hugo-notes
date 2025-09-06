@@ -14,7 +14,6 @@ main .post-list {
 	gap: 0;
 	margin: 0px auto;
 	border-radius: 10px;
-	transition: background 0.5s ease;
 	padding: 0px 0px;
 }
 
@@ -25,7 +24,6 @@ main .list-item {
     align-items: center;
 	padding: 10px 15px;
 	border-radius: 25px;
-	transition: background 0.5s ease;
 	user-select: none;
 }
 
@@ -88,6 +86,7 @@ main .date  {
 #search-input {
 	display: flex;
 	color: var(--text-primary);
+	background-color: var(--bg);
 	padding: 8px 15px;
 	border: 2px solid var(--home-search-border-fg);
 	border-radius: 50px;

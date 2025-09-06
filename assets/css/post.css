@@ -43,14 +43,12 @@
 /* 目录：按钮，控制目录展开 */
 #toc-toggle {
 	padding: 10px;
-	color: var(--text-primary);
 	cursor: zoom-in;
 	font-weight: Bold;
 	line-height: 30px;
 	display: flex;
 	align-items: center;
 	user-select: none;
-	transition: color 0.5s ease;
 }
 
 #toc-toggle .toc-title {
@@ -179,10 +177,8 @@ a.anchor:hover {
 .post-content h5, h6 {
 	font-size: 1.1rem;
 	font-weight: normal;
-	color: var(--text-primary);
 	margin-top: 10px;
 	margin-bottom: 0px;
-	transition: color 0.5s ease;
 }
 
 
@@ -191,12 +187,11 @@ a.anchor:hover {
 
 /* 表格 */
 .post-content th, td {
-	color: var(--text-primary);
 	line-height: 2.1;
     border: none;
     border-bottom: 1px solid var(--post-border-fg);
 	padding-right: 10px;
-	transition: all 0.5s ease;
+	transition: border-color 0.5s ease;
 }
 
 .post-content table{
@@ -242,7 +237,7 @@ a.anchor:hover {
 	color: var(--post-code-fg);
 	background-color: var(--post-code-bg);
 	border-radius: 5px;
-	transition: all 0.5s ease;
+	transition: background-color 0.5s ease;
 }
 
 
