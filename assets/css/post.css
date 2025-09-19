@@ -139,7 +139,9 @@ a.anchor:hover {
 .post-content ol:not(.toc ol) {
 	margin-left: 25px;
 }
-
+.post-content dd {
+	padding-inline-start: 10%;
+}
 
 
 
