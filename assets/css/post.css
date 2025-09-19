@@ -134,10 +134,14 @@ a.anchor:hover {
 /* 列表 */
 .post-content ul:not(.toc ul) {
 	margin-left: 17px;
+	margin-bottom: 10px;
+	line-height: 2;
 }
 
 .post-content ol:not(.toc ol) {
 	margin-left: 25px;
+	margin-bottom: 10px;
+	line-height: 2;
 }
 .post-content dd {
 	padding-inline-start: 10%;
@@ -262,6 +266,7 @@ a.anchor:hover {
     border-radius: 10px;
     overflow-x: auto;
     word-break: break-all;
+	transition: background-color 0.5s ease;
 }
 
 .post-content pre code {
