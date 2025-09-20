@@ -196,6 +196,10 @@ a.anchor:hover {
 
 
 /* 表格 */
+.post-content th {
+	color: var(--post-table-th-fg);
+}
+
 .post-content th, td {
 	line-height: 2.1;
     border: none;
@@ -298,7 +302,8 @@ a.anchor:hover {
 
 
 /* 粗体字 */
-.post-content strong:not(table strong){
+/* .post-content strong:not(table strong){ */
+.post-content strong {
 	color: var(--post-strong-fg);
 	transition: color 0.5s ease;
 }
@@ -335,10 +340,6 @@ a.anchor:hover {
 .post-content blockquote code{
 	font-family: "LXGW WenKai Mono Medium", 'JetBrainsMonoNL NF', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
 	color: var(--post-code-fg);
-}
-
-.post-content blockquote a:hover {
-	font-weight: Bold;
 }
 
 
