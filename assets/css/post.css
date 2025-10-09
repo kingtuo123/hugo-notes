@@ -106,6 +106,9 @@
 
 
 /*************    以下是文章正文中的内容样式    **************/
+.post-content p {
+	margin: 10px 0;
+}
 
 /* 链接 */
 .post-content a:not(.anchor):not(.toc a) {
@@ -213,11 +216,15 @@ a.anchor:hover {
 	display: table;
 }
 
+.post-content table strong {
+	color: var(--post-table-th-fg);
+}
+
 .post-content .table-container {
 	width: 100%;
 	white-space: nowrap;
 	overflow-x: auto;
-	margin: 5px 0px 10px 0px;
+/*	margin: 5px 0px 10px 0px;  */
 }
 
 .table-container::-webkit-scrollbar {
@@ -302,8 +309,7 @@ a.anchor:hover {
 
 
 /* 粗体字 */
-/* .post-content strong:not(table strong){ */
-.post-content strong {
+.post-content strong:not(table strong){
 	color: var(--post-strong-fg);
 	transition: color 0.5s ease;
 }
@@ -335,6 +341,10 @@ a.anchor:hover {
 	padding: 10px 10px 10px 15px;
 	background-color: var(--post-quote-bg);
 	transition: background-color 0.5s ease;
+}
+
+.post-content blockquote p {
+	margin: 0;
 }
 
 .post-content blockquote code{
