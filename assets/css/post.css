@@ -361,7 +361,7 @@ a.anchor:hover {
 .post-content hr {
 	border: 0px;
 	height: 1px;
-	margin: 20px 0;
+	margin: 10px 0;
 	background-color: var(--post-border-fg);
 	transition: background-color 0.5s ease;
 }
