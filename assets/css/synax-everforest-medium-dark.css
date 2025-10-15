@@ -74,7 +74,7 @@
 /* CommentMultiline */ .chroma .cm { color: #859289;font-style:normal }
 /* CommentSingle */ .chroma .c1 { color: #859289;font-style:normal }
 /* CommentSpecial */ .chroma .cs { color: #859289;background-color: #343f44;font-style:normal }
-/* CommentPreproc */ .chroma .cp { color: #859289; }
+/* CommentPreproc */ .chroma .cp { color: #7FBBB3; }
 /* CommentPreprocFile */ .chroma .cpf { color: #859289; }
 /* Generic */ .chroma .g { color: #d3c6aa; }
 /* GenericDeleted */ .chroma .gd { color: #e67e80; }
