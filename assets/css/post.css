@@ -208,7 +208,7 @@ a.anchor:hover {
     border: none;
     border-bottom: 1px solid var(--post-border-fg);
 	padding-right: 10px;
-	transition: all 0.5s ease;
+	transition: border-color 0.5s ease;
 }
 
 .post-content table{
