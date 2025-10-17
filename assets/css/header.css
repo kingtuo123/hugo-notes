@@ -2,6 +2,7 @@ header {
 	background-color: var(--header-bg);
 	transition: background 0.5s ease;
 	user-select: none;
+	padding: 5px 10px;
 }
 
 
@@ -21,14 +22,14 @@ header .title {
 	font-size: 25px;
 	font-weight: 800;
 	line-height: var(--header-height);
-	margin: auto 10px;
+	/* margin: auto 10px; */
 	transition: color 0.5s ease;
 }
 
 
 /* 图标最外层的框架，作用于 header 中的 flex 布局*/
 #theme-toggle {
-	margin: 5px;
+	/* margin: 5px; */
 	background-color: var(--header-bg);
 	color: var(--header-theme-toggle-fg);
 	width: var(--header-height);
@@ -39,13 +40,12 @@ header .title {
 	transition: all 0.5s ease;
 }
 
-/* 图标的 "圆形遮罩" 和 用于图标的 position:absolute 定位 */
+/* 用于图标的 position:absolute 定位 */
 #theme-toggle .toggle-wrapper {
 	position: relative;
 	width: var(--header-theme-toggle-icon-size);
 	height: var(--header-theme-toggle-icon-size);
 	margin: calc( (var(--header-height) - var(--header-theme-toggle-icon-size)) / 2 ) ;
-	border-radius: 100%;
 }
 
 
@@ -76,9 +76,9 @@ header .title {
 
 
 /* 屏幕宽度 > 900 图标才有 hover 效果*/
-@media screen and (min-width: 900px) {
+/*@media screen and (min-width: 900px) {
 	#theme-toggle:hover {
 		color: var(--header-theme-toggle-hover-fg);
 		background: var(--header-theme-toggle-hover-bg);
 	}
-}
+}*/

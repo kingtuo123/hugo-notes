@@ -45,7 +45,6 @@ footer a:hover {
 @media (min-width: 900px) {
 	#back-to-top:hover  {
 		color: var(--footer-gotop-hover-bg);
-		transform: translateY(-5px);
 	}
 }
 

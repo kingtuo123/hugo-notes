@@ -165,7 +165,7 @@ a.anchor:hover {
 	font-weight: normal;
 	color: var(--post-h2);
 	margin-top: 40px;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	transition: color 0.5s ease;
 }
 
@@ -178,17 +178,25 @@ a.anchor:hover {
 	transition: color 0.5s ease;
 }
 
+.post-content h2 + h3 {
+	margin-top: 10px;
+}
+
 .post-content h4 {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	font-weight: normal;
 	color: var(--post-h4);
 	margin-top: 20px;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	transition: color 0.5s ease;
 }
 
+.post-content h3 + h4 {
+	margin-top: 10px;
+}
+
 .post-content h5, h6 {
-	font-size: 1.1rem;
+	font-size: 1rem;
 	font-weight: normal;
 	margin-top: 10px;
 	margin-bottom: 0px;
@@ -200,6 +208,7 @@ a.anchor:hover {
 
 /* 表格 */
 .post-content th {
+	font-weight: normal;
 	color: var(--post-table-th-fg);
 }
 
@@ -218,6 +227,7 @@ a.anchor:hover {
 
 .post-content table strong {
 	color: var(--post-table-th-fg);
+	font-weight: normal;
 	transition: color 0.5s ease;
 }
 
@@ -311,6 +321,7 @@ a.anchor:hover {
 
 /* 粗体字 */
 .post-content strong:not(table strong){
+	font-weight: normal;
 	color: var(--post-strong-fg);
 	transition: color 0.5s ease;
 }
