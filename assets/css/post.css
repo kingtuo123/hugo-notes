@@ -1,5 +1,5 @@
 .post-content {
-	max-width: 1024px;
+	max-width: var(--header-nav-width);
 	width: 100%;
 	margin: 0 auto;
 	height: 100%;
@@ -23,7 +23,7 @@
 .post-content .toc {
 	transition: background-color 0.5s ease;
 	background-color: var(--post-toc-bg);
-	padding-left: 5px;
+	padding-left: 0px;
 	border-radius: 10px;
 	margin-bottom: 30px;
 	/*
@@ -60,7 +60,7 @@
 }
 
 #toc-toggle .toc-icon {
-	height: 25px;
+	height: 22px;
 	transition: transform 0.2s ease;
 }
 
@@ -74,6 +74,7 @@
 
 /* 目录：列表 */
 #TableOfContents {
+	line-height: 1.8;
 	padding-bottom: 15px;
 	display: none;
 }
@@ -98,8 +99,20 @@
 }
 
 #TableOfContents ul  li  ul {
-	margin-left: 35px;
+	margin-left: 26px;
 }
+
+@media (max-width: 900px) {
+	#TableOfContents ul {
+		margin-left: 37px;
+	}
+	#TableOfContents ul  li  ul {
+		margin-left: 28px;
+	}
+}
+
+
+
 
 
 
@@ -207,7 +220,6 @@ a.anchor:hover {
 
 /* 表格 */
 .post-content th {
-	font-weight: normal;
 	color: var(--post-table-th-fg);
 }
 
@@ -226,7 +238,6 @@ a.anchor:hover {
 
 .post-content table strong {
 	color: var(--post-table-th-fg);
-	font-weight: normal;
 	transition: color 0.5s ease;
 }
 
@@ -324,7 +335,6 @@ a.anchor:hover {
 
 /* 粗体字 */
 .post-content strong:not(table strong){
-	font-weight: normal;
 	color: var(--post-strong-fg);
 	transition: color 0.5s ease;
 }
