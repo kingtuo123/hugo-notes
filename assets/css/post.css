@@ -151,7 +151,10 @@ a.anchor:hover {
 .post-content ul:not(.toc ul) {
 	margin-left: 17px;
 	margin-bottom: 10px;
-	line-height: 2.4;
+}
+
+.post-content li:not(.toc li) {
+	margin-top: 10px;
 }
 
 .post-content ol:not(.toc ol) {
