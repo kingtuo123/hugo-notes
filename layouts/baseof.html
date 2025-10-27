@@ -27,10 +27,22 @@
 
 
 
-<body class=" {{- if eq site.Params.defaultTheme `dark` -}} {{- print " dark" }} {{- end -}} ">
-
-<script> // 在页面渲染前就修改 body 的主题 class，防止页面切换时闪烁
-	(localStorage.getItem("current-theme")==="dark") && document.body.classList.add("dark") 
+<body>
+<script>
+	const defaultTheme = '{{- if eq site.Params.defaultTheme `auto` -}} {{- print "light dark" -}} {{- else -}} {{- site.Params.defaultTheme -}} {{- end -}}';
+	const currentTheme = localStorage.getItem("currentTheme");
+	console.log('默认主题={{- site.Params.defaultTheme -}}\n' + '当前主题=' + currentTheme);
+	if (currentTheme != null) {
+		document.documentElement.style.colorScheme = currentTheme;
+		document.body.classList.add(currentTheme);
+	}else{
+		document.documentElement.style.colorScheme = defaultTheme;
+		if ('{{- site.Params.defaultTheme -}}' != 'auto'){
+			document.body.classList.add(defaultTheme);
+		}else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			document.body.classList.add('dark')
+		}
+	}
 </script>
 
 
@@ -95,11 +107,13 @@
 	// 主题切换
 	document.getElementById("theme-toggle").addEventListener("click", () => {
 		if (document.body.className.includes("dark")) {
+			localStorage.setItem("currentTheme", 'light');
+			document.documentElement.style.colorScheme = 'light';
 			document.body.classList.remove('dark');
-			localStorage.setItem("current-theme", 'light');
 		} else {
+			localStorage.setItem("currentTheme", 'dark');
+			document.documentElement.style.colorScheme = 'dark';
 			document.body.classList.add('dark');
-			localStorage.setItem("current-theme", 'dark'); // 保存当前主题
 		}
 	})
 	// 返回页面顶部

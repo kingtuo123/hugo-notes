@@ -9,7 +9,7 @@ main {
 
 main .post-list {
 	display: flex;
-	max-width: 500px;
+	max-width: var(--home-list-max-width);
     flex-direction: column;
 	gap: 0;
 	margin: 0px auto;
@@ -29,12 +29,12 @@ main .list-item {
 
 
 main .list-item:hover > .title {
-	color: var(--home-list-title-hover-fg);
+	color: var(--home-list-hover-fg);
 }
 
 
 main .list-item:hover > .date {
-	color: var(--home-list-date-hover-fg);
+	color: var(--home-list-hover-fg);
 }
 
 
@@ -66,7 +66,7 @@ main .title::before {
     width: 8px;
     height: 8px;
 	margin-bottom: 2px;
-    background-color: var(--home-list-title-hover-fg);
+    background-color: var(--home-list-hover-fg);
     border-radius: 50%;
     margin-right: 8px;
 	opacity: 0;
@@ -85,7 +85,7 @@ main .date  {
 
 #search-input {
 	display: flex;
-	color: var(--text);
+	color: var(--fg);
 	background-color: var(--bg);
 	padding: 8px 15px;
 	border: 2px solid var(--home-search-border-fg);

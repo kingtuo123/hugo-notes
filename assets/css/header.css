@@ -18,7 +18,7 @@ header .nav {
 
 /* 标题样式 */
 header .title {
-	color: var(--header-title-fg);
+	color: var(--header-fg);
 	font-size: 25px;
 	font-weight: 800;
 	line-height: var(--header-height);
@@ -31,7 +31,7 @@ header .title {
 #theme-toggle {
 	/* margin: 5px; */
 	background-color: var(--header-bg);
-	color: var(--header-theme-toggle-fg);
+	color: var(--header-fg);
 	width: var(--header-height);
 	height: var(--header-height);
 	cursor: pointer;
