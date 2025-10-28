@@ -9,7 +9,7 @@ main {
 
 main .post-list {
 	display: flex;
-	max-width: var(--home-list-max-width);
+	max-width: 500px;
     flex-direction: column;
 	gap: 0;
 	margin: 0px auto;

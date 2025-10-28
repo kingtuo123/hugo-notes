@@ -1,0 +1,233 @@
+.highlight {
+--Foreground           : light-dark(#5C6A72, #D3C6AA);
+--Red                  : light-dark(#F85552, #E67E80);
+--Orange               : light-dark(#F57D26, #E69875);
+--Yellow               : light-dark(#DFA000, #DBBC7F);
+--Green                : light-dark(#8DA101, #A7C080);
+--Blue                 : light-dark(#3A94C5, #7FBBB3);
+--Aqua                 : light-dark(#35A77C, #83C092);
+--Purple               : light-dark(#DF69BA, #D699B6);
+--Background-Dim       : light-dark(#E5DFC5, #293136);
+--Background-0         : light-dark(#F3EAD3, #333C43);
+--Background-1         : light-dark(#EAE4CA, #3A464C);
+--Background-2         : light-dark(#E5DFC5, #434F55);
+--Background-3         : light-dark(#DDD8BE, #4D5960);
+--Background-4         : light-dark(#D8D3BA, #555F66);
+--Background-5         : light-dark(#B9C0AB, #5D6B66);
+--Background-Red       : light-dark(#F4DBD0, #5C3F4F);
+--Background-Visual    : light-dark(#E1E4BD, #59464C);
+--Background-Yellow    : light-dark(#F1E4C5, #55544A);
+--Background-Green     : light-dark(#E5E6C5, #48584E);
+--Background-Blue      : light-dark(#E1E7DD, #3F5865);
+--Gray-0               : light-dark(#A6B0A0, #7A8478);
+--Gray-1               : light-dark(#939F91, #859289);
+--Gray-2               : light-dark(#829181, #9DA9A0);
+.n, .cl {
+	transition: color var(--transition-time) ease;
+}
+pre {
+	border: 1px solid var(--post-pre-border-fg);
+}
+/* Background                 */    .bg              { background-color: var(--Background-0);                                                                                    }
+/* PreWrapper                 */    .chroma          { background-color: var(--Background-0); color: var(--Foreground);                                                          }
+/* Other                      */    .chroma .x       { color: var(--Foreground);                                                                                                 }
+/* Error                      */    .chroma .err     { color: var(--Red);                                                                                                        }
+/* CodeLine                   */    .chroma .cl      { color: var(--Foreground);                                                                                                 }
+/* LineLink                   */    .chroma .lnlinks { outline:none;text-decoration:none;color:inherit                                                                           }
+/* LineTableTD                */    .chroma .lntd    { vertical-align:top;padding:0;margin:0;border:0;                                                                           }
+/* LineTable                  */    .chroma .lntable { border-spacing:0;padding:0;margin:0;border:0;                                                                             }
+/* LineHighlight              */    .chroma .hl      { background-color: var(--Background-2)                                                                                     }
+/* LineNumbersTable           */    .chroma .lnt     { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color: var(--Gray-0) }
+/* LineNumbers                */    .chroma .ln      { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color: var(--Gray-0) }
+/* Keyword                    */    .chroma .k       { color: var(--Orange);                                                                                                     }
+/* KeywordConstant            */    .chroma .kc      { color: var(--Orange);                                                                                                     }
+/* KeywordDeclaration         */    .chroma .kd      { color: var(--Orange);                                                                                                     }
+/* KeywordNamespace           */    .chroma .kn      { color: var(--Orange);                                                                                                     }
+/* KeywordPseudo              */    .chroma .kp      { color: var(--Orange);                                                                                                     }
+/* KeywordReserved            */    .chroma .kr      { color: var(--Orange);                                                                                                     }
+/* KeywordType                */    .chroma .kt      { color: var(--Yellow);                                                                                                     }
+/* Name                       */    .chroma .n       { color: var(--Foreground);                                                                                                 }
+/* NameAttribute              */    .chroma .na      { color: var(--Green);                                                                                                      }
+/* NameClass                  */    .chroma .nc      { color: var(--Yellow);                                                                                                     }
+/* NameConstant               */    .chroma .no      { color: var(--Purple);                                                                                                     }
+/* NameDecorator              */    .chroma .nd      { color: var(--Blue);                                                                                                       }
+/* NameEntity                 */    .chroma .ni      { color: var(--Orange);                                                                                                     }
+/* NameException              */    .chroma .ne      { color: var(--Orange);                                                                                                     }
+/* NameLabel                  */    .chroma .nl      { color: var(--Green);                                                                                                      }
+/* NameNamespace              */    .chroma .nn      { color: var(--Yellow);                                                                                                     }
+/* NameOther                  */    .chroma .nx      { color: var(--Foreground);                                                                                                 }
+/* NameProperty               */    .chroma .py      { color: var(--Foreground);                                                                                                 }
+/* NameTag                    */    .chroma .nt      { color: var(--Orange);                                                                                                     }
+/* NameBuiltin                */    .chroma .nb      { color: var(--Purple);                                                                                                     }
+/* NameBuiltinPseudo          */    .chroma .bp      { color: var(--Purple);                                                                                                     }
+/* NameVariable               */    .chroma .nv      { color: var(--Purple);                                                                                                     }
+/* NameVariableClass          */    .chroma .vc      { color: var(--Purple);                                                                                                     }
+/* NameVariableGlobal         */    .chroma .vg      { color: var(--Purple);                                                                                                     }
+/* NameVariableInstance       */    .chroma .vi      { color: var(--Purple);                                                                                                     }
+/* NameVariableMagic          */    .chroma .vm      { color: var(--Purple);                                                                                                     }
+/* NameFunction               */    .chroma .nf      { color: var(--Green);                                                                                                      }
+/* NameFunctionMagic          */    .chroma .fm      { color: var(--Green);                                                                                                      }
+/* Literal                    */    .chroma .l       { color: var(--Purple);                                                                                                     }
+/* LiteralDate                */    .chroma .ld      { color: var(--Green);                                                                                                      }
+/* LiteralString              */    .chroma .s       { color: var(--Green);                                                                                                      }
+/* LiteralStringAffix         */    .chroma .sa      { color: var(--Green);                                                                                                      }
+/* LiteralStringBacktick      */    .chroma .sb      { color: var(--Green);                                                                                                      }
+/* LiteralStringChar          */    .chroma .sc      { color: var(--Green);                                                                                                      }
+/* LiteralStringDelimiter     */    .chroma .dl      { color: var(--Green);                                                                                                      }
+/* LiteralStringDoc           */    .chroma .sd      { color: var(--Gray-1);font-style:normal                                                                                    }
+/* LiteralStringDouble        */    .chroma .s2      { color: var(--Green);                                                                                                      }
+/* LiteralStringEscape        */    .chroma .se      { color: var(--Orange);                                                                                                     }
+/* LiteralStringHeredoc       */    .chroma .sh      { color: var(--Green);                                                                                                      }
+/* LiteralStringInterpol      */    .chroma .si      { color: var(--Green);                                                                                                      }
+/* LiteralStringOther         */    .chroma .sx      { color: var(--Green);                                                                                                      }
+/* LiteralStringRegex         */    .chroma .sr      { color: var(--Green);                                                                                                      }
+/* LiteralStringSingle        */    .chroma .s1      { color: var(--Green);                                                                                                      }
+/* LiteralStringSymbol        */    .chroma .ss      { color: var(--Green);                                                                                                      }
+/* LiteralNumber              */    .chroma .m       { color: var(--Purple);                                                                                                     }
+/* LiteralNumberBin           */    .chroma .mb      { color: var(--Purple);                                                                                                     }
+/* LiteralNumberFloat         */    .chroma .mf      { color: var(--Purple);                                                                                                     }
+/* LiteralNumberHex           */    .chroma .mh      { color: var(--Purple);                                                                                                     }
+/* LiteralNumberInteger       */    .chroma .mi      { color: var(--Purple);                                                                                                     }
+/* LiteralNumberIntegerLong   */    .chroma .il      { color: var(--Purple);                                                                                                     }
+/* LiteralNumberOct           */    .chroma .mo      { color: var(--Purple);                                                                                                     }
+/* Operator                   */    .chroma .o       { color: var(--Gray-1);                                                                                                     }
+/* OperatorWord               */    .chroma .ow      { color: var(--Gray-1);                                                                                                     }
+/* Punctuation                */    .chroma .p       { color: var(--Gray-1);                                                                                                     }
+/* Comment                    */    .chroma .c       { color: var(--Gray-1);font-style:normal                                                                                    }
+/* CommentHashbang            */    .chroma .ch      { color: var(--Gray-1);font-style:normal                                                                                    }
+/* CommentMultiline           */    .chroma .cm      { color: var(--Gray-1);font-style:normal                                                                                    }
+/* CommentSingle              */    .chroma .c1      { color: var(--Gray-1);font-style:normal                                                                                    }
+/* CommentSpecial             */    .chroma .cs      { color: var(--Gray-1);background-color: var(--Background-1);font-style:normal                                              }
+/* CommentPreproc             */    .chroma .cp      { color: var(--Blue);                                                                                                       }
+/* CommentPreprocFile         */    .chroma .cpf     { color: var(--Gray-1);                                                                                                     }
+/* Generic                    */    .chroma .g       { color: var(--Foreground);                                                                                                 }
+/* GenericDeleted             */    .chroma .gd      { color: var(--Red);                                                                                                        }
+/* GenericEmph                */    .chroma .ge      { font-style:normal;color: var(--Foreground);                                                                               }
+/* GenericError               */    .chroma .gr      { color: var(--Red);                                                                                                        }
+/* GenericHeading             */    .chroma .gh      { color: var(--Green);font-weight:bold                                                                                      }
+/* GenericInserted            */    .chroma .gi      { color: var(--Green);                                                                                                      }
+/* GenericOutput              */    .chroma .go      { color: var(--Gray-1);                                                                                                     }
+/* GenericPrompt              */    .chroma .gp      { color: var(--Aqua);font-weight:bold                                                                                       }
+/* GenericStrong              */    .chroma .gs      { font-weight:bold;color: var(--Foreground);                                                                                }
+/* GenericSubheading          */    .chroma .gu      { color: var(--Blue);font-weight:bold                                                                                       }
+/* GenericTraceback           */    .chroma .gt      { color: var(--Red);                                                                                                        }
+/* GenericUnderline           */    .chroma .gl      { text-decoration:underline;color: var(--Foreground);                                                                       }
+/* TextWhitespace             */    .chroma .w       { color: var(--Background-5);                                                                                               }
+}
+
+
+
+
+.highlight:has(.language-bash-session), .highlight:has(.language-shell-session){
+--Foreground           : light-dark(#D3C6AA, #D3C6AA);
+--Red                  : light-dark(#E67E80, #E67E80);
+--Orange               : light-dark(#E69875, #E69875);
+--Yellow               : light-dark(#DBBC7F, #DBBC7F);
+--Green                : light-dark(#A7C080, #A7C080);
+--Blue                 : light-dark(#7FBBB3, #7FBBB3);
+--Aqua                 : light-dark(#83C092, #83C092);
+--Purple               : light-dark(#D699B6, #D699B6);
+--Background-Dim       : light-dark(#293136, #1E2326);
+--Background-0         : light-dark(#333C43, #272E33);
+--Background-1         : light-dark(#3A464C, #2E383C);
+--Background-2         : light-dark(#434F55, #374145);
+--Background-3         : light-dark(#4D5960, #414B50);
+--Background-4         : light-dark(#555F66, #495156);
+--Background-5         : light-dark(#5D6B66, #4F5B58);
+--Background-Red       : light-dark(#5C3F4F, #4C3743);
+--Background-Visual    : light-dark(#59464C, #493B40);
+--Background-Yellow    : light-dark(#55544A, #45443C);
+--Background-Green     : light-dark(#48584E, #3C4841);
+--Background-Blue      : light-dark(#3F5865, #384B55);
+--Gray-0               : light-dark(#7A8478, #7A8478);
+--Gray-1               : light-dark(#859289, #859289);
+--Gray-2               : light-dark(#9DA9A0, #9DA9A0);
+pre {
+	border: 1px solid var(--post-pre-term-border-fg);
+}
+/* Background                 */    .bg              { background-color: var(--Background-0);                                                                                    }
+/* PreWrapper                 */    .chroma          { background-color: var(--Background-0); color: var(--Foreground);                                                          }
+/* Other                      */    .chroma .x       { color: var(--Foreground);                                                                                                 }
+/* Error                      */    .chroma .err     { color: var(--Red);                                                                                                        }
+/* CodeLine                   */    .chroma .cl      { color: var(--Foreground);                                                                                                 }
+/* LineLink                   */    .chroma .lnlinks { outline:none;text-decoration:none;color:inherit                                                                           }
+/* LineTableTD                */    .chroma .lntd    { vertical-align:top;padding:0;margin:0;border:0;                                                                           }
+/* LineTable                  */    .chroma .lntable { border-spacing:0;padding:0;margin:0;border:0;                                                                             }
+/* LineHighlight              */    .chroma .hl      { background-color: var(--Background-2)                                                                                     }
+/* LineNumbersTable           */    .chroma .lnt     { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color: var(--Gray-0) }
+/* LineNumbers                */    .chroma .ln      { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color: var(--Gray-0) }
+/* Keyword                    */    .chroma .k       { color: var(--Orange);                                                                                                     }
+/* KeywordConstant            */    .chroma .kc      { color: var(--Orange);                                                                                                     }
+/* KeywordDeclaration         */    .chroma .kd      { color: var(--Orange);                                                                                                     }
+/* KeywordNamespace           */    .chroma .kn      { color: var(--Orange);                                                                                                     }
+/* KeywordPseudo              */    .chroma .kp      { color: var(--Orange);                                                                                                     }
+/* KeywordReserved            */    .chroma .kr      { color: var(--Orange);                                                                                                     }
+/* KeywordType                */    .chroma .kt      { color: var(--Yellow);                                                                                                     }
+/* Name                       */    .chroma .n       { color: var(--Foreground);                                                                                                 }
+/* NameAttribute              */    .chroma .na      { color: var(--Green);                                                                                                      }
+/* NameClass                  */    .chroma .nc      { color: var(--Yellow);                                                                                                     }
+/* NameConstant               */    .chroma .no      { color: var(--Purple);                                                                                                     }
+/* NameDecorator              */    .chroma .nd      { color: var(--Blue);                                                                                                       }
+/* NameEntity                 */    .chroma .ni      { color: var(--Orange);                                                                                                     }
+/* NameException              */    .chroma .ne      { color: var(--Orange);                                                                                                     }
+/* NameLabel                  */    .chroma .nl      { color: var(--Green);                                                                                                      }
+/* NameNamespace              */    .chroma .nn      { color: var(--Yellow);                                                                                                     }
+/* NameOther                  */    .chroma .nx      { color: var(--Foreground);                                                                                                 }
+/* NameProperty               */    .chroma .py      { color: var(--Foreground);                                                                                                 }
+/* NameTag                    */    .chroma .nt      { color: var(--Orange);                                                                                                     }
+/* NameBuiltin                */    .chroma .nb      { color: var(--Purple);                                                                                                     }
+/* NameBuiltinPseudo          */    .chroma .bp      { color: var(--Purple);                                                                                                     }
+/* NameVariable               */    .chroma .nv      { color: var(--Purple);                                                                                                     }
+/* NameVariableClass          */    .chroma .vc      { color: var(--Purple);                                                                                                     }
+/* NameVariableGlobal         */    .chroma .vg      { color: var(--Purple);                                                                                                     }
+/* NameVariableInstance       */    .chroma .vi      { color: var(--Purple);                                                                                                     }
+/* NameVariableMagic          */    .chroma .vm      { color: var(--Purple);                                                                                                     }
+/* NameFunction               */    .chroma .nf      { color: var(--Green);                                                                                                      }
+/* NameFunctionMagic          */    .chroma .fm      { color: var(--Green);                                                                                                      }
+/* Literal                    */    .chroma .l       { color: var(--Purple);                                                                                                     }
+/* LiteralDate                */    .chroma .ld      { color: var(--Green);                                                                                                      }
+/* LiteralString              */    .chroma .s       { color: var(--Green);                                                                                                      }
+/* LiteralStringAffix         */    .chroma .sa      { color: var(--Green);                                                                                                      }
+/* LiteralStringBacktick      */    .chroma .sb      { color: var(--Green);                                                                                                      }
+/* LiteralStringChar          */    .chroma .sc      { color: var(--Green);                                                                                                      }
+/* LiteralStringDelimiter     */    .chroma .dl      { color: var(--Green);                                                                                                      }
+/* LiteralStringDoc           */    .chroma .sd      { color: var(--Gray-1);font-style:normal                                                                                    }
+/* LiteralStringDouble        */    .chroma .s2      { color: var(--Green);                                                                                                      }
+/* LiteralStringEscape        */    .chroma .se      { color: var(--Orange);                                                                                                     }
+/* LiteralStringHeredoc       */    .chroma .sh      { color: var(--Green);                                                                                                      }
+/* LiteralStringInterpol      */    .chroma .si      { color: var(--Green);                                                                                                      }
+/* LiteralStringOther         */    .chroma .sx      { color: var(--Green);                                                                                                      }
+/* LiteralStringRegex         */    .chroma .sr      { color: var(--Green);                                                                                                      }
+/* LiteralStringSingle        */    .chroma .s1      { color: var(--Green);                                                                                                      }
+/* LiteralStringSymbol        */    .chroma .ss      { color: var(--Green);                                                                                                      }
+/* LiteralNumber              */    .chroma .m       { color: var(--Purple);                                                                                                     }
+/* LiteralNumberBin           */    .chroma .mb      { color: var(--Purple);                                                                                                     }
+/* LiteralNumberFloat         */    .chroma .mf      { color: var(--Purple);                                                                                                     }
+/* LiteralNumberHex           */    .chroma .mh      { color: var(--Purple);                                                                                                     }
+/* LiteralNumberInteger       */    .chroma .mi      { color: var(--Purple);                                                                                                     }
+/* LiteralNumberIntegerLong   */    .chroma .il      { color: var(--Purple);                                                                                                     }
+/* LiteralNumberOct           */    .chroma .mo      { color: var(--Purple);                                                                                                     }
+/* Operator                   */    .chroma .o       { color: var(--Gray-1);                                                                                                     }
+/* OperatorWord               */    .chroma .ow      { color: var(--Gray-1);                                                                                                     }
+/* Punctuation                */    .chroma .p       { color: var(--Gray-1);                                                                                                     }
+/* Comment                    */    .chroma .c       { color: var(--Gray-1);font-style:normal                                                                                    }
+/* CommentHashbang            */    .chroma .ch      { color: var(--Gray-1);font-style:normal                                                                                    }
+/* CommentMultiline           */    .chroma .cm      { color: var(--Gray-1);font-style:normal                                                                                    }
+/* CommentSingle              */    .chroma .c1      { color: var(--Gray-1);font-style:normal                                                                                    }
+/* CommentSpecial             */    .chroma .cs      { color: var(--Gray-1);background-color: var(--Background-1);font-style:normal                                              }
+/* CommentPreproc             */    .chroma .cp      { color: var(--Blue);                                                                                                       }
+/* CommentPreprocFile         */    .chroma .cpf     { color: var(--Gray-1);                                                                                                     }
+/* Generic                    */    .chroma .g       { color: var(--Foreground);                                                                                                 }
+/* GenericDeleted             */    .chroma .gd      { color: var(--Red);                                                                                                        }
+/* GenericEmph                */    .chroma .ge      { font-style:normal;color: var(--Foreground);                                                                               }
+/* GenericError               */    .chroma .gr      { color: var(--Red);                                                                                                        }
+/* GenericHeading             */    .chroma .gh      { color: var(--Green);font-weight:bold                                                                                      }
+/* GenericInserted            */    .chroma .gi      { color: var(--Green);                                                                                                      }
+/* GenericOutput              */    .chroma .go      { color: var(--Gray-1);                                                                                                     }
+/* GenericPrompt              */    .chroma .gp      { color: var(--Aqua);font-weight:bold                                                                                       }
+/* GenericStrong              */    .chroma .gs      { font-weight:bold;color: var(--Foreground);                                                                                }
+/* GenericSubheading          */    .chroma .gu      { color: var(--Blue);font-weight:bold                                                                                       }
+/* GenericTraceback           */    .chroma .gt      { color: var(--Red);                                                                                                        }
+/* GenericUnderline           */    .chroma .gl      { text-decoration:underline;color: var(--Foreground);                                                                       }
+/* TextWhitespace             */    .chroma .w       { color: var(--Background-5);                                                                                               }
+}
