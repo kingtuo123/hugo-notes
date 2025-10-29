@@ -1,7 +1,7 @@
 main {
 	flex: 1;
 	background-color: var(--bg);
-	transition: background-color 0.5s ease;
+	transition: background-color var(--transition-time) ease;
 	height: 100%;
 	padding: 0 10px;
 }
@@ -49,7 +49,7 @@ main .title {
 	color: var(--home-list-title-fg);
 	font-size: 18px;
 	font-weight: 400;
-	transition: color 0.5s ease;
+	transition: color var(--transition-time) ease;
 	max-width: 75%;
 	white-space: nowrap;
 	overflow: hidden;
@@ -79,7 +79,7 @@ main .date  {
 	font-size: 15px;
 	font-weight: 400;
 	display: inline-block;
-	transition: color 0.5s ease;
+	transition: color var(--transition-time) ease;
 }
 
 
@@ -88,19 +88,19 @@ main .date  {
 	color: var(--fg);
 	background-color: var(--bg);
 	padding: 8px 15px;
-	border: 2px solid var(--home-search-border-fg);
+	border: 1px solid var(--home-search-border-fg);
 	border-radius: 50px;
 	width: 300px;
 	max-width: 90%;
 	margin: 50px auto 30px auto;
 	text-align: center;
     font: inherit;
-	transition: all 0.5s ease;
+	transition: all var(--transition-time) ease;
 }
 
 
 #search-input:focus {
-	border: 2px solid var(--home-search-border-focus-fg);
+	border: 1px solid var(--home-search-border-focus-fg);
 	outline: none;
 	transform: scale(1.05);
 }
@@ -108,6 +108,6 @@ main .date  {
 
 #search-input::placeholder {
 	color: var(--home-search-placeholder-fg);
-	transition: color 0.5s ease;
+	transition: color var(--transition-time) ease;
 	user-select: none;
 }

@@ -32,7 +32,7 @@
 	--home-list-title-fg          : var(--Foreground      );
 	--home-list-date-fg           : var(--Gray-0          );
 	--home-list-hover-fg          : var(--Green           );
-	--home-search-border-fg       : var(--Background-2    );
+	--home-search-border-fg       : var(--Background-3    );
 	--home-search-border-focus-fg : var(--Green           );
 	--home-search-placeholder-fg  : var(--Background-3    );
 
@@ -51,26 +51,28 @@
 	--post-strong-fg              : var(--Orange          );
 	--post-quote-border-fg        : var(--Green           );
 	--post-quote-fg               : var(--Green    );
-	--post-quote-bg               : var(--Background-1    );
+	--post-quote-bg               : var(--Background-Green    );
 	--post-border-fg              : var(--Background-2    );
 	--post-selection-bg           : var(--Green           );
 
 	--footer-fg                   : var(--Gray-0          );
 	--footer-bg                   : var(--Background-0    );
 	--footer-link-hover-fg        : var(--Green           );
-	--footer-gotop-bg             : var(--Background-2    );
-	--footer-gotop-hover-bg       : var(--Green           );
+	--footer-gotop-fg             : var(--Background-1    );
+	--footer-gotop-bg             : var(--Background-5    );
+	--footer-gotop-hover-fg       : var(--Green           );
+	--footer-gotop-border-fg      : var(--Background-3    );
 
 	--post-pre-border-fg          : light-dark(#E5DFC5, #434F55);
 	--post-pre-term-border-fg     : light-dark(#333C43, #434F55);
-	--post-horizontal-scroll-bar-fg: var(--Background-2);
+	--post-horizontal-scroll-bar-fg: var(--Background-3);
 	--post-horizontal-scroll-bar-hover-fg: var(--Green);
 
 	--header-height: 50px;
 	--header-nav-width: 1140px;
 	--header-theme-toggle-icon-size: 25px;
 	--post-border-radius : 10px;
-	--transition-time : 0.5s;
+	--transition-time : 0.3s;
 }
 
 

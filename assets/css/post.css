@@ -133,15 +133,14 @@ a.anchor:hover {
 /*****     列表     *****/
 ul:not(.toc ul) {
 	margin-left   : 17px;
-	margin-bottom : 10px;
+	margin-bottom : 15px;
 }
 li:not(.toc li) {
-	margin-top: 10px;
+	margin-top: 15px;
 }
 ol:not(.toc ol) {
 	margin-left   : 25px;
-	margin-bottom : 10px;
-	line-height   : 2.4;
+	margin-bottom : 15px;
 }
 dd {
 	padding-inline-start: 10%;
@@ -225,7 +224,7 @@ table strong {
     border-radius: 10px;
 }
 .table-container::-webkit-scrollbar-thumb {
-	background: var(--post-border-fg);
+	background: var(--post-horizontal-scroll-bar-fg);
     border-radius: 10px;
     border: 5px solid var(--bg);
 }
@@ -245,7 +244,7 @@ code:not(.highlight code):not(blockquote code) {
 	color: var(--post-code-fg);
 	background-color: var(--post-code-bg);
 	border: 1px solid var(--post-code-border-fg);
-	transition: all var(--transition-time) ease;
+	transition: background-color var(--transition-time) ease, border-color var(--transition-time) ease;
 }
 code:not(table code){
 	word-break: break-all;
@@ -265,14 +264,13 @@ pre {
     border-radius: var(--post-border-radius);
     overflow-x: auto;
     word-break: break-all;
-	transition: all var(--transition-time) ease;
 }
 pre code {
 	font-family: 'Maple Mono CN', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
 	font-size: 15px;
 }
 pre::-webkit-scrollbar {
-	height: 15px;
+	height: 5px;
 }
 pre::-webkit-scrollbar-track {
 	margin: 0px 5px;
@@ -281,7 +279,6 @@ pre::-webkit-scrollbar-track {
 pre::-webkit-scrollbar-thumb {
 	background: var(--post-horizontal-scroll-bar-fg);
     border-radius: var(--post-border-radius);
-	border: 5px solid #00000000;
 }
 pre::-webkit-scrollbar-thumb:hover {
 	background: var(--post-horizontal-scroll-bar-hover-fg);
@@ -318,7 +315,7 @@ img {
 /*****     提示 notice     *****/
 blockquote {
 	color: var(--post-quote-fg);
-	border-left: 5px solid var(--post-quote-border-fg);
+	border-left: 4px solid var(--post-quote-border-fg);
     border-radius: var(--post-border-radius);
 	margin: 10px 0;
 	padding: 10px 10px 10px 15px;

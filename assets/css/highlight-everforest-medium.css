@@ -27,6 +27,7 @@
 }
 pre {
 	border: 1px solid var(--post-pre-border-fg);
+	transition: background-color var(--transition-time) ease,  border-color var(--transition-time) ease;
 }
 /* Background                 */    .bg              { background-color: var(--Background-0);                                                                                    }
 /* PreWrapper                 */    .chroma          { background-color: var(--Background-0); color: var(--Foreground);                                                          }

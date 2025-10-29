@@ -8,7 +8,7 @@ footer {
 	padding: 40px 0 30px 0;
 	font-size: 14px;
 	background: var(--footer-bg);
-	transition: all 0.5s ease;
+	transition: all var(--transition-time) ease;
 	color: var(--footer-fg);
 	user-select: none;
 }
@@ -25,10 +25,13 @@ footer a:hover {
 	right: 50px;
 	width: 50px;
 	height: 50px;
+	border-radius: 100%;
+	border: 1px solid var(--footer-gotop-border-fg);
 	cursor: pointer;
 	opacity: 0;
 	visibility: hidden;
-	color: var(--footer-gotop-bg);
+	color: var(--footer-gotop-fg);
+	background-color: var(--footer-gotop-bg);
 	z-index: 1000;
 	transition: all 0.3s ease;
 	user-select: none;
@@ -44,7 +47,7 @@ footer a:hover {
 /* 屏幕宽度 > 900 */
 @media (min-width: 900px) {
 	#back-to-top:hover  {
-		color: var(--footer-gotop-hover-bg);
+		color: var(--footer-gotop-hover-fg);
 	}
 }
 
