@@ -348,7 +348,41 @@ hr {
 
 
 
-/* 鼠标选中的文字 */
+/*****     checkbox     *****/
+li:has(input) {
+	list-style: none;
+	list-style-type: none;
+}
+input[type='checkbox']{
+	-webkit-appearance:none;
+	position: relative;
+	top: 3px;
+	width: 20px;
+	height: 20px;
+	background-color: var(--Background-3);
+	border-radius: 5px;
+	outline: none;
+	transition: background-color var(--transition-time) ease;
+}
+li input[type='checkbox']{
+	left: -5px;
+	top: 4px;
+	padding-right: 10px;
+}
+input[type='checkbox']:checked{
+	border: none;
+	background: url("/checked.svg") no-repeat center;
+	background-size: contain;
+}
+ul:not(.toc ul):has(input) {
+	margin-left: 5px;
+}
+
+
+
+
+
+/*****      鼠标选中的文字     *****/
 ::selection {
 	color: var(--bg);
 	background: var(--post-selection-bg);

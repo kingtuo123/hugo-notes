@@ -58,10 +58,11 @@
 	--footer-fg                   : var(--Gray-0          );
 	--footer-bg                   : var(--Background-0    );
 	--footer-link-hover-fg        : var(--Green           );
-	--footer-gotop-fg             : var(--Background-1    );
-	--footer-gotop-bg             : var(--Background-5    );
+	--footer-gotop-fg             : light-dark(#272E3333, #E9F0E933);
+	--footer-gotop-bg             : light-dark(#E6E2CC7F, #4752587F);
 	--footer-gotop-hover-fg       : var(--Green           );
-	--footer-gotop-border-fg      : var(--Background-3    );
+	--footer-gotop-hover-bg       : light-dark(#8DA10133, #A7C08033);
+	--footer-gotop-border-fg      : light-dark(#272E3310, #475258);
 
 	--post-pre-border-fg          : light-dark(#E5DFC5, #434F55);
 	--post-pre-term-border-fg     : light-dark(#333C43, #434F55);
@@ -78,6 +79,7 @@
 
 
 
+
 html, body {
 	font-family    : "LXGW WenKai", "PingFang SC", "Microsoft YaHei";
 	font-weight    : normal;
@@ -89,4 +91,23 @@ html, body {
     flex-direction : column;
 	min-height     : 100vh;
 	width          : 100%;
+}
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: light-dark(#A6B0A0, #434F55);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--Green);
 }
