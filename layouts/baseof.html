@@ -8,7 +8,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ site.Title }}</title>
+	<title>{{ if not .IsHome }} {{ if .Title }}{{- .Title }} | {{ end }}{{ end }}{{ site.Title -}}</title>
 	{{ $Reset  := resources.Get "css/reset.css"  }}
 	{{ $Core   := resources.Get "css/core.css"   }}
 	{{ $Header := resources.Get "css/header.css" }}
