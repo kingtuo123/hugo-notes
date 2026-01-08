@@ -197,11 +197,14 @@ th {
 	color: var(--post-table-th-fg);
 }
 th, td {
-	line-height   : 2.6;
     border        : none;
     border-bottom : 1px solid var(--post-border-fg);
-	padding-right : 20px;
+	padding       : 9px 10px 9px 0px;
 	transition    : border-color var(--transition-time) ease;
+}
+th:last-child,
+td:last-child {
+	padding-right: 0px;
 }
 table{
 	width: 100%;
@@ -210,11 +213,6 @@ table{
 }
 table strong {
 	color: var(--post-table-th-fg);
-}
-.table-container {
-	width: 100%;
-	white-space: nowrap;
-	overflow-x: auto;
 }
 
 
