@@ -271,11 +271,8 @@ strong:not(table strong){
 img {
     border-radius: var(--post-border-radius);
 	margin: 10px 0;
+	user-select : none;
 }
-.dark img {
-	filter: brightness(70%);
-	transition: filter var(--transition-time) ease;
-} 
 
 
 
