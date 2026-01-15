@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="post-content">
 	<div class="post-title">
-		<h1>{{ .Title }}</h1>
+		<h1>{{ if page.Params.draft }}[草稿] {{ end }}{{ .Title }}</h1>
 		{{ $date := .Date | time.Format "2006-01-02" }}
 		{{ $dateHuman := .Date | time.Format "2006 年 1 月 2 日" }}
 		<time datetime="{{ $date }}">{{ $dateHuman }}</time>
