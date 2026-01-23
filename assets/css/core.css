@@ -112,3 +112,7 @@ html, body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--Green);
 }
+::-webkit-scrollbar-corner {
+  background: transparent;
+  display: none;
+}
