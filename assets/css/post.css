@@ -273,6 +273,10 @@ img {
     border-radius: var(--post-border-radius);
 	margin: 10px 0;
 	user-select : none;
+	-webkit-user-drag: none;
+	-moz-user-drag: none;
+	user-drag: none;
+	pointer-events: none;
 }
 
 
