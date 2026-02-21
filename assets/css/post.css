@@ -221,7 +221,7 @@ table strong {
 
 
 /*****     `code`     *****/
-code:not(.highlight code):not(blockquote code) {
+code:not(.highlight code):not(blockquote code):not(em code):not(strong code) {
 	font-family: 'LXGW WenKai Mono', 'monospace';
 	padding: 1px 5px;
 	border-radius: 5px;
@@ -233,6 +233,19 @@ code:not(.highlight code):not(blockquote code) {
 code:not(table code){
 	word-break: break-all;
 }
+em code {
+	font-family: 'LXGW WenKai Mono', 'monospace';
+	font-style: normal;
+	margin: 0px 2px;
+	background-color: transparent;
+}
+strong code {
+	font-family: 'LXGW WenKai Mono Medium', 'monospace';
+	color: var(--post-strong-fg);
+	font-style: normal;
+	background-color: transparent;
+}
+
 
 
 
