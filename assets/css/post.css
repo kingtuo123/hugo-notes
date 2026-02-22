@@ -235,6 +235,7 @@ code:not(table code){
 }
 em code {
 	font-family: 'LXGW WenKai Mono', 'monospace';
+	color: var(--post-em-code-fg);
 	font-style: normal;
 	margin: 0px 2px;
 	background-color: transparent;

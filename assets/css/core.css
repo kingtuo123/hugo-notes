@@ -43,6 +43,7 @@
 	--post-h3-fg                  : var(--Green           );
 	--post-h4-fg                  : var(--Orange          );
 	--post-table-th-fg            : var(--Aqua            );
+    --post-em-code-fg             : light-dark(#829181, #A6B0A0);
 	--post-code-fg                : var(--Gray-2          );
 	--post-code-bg                : var(--Background-1    );
 	--post-code-border-fg         : var(--Background-3    );
