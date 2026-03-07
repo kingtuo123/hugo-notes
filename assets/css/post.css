@@ -23,10 +23,11 @@ time {
 
 /*****     目录条     *****/
 .toc {
-	border           : 1px solid var(--post-toc-border-fg);
+	border           : 0px solid var(--post-toc-border-fg);
 	border-radius    : var(--post-border-radius);
 	margin-bottom    : 30px;
 	background-color : var(--post-toc-bg);
+    box-shadow       : var(--shadow);
 	transition       : all var(--transition-time) ease;
 }
 
@@ -203,6 +204,9 @@ th, td {
 	padding       : 9px 10px 9px 0px;
 	transition    : border-color var(--transition-time) ease;
 }
+td:first-child > code {
+    margin-left: 2px;
+}
 th:last-child,
 td:last-child {
 	padding-right: 0px;
@@ -223,11 +227,12 @@ table strong {
 /*****     `code`     *****/
 code:not(.highlight code):not(blockquote code):not(em code):not(strong code) {
 	font-family: 'LXGW WenKai Mono', 'monospace';
-	padding: 1px 5px;
+	padding: 2px 5px;
 	border-radius: 5px;
 	color: var(--post-code-fg);
 	background-color: var(--post-code-bg);
-	border: 1px solid var(--post-code-border-fg);
+	border: 0px solid var(--post-code-border-fg);
+    box-shadow : var(--shadow);
 	transition: background-color var(--transition-time) ease, border-color var(--transition-time) ease;
 }
 code:not(table code){
@@ -255,17 +260,24 @@ strong code {
 /*****     语法高亮的代码     *****/
 .highlight {
 	margin: 10px 0;
+    border-radius: var(--post-border-radius);
+    box-shadow : var(--shadow);
+    background-color: var(--Background-0);
+	transition: background-color var(--transition-time) ease;
 }
 pre {
-	line-height: 1.4;
-    padding: 10px;
-    border-radius: var(--post-border-radius);
+	line-height: 1.65;
+    padding: 8px 0;
     overflow-x: auto;
     word-break: break-all;
 }
 pre code {
 	font-family: 'Maple Mono CN', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
 	font-size: 15px;
+    display: grid;
+    .line {
+        padding: 0px 13px;
+    }
 }
 
 
@@ -306,6 +318,7 @@ blockquote {
 	padding: 10px 10px 10px 15px;
 	background-color: var(--post-quote-bg);
 	transition: all var(--transition-time) ease;
+    box-shadow : var(--shadow);
 }
 blockquote p {
 	margin: 0;

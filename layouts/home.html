@@ -1,5 +1,38 @@
 {{ define "main" }}
-<input type="text" id="search-input" placeholder="搜点什么">
+<div class="profile">
+    <div class="avatar-container">
+        <img class="avatar" src="android-chrome-512x512.png"></img>
+    </div>
+
+    <span>{{ site.Params.headerTitle }}</span>
+
+    <div class="typewriter">
+        <span id="text">|</span>
+    </div>
+
+    <div id="theme-toggle" accesskey="t">
+        <div class="toggle-wrapper">
+            <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+        </div>
+    </div>
+
+</div>
+
+<div class="dash-line"> <span class="dash-title">文章</span></div>
+
 <div class="post-list">
 	{{ range site.RegularPages }}
 	<a class="list-item" draggable="false" href="{{ .RelPermalink }}">
@@ -9,51 +42,23 @@
 	{{ end }}
 </div>
 
-
-
-
+<div class="dash-line"> </div>
 
 <script>
-	const listItems   = document.querySelectorAll('a.list-item');
-	const titlesArray = [];
-	const titleElements = document.querySelectorAll('a.list-item span.title');
-	// 将获取的所有标题存入数组
-	titleElements.forEach(function(element) {
-		titlesArray.push( element.textContent.replaceAll(' ', '').replaceAll('-', '').toLowerCase() );
-	});
-
-	// 通过判断标题是否包含输入的字符串，实现简单的搜索
-	const searchInput = document.getElementById('search-input');
-    searchInput.addEventListener('input', searchResult);
-    function searchResult() {
-		const inputValue = searchInput.value.replaceAll(' ', '').replaceAll('-', '').toLowerCase();
-		titlesArray.forEach((title, i, array) => {
-			if (title.includes(inputValue)){
-				listItems[i].style.display = "flex";
-			}else{
-				listItems[i].style.display = "none";
-			}
-		});
-	}
-
-	// 按下 ESC 键清除输入
-	searchInput.addEventListener('keydown', function(e) {
-		if (e.keyCode === 27) { // 检查是否按下ESC键 (keyCode 27)
-			this.value = '';    // 清除输入框的值
-			this.blur();        // 移除输入框的焦点
-			searchResult();
-		}
-	});
-
-	// 失去焦点 500ms 后清除输入，只对鼠标点击后清除输入
-	searchInput.addEventListener('blur', function() {
-		if ('ontouchstart' in window) { // 排除触摸屏操作的设备
-			return 0;
-		}
-		setTimeout(() => {
-			this.value = '';
-			searchResult();
-		}, 500);
-	});
+    (function simpleTypewriter() {
+        const sentence = "夜夜夜夜夜夜夜夜夜不能寐吗？";
+        const output = document.getElementById('text');
+        let index = 0;
+        output.textContent = '|';
+        function typeNext() {
+            if (index < sentence.length) {
+                output.textContent = sentence.substring(0, index + 1);
+                index++;
+            } else {
+                clearInterval(intervalId);
+            }
+        }
+        const intervalId = setInterval(typeNext, 150);
+    })();
 </script>
 {{ end }}

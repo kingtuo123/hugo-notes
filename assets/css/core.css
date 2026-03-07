@@ -27,7 +27,7 @@
 
 	--bg                          : var(--Background-0    );
 	--fg                          : var(--Foreground      );
-	--header-bg                   : light-dark(#F4F0D9, #272E33);
+	--header-bg                   : var(--bg              );
 	--header-fg                   : var(--Green           );
 	--home-list-title-fg          : var(--Foreground      );
 	--home-list-date-fg           : var(--Gray-0          );
@@ -75,6 +75,7 @@
 	--header-theme-toggle-icon-size: 25px;
 	--post-border-radius : 10px;
 	--transition-time : 0.3s;
+    --shadow: 0.5px 0.5px 3px -1px light-dark(#00000099, #000);
 }
 
 

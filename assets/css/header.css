@@ -2,7 +2,7 @@ header {
 	background-color: var(--header-bg);
 	user-select: none;
 	padding: 5px 10px;
-	border-bottom : 1px solid var(--post-border-fg);
+	border-bottom : 0px solid var(--post-border-fg);
 	transition: all var(--transition-time) ease;
 }
 

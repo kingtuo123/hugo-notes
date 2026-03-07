@@ -1,4 +1,54 @@
+.profile {
+    margin: 100px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.avatar-container {
+    background-color: var(--Background-2);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    box-shadow: var(--shadow);
+    transition: background-color var(--transition-time) ease;
+}
+.avatar {
+    user-select: none;
+	pointer-events: none;
+    align: center;
+}
+
+.dash-title {
+    line-height: 1.7;
+    color: var(--Gray-0);
+    transition: color var(--transition-time) ease;
+}
+
+.dash-line {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px dashed var(--Gray-0);
+    transition: border-color var(--transition-time) ease;
+    mask: linear-gradient( 90deg, transparent, black 20%, black 80%, transparent);
+}
+
+
+.typewriter{
+    #text {
+        line-height: 4;
+    }
+}
+
+
+
+
+
 main {
+    user-select: none;
 	flex: 1;
 	background-color: var(--bg);
 	transition: background-color var(--transition-time) ease;

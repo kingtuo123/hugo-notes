@@ -25,12 +25,8 @@
 .n, .cl {
 	transition: color var(--transition-time) ease;
 }
-pre {
-	border: 1px solid var(--post-pre-border-fg);
-	transition: background-color var(--transition-time) ease,  border-color var(--transition-time) ease;
-}
 /* Background                 */    .bg              { background-color: var(--Background-0);                                                                                    }
-/* PreWrapper                 */    .chroma          { background-color: var(--Background-0); color: var(--Foreground);                                                          }
+/* PreWrapper                 */    .chroma          { background-color: transparent; color: var(--Foreground);                                                                  }
 /* Other                      */    .chroma .x       { color: var(--Foreground);                                                                                                 }
 /* Error                      */    .chroma .err     { color: var(--Red);                                                                                                        }
 /* CodeLine                   */    .chroma .cl      { color: var(--Foreground);                                                                                                 }
@@ -143,11 +139,8 @@ pre {
 --Gray-0               : light-dark(#7A8478, #7A8478);
 --Gray-1               : light-dark(#859289, #859289);
 --Gray-2               : light-dark(#9DA9A0, #9DA9A0);
-pre {
-	border: 1px solid var(--post-pre-term-border-fg);
-}
 /* Background                 */    .bg              { background-color: var(--Background-0);                                                                                    }
-/* PreWrapper                 */    .chroma          { background-color: var(--Background-0); color: var(--Foreground);                                                          }
+/* PreWrapper                 */    .chroma          { background-color: transparent; color: var(--Foreground);                                                          }
 /* Other                      */    .chroma .x       { color: var(--Foreground);                                                                                                 }
 /* Error                      */    .chroma .err     { color: var(--Red);                                                                                                        }
 /* CodeLine                   */    .chroma .cl      { color: var(--Foreground);                                                                                                 }
