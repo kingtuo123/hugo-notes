@@ -30,6 +30,7 @@ time {
     justify-content: center;
     align-items: center;
     .home-icon-container {
+        border-radius: 50%;
         background-color: var(--icon-bg);
         color: var(--icon-fg);
         display: flex;

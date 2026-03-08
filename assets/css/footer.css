@@ -58,6 +58,8 @@ footer a:hover {
 /* 屏幕宽度 < 900 */
 @media (max-width: 900px) {
 	#back-to-top {
+        border: 0.5px solid var(--footer-gotop-border-fg);
+        box-shadow: none;
 		bottom: 20px;
 		right: 20px;
 		width: 40px;
