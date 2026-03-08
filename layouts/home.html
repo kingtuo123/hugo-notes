@@ -1,7 +1,9 @@
 {{ define "main" }}
 <div class="profile">
     <div class="avatar-container">
-        <img class="avatar" src="avatar.svg"></img>
+        <div class="avatar">
+        {{- readFile "static/avatar.svg" | safeHTML -}}
+        </div>
     </div>
 
     <span class="profile-name" >{{- site.Params.profileName -}}</span>
@@ -31,7 +33,7 @@
 
 </div>
 
-<div class="dash-line"> <span class="dash-title">文章</span></div>
+<div class="dash-line"> <span class="dash-title">笔记</span></div>
 
 <div class="post-list">
 	{{ range site.RegularPages }}
