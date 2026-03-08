@@ -27,18 +27,13 @@
 
 	--bg                          : var(--Background-0    );
 	--fg                          : var(--Foreground      );
-	--header-bg                   : var(--bg              );
-	--header-fg                   : var(--Green           );
 	--home-list-title-fg          : var(--Foreground      );
-	--home-list-date-fg           : var(--Gray-0          );
+	--home-list-date-fg           : var(--Gray-1          );
 	--home-list-hover-fg          : var(--Green           );
-	--home-search-border-fg       : var(--Background-3    );
-	--home-search-border-focus-fg : var(--Green           );
-	--home-search-placeholder-fg  : var(--Background-3    );
 
-	--post-toc-bg                 : light-dark(#F4F0D9, #272E33);
-	--post-toc-border-fg          : var(--Background-2    );
-	--post-toc-link-hover-fg      : var(--Blue            );
+	--post-toc-bg                 : transparent;
+	--post-toc-border-fg          : var(--Background-3    );
+	--post-toc-link-hover-fg      : var(--Green           );
 	--post-h2-fg                  : var(--Blue            );
 	--post-h3-fg                  : var(--Green           );
 	--post-h4-fg                  : var(--Orange          );
@@ -56,12 +51,12 @@
 	--post-border-fg              : var(--Background-2    );
 	--post-selection-bg           : var(--Green           );
 
-	--footer-fg                   : var(--Gray-0          );
+	--footer-fg                   : var(--Gray-1          );
 	--footer-bg                   : var(--Background-0    );
 	--footer-link-hover-fg        : var(--Green           );
 	--footer-gotop-fg             : light-dark(#272E3333, #E9F0E933);
 	--footer-gotop-bg             : light-dark(#E6E2CC7F, #4752587F);
-	--footer-gotop-hover-fg       : var(--Green           );
+	--footer-gotop-hover-fg       : light-dark(#DBBC7F, #A7C080);
 	--footer-gotop-hover-bg       : light-dark(#8DA10133, #A7C08033);
 	--footer-gotop-border-fg      : light-dark(#272E3310, #475258);
 
@@ -70,12 +65,13 @@
 	--post-horizontal-scroll-bar-fg: var(--Background-3);
 	--post-horizontal-scroll-bar-hover-fg: var(--Green);
 
-	--header-height: 50px;
-	--header-nav-width: 1140px;
-	--header-theme-toggle-icon-size: 25px;
+	--icon-bg                   : var(--bg              );
+	--icon-fg                   : light-dark(#DBBC7F, #A7C080);
+    --icon-container-size: 50px;
+	--icon-size: 25px;
 	--post-border-radius : 10px;
 	--transition-time : 0.3s;
-    --shadow: 0.5px 0.5px 3px -1px light-dark(#00000099, #000);
+    --shadow: 0.5px 0.5px 3px -1px light-dark(#000000AA, #000);
 }
 
 

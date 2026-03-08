@@ -1,5 +1,5 @@
 .post-content {
-max-width : var(--header-nav-width);
+max-width : 1140px;
 width     : 100%;
 margin    : 0 auto;
 height    : 100%;
@@ -11,10 +11,43 @@ padding   : 30px 0;
 
 /*****     文章标题     *****/
 .post-title {
-	margin-bottom: 30px;
+    margin: 80px 0 0px 0;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 time {
+    color: var(--Gray-2);
+    font-size: 16px;
+    margin: 20px 0;
 	transition: color var(--transition-time) ease;
+}
+.icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .home-icon-container {
+        background-color: var(--icon-bg);
+        color: var(--icon-fg);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: var(--icon-container-size);
+        height: var(--icon-container-size);
+        transition: all var(--transition-time) ease;
+        #home {
+            width: 27px;
+            height: 27px;
+        }
+    }
+}
+.dash-line {
+    min-width: 100%;
+    margin-bottom: 50px;
 }
 
 
@@ -23,11 +56,12 @@ time {
 
 /*****     目录条     *****/
 .toc {
-	border           : 0px solid var(--post-toc-border-fg);
+    color: var(--Gray-2);
+	border           : 1px solid var(--post-toc-border-fg);
 	border-radius    : var(--post-border-radius);
+    margin-top       : 50px;
 	margin-bottom    : 30px;
 	background-color : var(--post-toc-bg);
-    box-shadow       : var(--shadow);
 	transition       : all var(--transition-time) ease;
 }
 
@@ -111,13 +145,13 @@ p {
 
 
 /*****     链接     *****/
-a:not(.anchor):not(.toc a) {
+a:not(.anchor):not(.toc a):not(.icons-container a) {
 	color         : var(--post-link-fg);
 	padding       : 2px 5px;
 	border-radius : 5px;
 	transition    : color var(--transition-time) ease;
 }
-a:not(.anchor):not(.toc a):not(blockquote a):hover {
+a:not(.anchor):not(.toc a):not(blockquote a):not(.icons-container a):hover {
 	background-color: var(--post-link-hover-bg);
 }
 a.anchor {

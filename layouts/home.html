@@ -1,10 +1,10 @@
 {{ define "main" }}
 <div class="profile">
     <div class="avatar-container">
-        <img class="avatar" src="android-chrome-512x512.png"></img>
+        <img class="avatar" src="avatar.svg"></img>
     </div>
 
-    <span>{{ site.Params.headerTitle }}</span>
+    <span class="profile-name" >{{- site.Params.profileName -}}</span>
 
     <div class="typewriter">
         <span id="text">|</span>
@@ -43,22 +43,4 @@
 </div>
 
 <div class="dash-line"> </div>
-
-<script>
-    (function simpleTypewriter() {
-        const sentence = "夜夜夜夜夜夜夜夜夜不能寐吗？";
-        const output = document.getElementById('text');
-        let index = 0;
-        output.textContent = '|';
-        function typeNext() {
-            if (index < sentence.length) {
-                output.textContent = sentence.substring(0, index + 1);
-                index++;
-            } else {
-                clearInterval(intervalId);
-            }
-        }
-        const intervalId = setInterval(typeNext, 150);
-    })();
-</script>
 {{ end }}

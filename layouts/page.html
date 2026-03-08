@@ -1,11 +1,42 @@
 {{ define "main" }}
+{{ $date := .Date | time.Format "2006-01-02" }}
+{{ $dateHuman := .Date | time.Format "2006 年 1 月 2 日" }}
 <div class="post-content">
 	<div class="post-title">
 		<h1>{{ if page.Params.draft }}[草稿] {{ end }}{{ .Title }}</h1>
-		{{ $date := .Date | time.Format "2006-01-02" }}
-		{{ $dateHuman := .Date | time.Format "2006 年 1 月 2 日" }}
+
 		<time datetime="{{ $date }}">{{ $dateHuman }}</time>
+
+        <div class="icons-container">
+            <a class="home-icon-container" href="/">
+                <svg id="home" width="30" height="30" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="29928" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M548.1984 117.4016a51.2 51.2 0 0 0-72.3968 0l-358.4 358.4a51.2 51.2 0 0 0 72.3968 72.3968L204.8 533.1968V870.4a51.2 51.2 0 0 0 51.2 51.2h102.4a51.2 51.2 0 0 0 51.2-51.2v-102.4a51.2 51.2 0 0 1 51.2-51.2h102.4a51.2 51.2 0 0 1 51.2 51.2v102.4a51.2 51.2 0 0 0 51.2 51.2h102.4a51.2 51.2 0 0 0 51.2-51.2v-337.2032l15.0016 15.0016a51.2 51.2 0 0 0 72.3968-72.3968l-358.4-358.4z" fill="currentColor" p-id="29929"></path>
+                </svg>
+            </a>
+
+
+            <div id="theme-toggle" accesskey="t">
+                <div class="toggle-wrapper">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </div>
+            </div>
+        </div>
 	</div>
+
+<div class="dash-line"> </div>
+
 
 	{{ if .Params.toc }}
 	<aside class="toc">
