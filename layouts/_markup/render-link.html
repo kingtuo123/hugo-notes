@@ -1,5 +1,5 @@
 <!-- layouts/_default/_markup/render-link.html -->
-<a href="{{ .Destination | safeURL }}" {{ with .Title }}
+<a class="link" href="{{ .Destination | safeURL }}" {{ with .Title }}
     title="{{ . }}" {{ end }}
     {{ if not (hasPrefix .Destination "#") }}target="_blank"{{ end }}
     rel="noopener noreferrer"

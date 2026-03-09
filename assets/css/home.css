@@ -1,36 +1,88 @@
-.profile {
+.home-container .profile {
     margin: 100px 0 50px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.avatar-container {
-    background-color: var(--Background-2);
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    padding: 8px;
-    box-shadow: var(--shadow);
-    transition: background-color var(--transition-time) ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.avatar {
-    zoom: 0.0656;
-    user-select: none;
-	pointer-events: none;
+    .avatar-container {
+        background-color: var(--Background-2);
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        padding: 8px;
+        box-shadow: var(--shadow);
+        transition: background-color var(--transition-time) ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .avatar {
+            zoom: 0.0656;
+            user-select: none;
+            pointer-events: none;
+        }
+    }
+    .profile-name {
+        margin: 5px 0;
+        user-select: none;
+        transition: color var(--transition-time) ease;
+    }
+    .typewriter{
+        margin: 20px 0;
+        #text {
+            color: var(--Gray-2);
+            user-select: none;
+            transition: color var(--transition-time) ease;
+        }
+    }
 }
 
-.profile-name {
-    margin: 5px 0;
-    user-select: none;
-    transition: color var(--transition-time) ease;
+
+
+
+
+#theme-toggle {
+    background-color: var(--icon-bg);
+    color: var(--icon-fg);
+    width: var(--icon-container-size);
+    height: var(--icon-container-size);
+    cursor: pointer;
+    border-radius: 100%;
+    overflow: hidden;
+    transition: all var(--transition-time) ease;
+    .toggle-wrapper {
+        position: relative;
+        width: var(--icon-size);
+        height: var(--icon-size);
+        margin: calc( (var(--icon-container-size) - var(--icon-size)) / 2 ) ;
+        #moon {
+            position: absolute;
+            top: -200%;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            transition: transform var(--transition-time) ease;
+        }
+        #sun {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            transition: transform var(--transition-time) ease;
+        }
+    }
+}
+.dark {
+    #moon, #sun {
+        transform: translateY(200%)
+    }
 }
 
 
-.dash-line {
+
+
+
+.home-container .dash-line {
     display: flex;
     justify-content: center;
     max-width: 800px;
@@ -47,147 +99,65 @@
 }
 
 
-.typewriter{
-    margin: 20px 0;
-    #text {
-        color: var(--Gray-2);
-        user-select: none;
-        transition: color var(--transition-time) ease;
-    }
-}
 
 
 
-
-
-/* 图标最外层的框架 */
-#theme-toggle {
-	background-color: var(--icon-bg);
-	color: var(--icon-fg);
-	width: var(--icon-container-size);
-	height: var(--icon-container-size);
-	cursor: pointer;
-	border-radius: 100%;
-	overflow: hidden;
-	transition: all var(--transition-time) ease;
-}
-
-/* 用于图标的 position:absolute 定位 */
-#theme-toggle .toggle-wrapper {
-	position: relative;
-	width: var(--icon-size);
-	height: var(--icon-size);
-	margin: calc( (var(--icon-container-size) - var(--icon-size)) / 2 ) ;
-}
-
-
-/* 月亮图标 */
-#moon {
-	position: absolute;
-	top: -200%;                   /* 初始位置为自身高度 -200% */
-	left: 0px;
-	width: 100%;
-	height: 100%;
-	transition: transform var(--transition-time) ease;
-}
-
-
-/* 太阳图标 */
-#sun {
-	position: absolute;
-	top: 0px;                     /* 初始位置为 0 */
-	left: 0px;
-	width: 100%;
-	height: 100%;
-	transition: transform var(--transition-time) ease;
-}
-
-.dark #moon, .dark #sun {
-	transform: translateY(200%);  /* 切换为暗色主题，图标从上往下移动自身高度 200% 的距离*/
-}
-
-
-
-
-
-main {
-	flex: 1;
-	background-color: var(--bg);
-	transition: background-color var(--transition-time) ease;
-	height: 100%;
-	padding: 0 10px;
-}
-
-
-main .post-list {
-	display: flex;
-	max-width: 500px;
+.home-container .post-list {
+    display: flex;
+    max-width: 500px;
     flex-direction: column;
-	gap: 0;
-	margin: 0px auto;
-	border-radius: 10px;
-	padding: 10px 0px;
-}
-
-
-main .list-item {
-	display: flex;
-	justify-content: space-between;
-    align-items: center;
-	padding: 10px 0px;
-	border-radius: 25px;
-	user-select: none;
-}
-
-
-main .list-item:hover > .title {
-	color: var(--home-list-hover-fg);
-}
-
-
-main .list-item:hover > .date {
-	color: var(--home-list-hover-fg);
-}
-
-
-@media screen and (min-width: 900px) {
-	main .list-item:hover > span.title::before {
-		opacity: 1;
-	}
-}
-
-
-main .title {
-	color: var(--home-list-title-fg);
-	transition: color var(--transition-time) ease;
-	max-width: 75%;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: inline-block;
-	margin-left: -16px;
-	-webkit-user-drag: none;
-}
-
-
-main .title::before {
-    content: "";
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-	margin-bottom: 2px;
-    background-color: var(--home-list-hover-fg);
-    border-radius: 50%;
-    margin-right: 8px;
-	opacity: 0;
-}
-
-
-main .date  {
-	color: var(--home-list-date-fg);
-	white-space: nowrap;
-	font-size: 15px;
-	font-weight: 400;
-	display: inline-block;
-	transition: color var(--transition-time) ease;
+    gap: 0;
+    margin: 0px auto;
+    border-radius: 10px;
+    padding: 10px 0px;
+    .list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0px;
+        border-radius: 10px;
+        user-select: none;
+        &:hover > .title,
+        &:hover > .date {
+            color: var(--home-list-hover-fg);
+        }
+        @media screen and (min-width: 900px) {
+            &:hover > .title::before {
+                opacity: 1;
+            }
+        }
+        @media screen and (max-width: 900px) {
+            padding: 10px;
+        }
+        .title {
+            color: var(--home-list-title-fg);
+            transition: color var(--transition-time) ease;
+            max-width: 75%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            margin-left: -16px;
+            -webkit-user-drag: none;
+        }
+        .title::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-bottom: 2px;
+            background-color: var(--home-list-hover-fg);
+            border-radius: 50%;
+            margin-right: 8px;
+            opacity: 0;
+        }
+        .date  {
+            color: var(--home-list-date-fg);
+            white-space: nowrap;
+            font-size: 15px;
+            font-weight: 400;
+            display: inline-block;
+            transition: color var(--transition-time) ease;
+        }
+    }
 }

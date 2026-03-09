@@ -94,6 +94,16 @@ html, body {
 
 
 
+main {
+    flex: 1;
+    background-color: var(--bg);
+    transition: background-color var(--transition-time) ease;
+    height: 100%;
+    padding: 0 10px;
+}
+
+
+
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -113,4 +123,9 @@ html, body {
 ::-webkit-scrollbar-corner {
   background: transparent;
   display: none;
+}
+/*****      鼠标选中的文字     *****/
+::selection {
+    color: var(--bg);
+    background: var(--post-selection-bg);
 }

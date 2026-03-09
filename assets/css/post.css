@@ -1,134 +1,138 @@
-.post-content {
-max-width : 1140px;
-width     : 100%;
-margin    : 0 auto;
-height    : 100%;
-padding   : 30px 0;
+.post-container {
+    max-width : 1140px;
+    width     : 100%;
+    margin    : 0 auto;
+    height    : 100%;
+    padding   : 30px 0 0 0;
+}
 
 
 
 
 
 /*****     文章标题     *****/
-.post-title {
+.post-container .post-title {
     margin: 80px 0 0px 0;
     padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-time {
-    color: var(--Gray-2);
-    font-size: 16px;
-    margin: 20px 0;
-	transition: color var(--transition-time) ease;
-}
-.icons-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    .home-icon-container {
-        border-radius: 50%;
-        background-color: var(--icon-bg);
-        color: var(--icon-fg);
+    h1 {
+        font-size     : 1.7rem;
+        margin-bottom : 5px;
+        transition: color var(--transition-time) ease;
+    }
+    time {
+        color: var(--Gray-2);
+        font-size: 16px;
+        margin: 20px 0;
+        transition: color var(--transition-time) ease;
+    }
+    .icons-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        width: var(--icon-container-size);
-        height: var(--icon-container-size);
-        transition: all var(--transition-time) ease;
-        #home {
-            width: 27px;
-            height: 27px;
+        .home-icon-container {
+            border-radius: 50%;
+            background-color: var(--icon-bg);
+            color: var(--icon-fg);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: var(--icon-container-size);
+            height: var(--icon-container-size);
+            transition: all var(--transition-time) ease;
+            #home {
+                width: 27px;
+                height: 27px;
+            }
         }
     }
 }
-.dash-line {
+
+
+
+
+
+/*****     虚线     *****/
+.post-container .dash-line {
+    display: flex;
+    justify-content: center;
     min-width: 100%;
     margin-bottom: 50px;
+    border-bottom: 1px dashed var(--Gray-0);
+    transition: border-color var(--transition-time) ease;
+    mask: linear-gradient( 90deg, transparent, black 20%, black 80%, transparent);
 }
 
 
 
 
 
-/*****     目录条     *****/
-.toc {
+/*****     目录     *****/
+.post-container .toc {
     color: var(--Gray-2);
-	border           : 1px solid var(--post-toc-border-fg);
-	border-radius    : var(--post-border-radius);
+    border           : 1px solid var(--post-toc-border-fg);
+    border-radius    : var(--post-border-radius);
     margin-top       : 50px;
-	margin-bottom    : 30px;
-	background-color : var(--post-toc-bg);
-	transition       : all var(--transition-time) ease;
-}
-
-
-
-
-
-/*****     目录展开     *****/
-#toc-toggle {
-	padding     : 10px;
-	font-weight : Bold;
-	line-height : 30px;
-	display     : flex;
-	align-items : center;
-	cursor      : zoom-in;
-	user-select : none;
-}
-#toc-toggle .toc-title {
-	padding-left : 5px;
-}
-#toc-toggle.open {
-	cursor : zoom-out;
-}
-#toc-toggle .toc-icon {
-	height     : 22px;
-	transition : transform 0.2s ease;
-}
-#toc-toggle.open .toc-icon {
-	transform  : rotate(90deg);
-}
-
-
-
-
-
-/*****     目录列表     *****/
-#TableOfContents {
-	line-height    : 1.8;
-	padding-bottom : 15px;
-	display        : none;
-}
-#toc-toggle.open ~ #TableOfContents {
-	display: block;
-}
-#TableOfContents ul {
-	margin-left: 35px;
-}
-#TableOfContents a {
-	padding           : 2px 5px;
-	border-radius     : 5px;
-	-webkit-user-drag : none;
-	user-select       : none;
-}
-#TableOfContents a:hover {
-	color: var(--post-toc-link-hover-fg);
-}
-#TableOfContents ul  li  ul {
-	margin-left: 26px;
-}
-@media (max-width: 900px) {
-	#TableOfContents ul {
-		margin-left: 37px;
-	}
-	#TableOfContents ul  li  ul {
-		margin-left: 28px;
-	}
+    margin-bottom    : 30px;
+    background-color : var(--post-toc-bg);
+    transition       : all var(--transition-time) ease;
+    #toc-toggle {
+        padding     : 10px;
+        line-height : 30px;
+        display     : flex;
+        align-items : center;
+        cursor      : zoom-in;
+        user-select : none;
+        .toc-icon {
+            height     : 22px;
+            transition : transform 0.2s ease;
+        }
+        .toc-title {
+            padding-left : 5px;
+        }
+        &.open {
+            cursor : zoom-out;
+        }
+        &.open .toc-icon {
+            transform  : rotate(90deg);
+        }
+        &.open ~ #TableOfContents {
+            display: block;
+        }
+    }
+    #TableOfContents {
+        line-height    : 1.8;
+        padding-bottom : 15px;
+        display        : none;
+        ul {
+            margin-left: 35px;
+            li  ul {
+                margin-left: 26px;
+            }
+        }
+        @media (max-width: 900px) {
+            ul {
+                margin-left: 37px;
+                li  ul {
+                    margin-left: 28px;
+                }
+            }
+        }
+        a {
+            padding           : 2px 5px;
+            border-radius     : 5px;
+            -webkit-user-drag : none;
+            user-select       : none;
+            &:hover {
+                color: var(--post-toc-link-hover-fg);
+            }
+        }
+    }
 }
 
 
@@ -136,296 +140,284 @@ time {
 
 
 /*****     文章正文     *****/
-p {
-	margin     : 10px 0;
-	transition : color var(--transition-time) ease;
-}
-
-
-
-
-
-/*****     链接     *****/
-a:not(.anchor):not(.toc a):not(.icons-container a) {
-	color         : var(--post-link-fg);
-	padding       : 2px 5px;
-	border-radius : 5px;
-	transition    : color var(--transition-time) ease;
-}
-a:not(.anchor):not(.toc a):not(blockquote a):not(.icons-container a):hover {
-	background-color: var(--post-link-hover-bg);
-}
-a.anchor {
-	opacity: 0;
-}
-a.anchor:hover {
-	opacity: 1;
-}
-
-
-
-
-
-/*****     列表     *****/
-ul:not(.toc ul) {
-	margin-left   : 17px;
-	margin-bottom : 15px;
-	transition: color var(--transition-time) ease;
-}
-li:not(.toc li) {
-	margin-top: 15px;
-}
-ol:not(.toc ol) {
-	margin-left   : 25px;
-	margin-bottom : 15px;
-}
-dd {
-	padding-inline-start: 10%;
-}
-
-
-
-
-/*****     标题 h1-h6     *****/
-h1,h2,h3,h4,h5,h6 {
-	font-weight : normal;
-	transition  : color var(--transition-time) ease;
-}
-h1 {
-	font-size     : 1.7rem;
-	margin-bottom : 5px;
-}
-h2 {
-	font-size     : 1.5rem;
-	color         : var(--post-h2-fg);
-	margin-top    : 40px;
-	margin-bottom : 10px;
-}
-h3 {
-	font-size     : 1.3rem;
-	color         : var(--post-h3-fg);
-	margin-top    : 30px;
-	margin-bottom : 10px;
-}
-h2 + h3 {
-	margin-top    : 10px;
-}
-h4 {
-	font-size     : 1.1rem;
-	color         : var(--post-h4-fg);
-	margin-top    : 20px;
-	margin-bottom : 10px;
-}
-h3 + h4 {
-	margin-top    : 10px;
-}
-h5, h6 {
-	font-size     : 1rem;
-	margin-top    : 10px;
-	margin-bottom : 0px;
-}
-
-
-
-
-
-/*****     表格     *****/
-th {
-	color: var(--post-table-th-fg);
-}
-th, td {
-    border        : none;
-    border-bottom : 1px solid var(--post-border-fg);
-	padding       : 9px 10px 9px 0px;
-	transition    : border-color var(--transition-time) ease;
-}
-td:first-child > code {
-    margin-left: 2px;
-}
-th:last-child,
-td:last-child {
-	padding-right: 0px;
-}
-table{
-	width: 100%;
-	display: table;
-	transition: color var(--transition-time) ease;
-}
-table strong {
-	color: var(--post-table-th-fg);
-}
-
-
-
-
-
-/*****     `code`     *****/
-code:not(.highlight code):not(blockquote code):not(em code):not(strong code) {
-	font-family: 'LXGW WenKai Mono', 'monospace';
-	padding: 2px 5px;
-	border-radius: 5px;
-	color: var(--post-code-fg);
-	background-color: var(--post-code-bg);
-	border: 0px solid var(--post-code-border-fg);
-    box-shadow : var(--shadow);
-	transition: background-color var(--transition-time) ease, border-color var(--transition-time) ease;
-}
-code:not(table code){
-	word-break: break-all;
-}
-em code {
-	font-family: 'LXGW WenKai Mono', 'monospace';
-	color: var(--post-em-code-fg);
-	font-style: normal;
-	margin: 0px 2px;
-	background-color: transparent;
-}
-strong code {
-	font-family: 'LXGW WenKai Mono Medium', 'monospace';
-	color: var(--post-strong-fg);
-	font-style: normal;
-	background-color: transparent;
-}
-
-
-
-
-
-
-/*****     语法高亮的代码     *****/
-.highlight {
-	margin: 10px 0;
-    border-radius: var(--post-border-radius);
-    box-shadow : var(--shadow);
-    background-color: var(--Background-0);
-	transition: background-color var(--transition-time) ease;
-}
-pre {
-	line-height: 1.65;
-    padding: 8px 0;
-    overflow-x: auto;
-    word-break: break-all;
-}
-pre code {
-	font-family: 'Maple Mono CN', 'JetBrainsMono NF', 'Source Code Pro', 'Monaco', 'Consolas', 'monospace';
-	font-size: 15px;
-    display: grid;
-    .line {
-        padding: 0px 13px;
+.main-text {
+    p {
+        margin     : 10px 0;
+        transition : color var(--transition-time) ease;
     }
-}
 
 
 
 
 
-/*****     粗体字     *****/
-strong:not(table strong){
-	color: var(--post-strong-fg);
-	transition: color var(--transition-time) ease;
-}
+    /*****     链接     *****/
+    a.link {
+        color         : var(--post-link-fg);
+        padding       : 2px 5px;
+        border-radius : 5px;
+        transition    : color var(--transition-time) ease;
+    }
+    a.link:hover {
+        background-color: var(--post-link-hover-bg);
+    }
+    blockquote a.link:hover {
+        background-color: transparent;
+    }
+    :is(h1, h2, h3, h4, h5, h6) a.anchor {
+        opacity: 0;
+    }
+    :is(h1, h2, h3, h4, h5, h6) a.anchor:hover {
+        opacity: 1;
+    }
 
 
 
 
 
-/*****     图片     *****/
-img {
-    border-radius: var(--post-border-radius);
-	margin: 10px 0;
-	user-select : none;
-	-webkit-user-drag: none;
-	-moz-user-drag: none;
-	user-drag: none;
-	pointer-events: none;
-}
+    /*****     列表     *****/
+    ul:not(.toc ul) {
+        margin-left   : 17px;
+        margin-bottom : 15px;
+        transition: color var(--transition-time) ease;
+    }
+    li:not(.toc li) {
+        margin-top: 15px;
+    }
+    ol:not(.toc ol) {
+        margin-left   : 25px;
+        margin-bottom : 15px;
+    }
+    dd {
+        padding-inline-start: 10%;
+    }
 
 
 
 
 
-/*****     提示 notice     *****/
-blockquote {
-	color: var(--post-quote-fg);
-	border-left: 4px solid var(--post-quote-border-fg);
-    border-radius: var(--post-border-radius);
-	margin: 10px 0;
-	padding: 10px 10px 10px 15px;
-	background-color: var(--post-quote-bg);
-	transition: all var(--transition-time) ease;
-    box-shadow : var(--shadow);
-}
-blockquote p {
-	margin: 0;
-}
-blockquote code {
-	font-family: 'LXGW WenKai Mono', 'monospace';
-	color: var(--post-code-fg);
-	word-break: break-all;
-}
+    /*****     标题 h2-h6     *****/
+    h2,h3,h4,h5,h6 {
+        transition  : color var(--transition-time) ease;
+    }
+    h2 {
+        font-size     : 1.5rem;
+        color         : var(--post-h2-fg);
+        margin-top    : 40px;
+        margin-bottom : 10px;
+    }
+    h2 + h3 {
+        margin-top    : 10px;
+    }
+    h3 {
+        font-size     : 1.3rem;
+        color         : var(--post-h3-fg);
+        margin-top    : 30px;
+        margin-bottom : 10px;
+    }
+    h3 + h4 {
+        margin-top    : 10px;
+    }
+    h4 {
+        font-size     : 1.1rem;
+        color         : var(--post-h4-fg);
+        margin-top    : 20px;
+        margin-bottom : 10px;
+    }
+    h5, h6 {
+        font-size     : 1rem;
+        margin-top    : 10px;
+        margin-bottom : 0px;
+    }
 
 
 
 
 
-/*****     分割线     *****/
-hr {
-	border: 0px;
-	height: 1px;
-	margin: 10px 0;
-	background-color: var(--post-border-fg);
-	transition: background-color var(--transition-time) ease;
-}
+    /*****     表格     *****/
+    th {
+        color: var(--post-table-th-fg);
+    }
+    th, td {
+        border        : none;
+        border-bottom : 1px solid var(--post-border-fg);
+        padding       : 9px 10px 9px 0px;
+        transition    : border-color var(--transition-time) ease;
+    }
+    td:first-child > code {
+        margin-left: 2px;
+    }
+    th:last-child,
+    td:last-child {
+        padding-right: 0px;
+    }
+    table{
+        width: 100%;
+        display: table;
+        transition: color var(--transition-time) ease;
+    }
+    table strong {
+        color: var(--post-table-th-fg);
+    }
 
 
 
 
 
-/*****     checkbox     *****/
-li:has(input) {
-	list-style: none;
-	list-style-type: none;
-}
-input[type='checkbox']{
-	-webkit-appearance:none;
-	position: relative;
-	top: 3px;
-	width: 20px;
-	height: 20px;
-	background-color: var(--Background-3);
-	border-radius: 5px;
-	outline: none;
-	transition: background-color var(--transition-time) ease;
-}
-li input[type='checkbox']{
-	left: -5px;
-	top: 4px;
-	padding-right: 10px;
-}
-input[type='checkbox']:checked{
-	border: none;
-	background: url("/checked.svg") no-repeat center;
-	background-size: contain;
-}
-ul:not(.toc ul):has(input) {
-	margin-left: 5px;
-}
-
-
-
-
-
-/*****      鼠标选中的文字     *****/
-::selection {
-	color: var(--bg);
-	background: var(--post-selection-bg);
-}
+    /*****     `code`     *****/
+    code:not(.highlight code):not(blockquote code):not(em code):not(strong code) {
+        padding: 2px 5px;
+        border-radius: 5px;
+        color: var(--post-code-fg);
+        background-color: var(--post-code-bg);
+        border: 0px solid var(--post-code-border-fg);
+        box-shadow : var(--shadow);
+        transition: background-color var(--transition-time) ease, border-color var(--transition-time) ease;
+    }
+    code:not(table code){
+        word-break: break-all;
+    }
 
 
 
 
 
 
+    /*****     语法高亮的代码     *****/
+    .highlight {
+        margin: 10px 0;
+        border-radius: var(--post-border-radius);
+        box-shadow : var(--shadow);
+        background-color: var(--Background-0);
+        transition: background-color var(--transition-time) ease;
+    }
+    pre {
+        line-height: 1.65;
+        padding: 8px 0;
+        overflow-x: auto;
+        word-break: break-all;
+    }
+    pre code {
+        font-size: 15px;
+        display: grid;
+        .line {
+            padding: 0px 13px;
+        }
+    }
 
-/*****     结束     *****/
-}
+
+
+
+
+    /*****     粗体字     *****/
+    strong:not(table strong){
+        color: var(--post-strong-fg);
+        transition: color var(--transition-time) ease;
+    }
+    strong code {
+        color: var(--post-strong-fg);
+        font-style: normal;
+        background-color: transparent;
+    }
+
+
+
+
+
+    /*****     斜体字     *****/
+    em code {
+        color: var(--post-em-code-fg);
+        font-style: normal;
+        margin: 0px 2px;
+        background-color: transparent;
+    }
+
+
+
+
+
+    /*****     图片     *****/
+    img {
+        border-radius: var(--post-border-radius);
+        margin: 10px 0;
+        user-select : none;
+        -webkit-user-drag: none;
+        -moz-user-drag: none;
+        user-drag: none;
+        pointer-events: none;
+    }
+
+
+
+
+
+    /*****     提示 notice     *****/
+    blockquote {
+        color: var(--post-quote-fg);
+        border-left: 4px solid var(--post-quote-border-fg);
+        border-radius: var(--post-border-radius);
+        margin: 10px 0;
+        padding: 10px 10px 10px 15px;
+        background-color: var(--post-quote-bg);
+        transition: all var(--transition-time) ease;
+        box-shadow : var(--shadow);
+    }
+    blockquote p {
+        margin: 0;
+    }
+    blockquote code {
+        color: var(--post-code-fg);
+        word-break: break-all;
+    }
+
+
+
+
+
+    /*****     分割线     *****/
+    hr {
+        border: 0px;
+        height: 1px;
+        margin: 10px 0;
+        background-color: var(--post-border-fg);
+        transition: background-color var(--transition-time) ease;
+    }
+
+
+
+
+
+    /*****     checkbox     *****/
+    li:has(input) {
+        list-style: none;
+        list-style-type: none;
+    }
+    input[type='checkbox']{
+        -webkit-appearance:none;
+        position: relative;
+        top: 3px;
+        width: 20px;
+        height: 20px;
+        background-color: var(--Background-3);
+        border-radius: 5px;
+        outline: none;
+        transition: background-color var(--transition-time) ease;
+    }
+    li input[type='checkbox']{
+        left: -5px;
+        top: 4px;
+        padding-right: 10px;
+    }
+    input[type='checkbox']:checked{
+        border: none;
+        background: url("/checked.svg") no-repeat center;
+        background-size: contain;
+    }
+    ul:not(.toc ul):has(input) {
+        margin-left: 5px;
+    }
+
+
+
+
+
+}    /*****     .main-text 结束     *****/

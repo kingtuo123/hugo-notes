@@ -1,24 +1,29 @@
 {{ define "main" }}
 {{ $date := .Date | time.Format "2006-01-02" }}
 {{ $dateHuman := .Date | time.Format "2006 年 1 月 2 日" }}
-<div class="post-content">
-	<div class="post-title">
-		<h1>{{ if page.Params.draft }}[草稿] {{ end }}{{ .Title }}</h1>
+<div class="post-container">
+    <div class="post-title">
+        <!-- 标题 -->
+        <h1>{{ if page.Params.draft }}[草稿] {{ end }}{{ .Title }}</h1>
 
-		<time datetime="{{ $date }}">{{ $dateHuman }}</time>
+        <!-- 时间 -->
+        <time datetime="{{ $date }}">{{ $dateHuman }}</time>
 
+        <!-- 图标 -->
         <div class="icons-container">
+            <!-- 主页图标 -->
             <a class="home-icon-container" href="/">
                 <svg id="home" width="30" height="30" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="29928" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M548.1984 117.4016a51.2 51.2 0 0 0-72.3968 0l-358.4 358.4a51.2 51.2 0 0 0 72.3968 72.3968L204.8 533.1968V870.4a51.2 51.2 0 0 0 51.2 51.2h102.4a51.2 51.2 0 0 0 51.2-51.2v-102.4a51.2 51.2 0 0 1 51.2-51.2h102.4a51.2 51.2 0 0 1 51.2 51.2v102.4a51.2 51.2 0 0 0 51.2 51.2h102.4a51.2 51.2 0 0 0 51.2-51.2v-337.2032l15.0016 15.0016a51.2 51.2 0 0 0 72.3968-72.3968l-358.4-358.4z" fill="currentColor" p-id="29929"></path>
                 </svg>
             </a>
-
-
+            <!-- 主题图标 -->
             <div id="theme-toggle" accesskey="t">
                 <div class="toggle-wrapper">
+                    <!-- 月亮 -->
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
+                    <!-- 太阳 -->
                     <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -33,27 +38,39 @@
                 </div>
             </div>
         </div>
-	</div>
+    </div>
 
-<div class="dash-line"> </div>
+    <!-- 虚线 -->
+    <div class="dash-line"> </div>
 
+    {{ if .Params.toc }}
+    <!-- 目录 -->
+    <aside class="toc">
+        <!-- 目录条 -->
+        <div id="toc-toggle">
+            <!-- 箭头图标 -->
+            <svg class="toc-icon" viewBox="0 0 1024 1024" fill="currentColor" stroke="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6088" width="24" height="24"><path d="M425.153 276.799a36.409 36.409 0 0 0-58.789 28.738V718.22a36.409 36.409 0 0 0 58.837 28.69l266.902-206.705a36.215 36.215 0 0 0-0.049-57.43L425.153 276.8z" p-id="6089"></path></svg>
+            <span class="toc-title" >目录</span>
+        </div>
+        <!-- 目录内容 -->
+        {{ .TableOfContents }}
+    </aside>
+    <!-- 打开目录脚本 -->
+    <script>
+        const toc = document.getElementById("toc-toggle");
+        toc.addEventListener("click", () => {
+            toc.classList.toggle("open")
+        })
+    </script>
+    {{ end }}
 
-	{{ if .Params.toc }}
-	<aside class="toc">
-		<div id="toc-toggle">
-			<svg class="toc-icon" viewBox="0 0 1024 1024" fill="currentColor" stroke="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6088" width="24" height="24"><path d="M425.153 276.799a36.409 36.409 0 0 0-58.789 28.738V718.22a36.409 36.409 0 0 0 58.837 28.69l266.902-206.705a36.215 36.215 0 0 0-0.049-57.43L425.153 276.8z" p-id="6089"></path></svg>
-			<span class="toc-title" >目录</span>
-		</div>
-		{{ .TableOfContents }}
-	</aside>
-	<script>
-		const toc = document.getElementById("toc-toggle");
-		toc.addEventListener("click", () => {
-			toc.classList.toggle("open")
-		})
-	</script>
-	{{ end }}
+    <!-- 正文 -->
+    <div class="main-text">
+        {{ .Content }}
+    </div>
 
-	{{ .Content }}
+    <!-- 用户自定义扩展 -->
+    {{- partial "extend_post.html" . }}
+
 </div>
 {{ end }}
