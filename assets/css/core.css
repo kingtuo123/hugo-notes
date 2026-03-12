@@ -1,77 +1,77 @@
 :root {
-	color-scheme: light dark;
+    color-scheme: light dark;
 
-	--Foreground                  : light-dark(#5C6A72, #D3C6AA);
-	--Red                         : light-dark(#F85552, #E67E80);
-	--Orange                      : light-dark(#F57D26, #E69875);
-	--Yellow                      : light-dark(#DFA000, #DBBC7F);
-	--Green                       : light-dark(#8DA101, #A7C080);
-	--Blue                        : light-dark(#3A94C5, #7FBBB3);
-	--Aqua                        : light-dark(#35A77C, #83C092);
-	--Purple                      : light-dark(#DF69BA, #D699B6);
-	--Background-Dim              : light-dark(#EFEBD4, #232A2E);
-	--Background-0                : light-dark(#FDF6E3, #2D353B);
-	--Background-1                : light-dark(#F4F0D9, #343F44);
-	--Background-2                : light-dark(#EFEBD4, #3D484D);
-	--Background-3                : light-dark(#E6E2CC, #475258);
-	--Background-4                : light-dark(#E0DCC7, #4F585E);
-	--Background-5                : light-dark(#BDC3AF, #56635F);
-	--Background-Red              : light-dark(#FBE3DA, #543A48);
-	--Background-Visual           : light-dark(#EAEDC8, #514045);
-	--Background-Yellow           : light-dark(#FAEDCD, #4D4C43);
-	--Background-Green            : light-dark(#F0F1D2, #425047);
-	--Background-Blue             : light-dark(#E9F0E9, #3A515D);
-	--Gray-0                      : light-dark(#A6B0A0, #7A8478);
-	--Gray-1                      : light-dark(#939F91, #859289);
-	--Gray-2                      : light-dark(#829181, #9DA9A0);
 
-	--bg                          : var(--Background-0    );
-	--fg                          : var(--Foreground      );
-	--home-list-title-fg          : var(--Foreground      );
-	--home-list-date-fg           : var(--Gray-1          );
-	--home-list-hover-fg          : var(--Green           );
+    --color-foreground                  : light-dark(#5C6A72, #D3C6AA);
+    --color-red                         : light-dark(#F85552, #E67E80);
+    --color-orange                      : light-dark(#F57D26, #E69875);
+    --color-yellow                      : light-dark(#DFA000, #DBBC7F);
+    --color-green                       : light-dark(#8DA101, #A7C080);
+    --color-blue                        : light-dark(#3A94C5, #7FBBB3);
+    --color-aqua                        : light-dark(#35A77C, #83C092);
+    --color-purple                      : light-dark(#DF69BA, #D699B6);
+    --color-background-dim              : light-dark(#EFEBD4, #232A2E);
+    --color-background-0                : light-dark(#FDF6E3, #2D353B);
+    --color-background-1                : light-dark(#F4F0D9, #343F44);
+    --color-background-2                : light-dark(#EFEBD4, #3D484D);
+    --color-background-3                : light-dark(#E6E2CC, #475258);
+    --color-background-4                : light-dark(#E0DCC7, #4F585E);
+    --color-background-5                : light-dark(#BDC3AF, #56635F);
+    --color-background-red              : light-dark(#FBE3DA, #543A48);
+    --color-background-visual           : light-dark(#EAEDC8, #514045);
+    --color-background-yellow           : light-dark(#FAEDCD, #4D4C43);
+    --color-background-green            : light-dark(#F0F1D2, #425047);
+    --color-background-blue             : light-dark(#E9F0E9, #3A515D);
+    --color-gray-0                      : light-dark(#A6B0A0, #7A8478);
+    --color-gray-1                      : light-dark(#939F91, #859289);
+    --color-gray-2                      : light-dark(#829181, #9DA9A0);
 
-	--post-toc-bg                 : transparent;
-	--post-toc-border-fg          : var(--Background-3    );
-	--post-toc-link-hover-fg      : var(--Green           );
-	--post-h2-fg                  : var(--Blue            );
-	--post-h3-fg                  : var(--Green           );
-	--post-h4-fg                  : var(--Orange          );
-	--post-table-th-fg            : var(--Aqua            );
-    --post-em-code-fg             : light-dark(#829181, #A6B0A0);
-	--post-code-fg                : var(--Gray-2          );
-	--post-code-bg                : var(--Background-1    );
-	--post-code-border-fg         : var(--Background-3    );
-	--post-link-fg                : var(--Blue            );
-	--post-link-hover-bg          : var(--Background-Blue );
-	--post-strong-fg              : var(--Orange          );
-	--post-quote-border-fg        : var(--Green           );
-	--post-quote-fg               : var(--Green    );
-	--post-quote-bg               : var(--Background-Green    );
-	--post-border-fg              : var(--Background-2    );
-	--post-selection-bg           : var(--Green           );
 
-	--footer-fg                   : var(--Gray-1          );
-	--footer-bg                   : var(--Background-0    );
-	--footer-link-hover-fg        : var(--Green           );
-	--footer-gotop-fg             : light-dark(#272E3333, #E9F0E933);
-	--footer-gotop-bg             : light-dark(#E6E2CC7F, #4752587F);
-	--footer-gotop-hover-fg       : light-dark(#DBBC7F, #A7C080);
-	--footer-gotop-hover-bg       : light-dark(#8DA10133, #A7C08033);
-	--footer-gotop-border-fg      : light-dark(#272E3310, #475258);
+    --theme-bg                          : var(--color-background-0    );
+    --theme-fg                          : var(--color-foreground      );
 
-	--post-pre-border-fg          : light-dark(#E5DFC5, #434F55);
-	--post-pre-term-border-fg     : light-dark(#333C43, #434F55);
-	--post-horizontal-scroll-bar-fg: var(--Background-3);
-	--post-horizontal-scroll-bar-hover-fg: var(--Green);
 
-	--icon-bg                   : var(--bg              );
-	--icon-fg                   : light-dark(#DBBC7F, #A7C080);
-    --icon-container-size: 50px;
-	--icon-size: 25px;
-	--post-border-radius : 10px;
-	--transition-time : 0.3s;
-    --shadow: 0.5px 0.5px 3px -1px light-dark(#000000AA, #000);
+    --theme-icon-bg                     : var(--theme-bg              );
+    --theme-icon-fg                     : light-dark(#DBBC7F, #A7C080);
+    --theme-home-list-title-fg          : var(--color-foreground      );
+    --theme-home-list-date-fg           : var(--color-gray-1          );
+    --theme-home-list-hover-fg          : var(--color-green           );
+
+
+    --theme-post-toc-bg                 : transparent;
+    --theme-post-toc-border-fg          : var(--color-background-3    );
+    --theme-post-toc-link-hover-fg      : var(--color-green           );
+    --theme-post-h2-fg                  : var(--color-blue            );
+    --theme-post-h3-fg                  : var(--color-green           );
+    --theme-post-h4-fg                  : var(--color-orange          );
+    --theme-post-table-th-fg            : var(--color-aqua            );
+    --theme-post-em-code-fg             : light-dark(#829181, #A6B0A0 );
+    --theme-post-code-fg                : var(--color-gray-2          );
+    --theme-post-code-bg                : var(--color-background-1    );
+    --theme-post-code-border-fg         : var(--color-background-3    );
+    --theme-post-link-fg                : var(--color-blue            );
+    --theme-post-link-hover-bg          : var(--color-background-blue );
+    --theme-post-strong-fg              : var(--color-orange          );
+    --theme-post-quote-border-fg        : var(--color-green           );
+    --theme-post-quote-fg               : var(--color-green           );
+    --theme-post-quote-bg               : var(--color-background-green);
+    --theme-post-border-fg              : var(--color-background-2    );
+    --theme-post-selection-bg           : var(--color-green           );
+
+
+    --theme-footer-fg                   : var(--color-gray-1          );
+    --theme-footer-bg                   : var(--color-background-0    );
+    --theme-footer-link-hover-fg        : var(--color-green           );
+    --theme-footer-gotop-fg             : light-dark(#272E3333, #E9F0E933);
+    --theme-footer-gotop-bg             : light-dark(#E6E2CC7F, #4752587F);
+    --theme-footer-gotop-hover-fg       : light-dark(#DBBC7F, #A7C080);
+    --theme-footer-gotop-hover-bg       : light-dark(#8DA10133, #A7C08033);
+    --theme-footer-gotop-border-fg      : light-dark(#272E3310, #475258);
+
+
+    --theme-post-border-radius          : 10px;
+    --theme-transition-time             : 0.3s;
+    --theme-box-shadow                  : 0.5px 0.5px 3px -1px light-dark(#000000AA, #000);
 }
 
 
@@ -79,16 +79,16 @@
 
 
 html, body {
-	font-family    : "LXGW WenKai", "PingFang SC", "Microsoft YaHei";
-	font-weight    : normal;
-	font-size      : 17px;
-	line-height    : 1.65;
-	color          : var(--fg);
-	background     : var(--bg);
-	display        : flex;
+    font-family    : "LXGW WenKai", "PingFang SC", "Microsoft YaHei";
+    font-weight    : normal;
+    font-size      : 17px;
+    line-height    : 1.65;
+    color          : var(--theme-fg);
+    background     : var(--theme-bg);
+    display        : flex;
     flex-direction : column;
-	min-height     : 100vh;
-	width          : 100%;
+    min-height     : 100vh;
+    width          : 100%;
 }
 
 
@@ -96,8 +96,8 @@ html, body {
 
 main {
     flex: 1;
-    background-color: var(--bg);
-    transition: background-color var(--transition-time) ease;
+    background-color: var(--theme-bg);
+    transition: background-color var(--theme-transition-time) ease;
     height: 100%;
     padding: 0 10px;
 }
@@ -106,26 +106,25 @@ main {
 
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+    width: 10px;
+    height: 0px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 10px;
+    background: transparent;
+    border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: light-dark(#A6B0A0, #434F55);
-  border-radius: 10px;
+    background: light-dark(#A6B0A0, #434F55);
+    border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--Green);
+    background: var(--color-green);
 }
 ::-webkit-scrollbar-corner {
-  background: transparent;
-  display: none;
+    background: transparent;
+    display: none;
 }
-/*****      鼠标选中的文字     *****/
 ::selection {
-    color: var(--bg);
-    background: var(--post-selection-bg);
+    color: var(--theme-bg);
+    background: var(--theme-post-selection-bg);
 }

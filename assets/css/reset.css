@@ -8,7 +8,6 @@
 /* 文档元素重置 */
 html {
 	line-height: 1.15;
-	-webkit-text-size-adjust: 100%;
 	font-family: sans-serif;
 }
 
@@ -55,7 +54,7 @@ button, select {
 }
 
 button, [type="button"], [type="reset"], [type="submit"] {
-	-webkit-appearance: button;
+	appearance: button;
 	cursor: pointer;
 }
 

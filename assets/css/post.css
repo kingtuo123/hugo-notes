@@ -21,13 +21,13 @@
     h1 {
         font-size     : 1.7rem;
         margin-bottom : 5px;
-        transition: color var(--transition-time) ease;
+        transition: color var(--theme-transition-time) ease;
     }
     time {
-        color: var(--Gray-2);
+        color: var(--color-gray-2);
         font-size: 16px;
         margin: 20px 0;
-        transition: color var(--transition-time) ease;
+        transition: color var(--theme-transition-time) ease;
     }
     .icons-container {
         display: flex;
@@ -36,15 +36,15 @@
         align-items: center;
         .home-icon-container {
             border-radius: 50%;
-            background-color: var(--icon-bg);
-            color: var(--icon-fg);
+            background-color: var(--theme-icon-bg);
+            color: var(--theme-icon-fg);
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            width: var(--icon-container-size);
-            height: var(--icon-container-size);
-            transition: all var(--transition-time) ease;
+            width: 50px;
+            height: 50px;
+            transition: all var(--theme-transition-time) ease;
             #home {
                 width: 27px;
                 height: 27px;
@@ -63,8 +63,8 @@
     justify-content: center;
     min-width: 100%;
     margin-bottom: 50px;
-    border-bottom: 1px dashed var(--Gray-0);
-    transition: border-color var(--transition-time) ease;
+    border-bottom: 1px dashed var(--color-gray-0);
+    transition: border-color var(--theme-transition-time) ease;
     mask: linear-gradient( 90deg, transparent, black 20%, black 80%, transparent);
 }
 
@@ -74,13 +74,13 @@
 
 /*****     目录     *****/
 .post-container .toc {
-    color: var(--Gray-2);
-    border           : 1px solid var(--post-toc-border-fg);
-    border-radius    : var(--post-border-radius);
+    color: var(--color-gray-2);
+    border           : 1px solid var(--theme-post-toc-border-fg);
+    border-radius    : var(--theme-post-border-radius);
     margin-top       : 50px;
     margin-bottom    : 30px;
-    background-color : var(--post-toc-bg);
-    transition       : all var(--transition-time) ease;
+    background-color : var(--theme-post-toc-bg);
+    transition       : all var(--theme-transition-time) ease;
     #toc-toggle {
         padding     : 10px;
         line-height : 30px;
@@ -129,7 +129,7 @@
             -webkit-user-drag : none;
             user-select       : none;
             &:hover {
-                color: var(--post-toc-link-hover-fg);
+                color: var(--theme-post-toc-link-hover-fg);
             }
         }
     }
@@ -143,7 +143,7 @@
 .main-text {
     p {
         margin     : 10px 0;
-        transition : color var(--transition-time) ease;
+        transition : color var(--theme-transition-time) ease;
     }
 
 
@@ -152,13 +152,13 @@
 
     /*****     链接     *****/
     a.link {
-        color         : var(--post-link-fg);
+        color         : var(--theme-post-link-fg);
         padding       : 2px 5px;
         border-radius : 5px;
-        transition    : color var(--transition-time) ease;
+        transition    : color var(--theme-transition-time) ease;
     }
     a.link:hover {
-        background-color: var(--post-link-hover-bg);
+        background-color: var(--theme-post-link-hover-bg);
     }
     blockquote a.link:hover {
         background-color: transparent;
@@ -178,7 +178,7 @@
     ul:not(.toc ul) {
         margin-left   : 17px;
         margin-bottom : 15px;
-        transition: color var(--transition-time) ease;
+        transition: color var(--theme-transition-time) ease;
     }
     li:not(.toc li) {
         margin-top: 15px;
@@ -197,11 +197,11 @@
 
     /*****     标题 h2-h6     *****/
     h2,h3,h4,h5,h6 {
-        transition  : color var(--transition-time) ease;
+        transition  : color var(--theme-transition-time) ease;
     }
     h2 {
         font-size     : 1.5rem;
-        color         : var(--post-h2-fg);
+        color         : var(--theme-post-h2-fg);
         margin-top    : 40px;
         margin-bottom : 10px;
     }
@@ -210,7 +210,7 @@
     }
     h3 {
         font-size     : 1.3rem;
-        color         : var(--post-h3-fg);
+        color         : var(--theme-post-h3-fg);
         margin-top    : 30px;
         margin-bottom : 10px;
     }
@@ -219,7 +219,7 @@
     }
     h4 {
         font-size     : 1.1rem;
-        color         : var(--post-h4-fg);
+        color         : var(--theme-post-h4-fg);
         margin-top    : 20px;
         margin-bottom : 10px;
     }
@@ -235,13 +235,13 @@
 
     /*****     表格     *****/
     th {
-        color: var(--post-table-th-fg);
+        color: var(--theme-post-table-th-fg);
     }
     th, td {
         border        : none;
-        border-bottom : 1px solid var(--post-border-fg);
+        border-bottom : 1px solid var(--theme-post-border-fg);
         padding       : 9px 10px 9px 0px;
-        transition    : border-color var(--transition-time) ease;
+        transition    : border-color var(--theme-transition-time) ease;
     }
     td:first-child > code {
         margin-left: 2px;
@@ -253,10 +253,10 @@
     table{
         width: 100%;
         display: table;
-        transition: color var(--transition-time) ease;
+        transition: color var(--theme-transition-time) ease;
     }
     table strong {
-        color: var(--post-table-th-fg);
+        color: var(--theme-post-table-th-fg);
     }
 
 
@@ -267,11 +267,11 @@
     code:not(.highlight code):not(blockquote code):not(em code):not(strong code) {
         padding: 2px 5px;
         border-radius: 5px;
-        color: var(--post-code-fg);
-        background-color: var(--post-code-bg);
-        border: 0px solid var(--post-code-border-fg);
-        box-shadow : var(--shadow);
-        transition: background-color var(--transition-time) ease, border-color var(--transition-time) ease;
+        color: var(--theme-post-code-fg);
+        background-color: var(--theme-post-code-bg);
+        border: 0px solid var(--theme-post-code-border-fg);
+        box-shadow : var(--theme-box-shadow);
+        transition: background-color var(--theme-transition-time) ease, border-color var(--theme-transition-time) ease;
     }
     code:not(table code){
         word-break: break-all;
@@ -285,10 +285,10 @@
     /*****     语法高亮的代码     *****/
     .highlight {
         margin: 10px 0;
-        border-radius: var(--post-border-radius);
-        box-shadow : var(--shadow);
-        background-color: var(--Background-0);
-        transition: background-color var(--transition-time) ease;
+        border-radius: var(--theme-post-border-radius);
+        box-shadow : var(--theme-box-shadow);
+        background-color: var(--color-background-0);
+        transition: background-color var(--theme-transition-time) ease;
     }
     pre {
         line-height: 1.65;
@@ -310,11 +310,11 @@
 
     /*****     粗体字     *****/
     strong:not(table strong){
-        color: var(--post-strong-fg);
-        transition: color var(--transition-time) ease;
+        color: var(--theme-post-strong-fg);
+        transition: color var(--theme-transition-time) ease;
     }
     strong code {
-        color: var(--post-strong-fg);
+        color: var(--theme-post-strong-fg);
         font-style: normal;
         background-color: transparent;
     }
@@ -325,7 +325,7 @@
 
     /*****     斜体字     *****/
     em code {
-        color: var(--post-em-code-fg);
+        color: var(--theme-post-em-code-fg);
         font-style: normal;
         margin: 0px 2px;
         background-color: transparent;
@@ -337,12 +337,9 @@
 
     /*****     图片     *****/
     img {
-        border-radius: var(--post-border-radius);
+        border-radius: var(--theme-post-border-radius);
         margin: 10px 0;
         user-select : none;
-        -webkit-user-drag: none;
-        -moz-user-drag: none;
-        user-drag: none;
         pointer-events: none;
     }
 
@@ -352,20 +349,20 @@
 
     /*****     提示 notice     *****/
     blockquote {
-        color: var(--post-quote-fg);
-        border-left: 4px solid var(--post-quote-border-fg);
-        border-radius: var(--post-border-radius);
+        color: var(--theme-post-quote-fg);
+        border-left: 4px solid var(--theme-post-quote-border-fg);
+        border-radius: var(--theme-post-border-radius);
         margin: 10px 0;
         padding: 10px 10px 10px 15px;
-        background-color: var(--post-quote-bg);
-        transition: all var(--transition-time) ease;
-        box-shadow : var(--shadow);
+        background-color: var(--theme-post-quote-bg);
+        transition: all var(--theme-transition-time) ease;
+        box-shadow : var(--theme-box-shadow);
     }
     blockquote p {
         margin: 0;
     }
     blockquote code {
-        color: var(--post-code-fg);
+        color: var(--theme-post-code-fg);
         word-break: break-all;
     }
 
@@ -378,8 +375,8 @@
         border: 0px;
         height: 1px;
         margin: 10px 0;
-        background-color: var(--post-border-fg);
-        transition: background-color var(--transition-time) ease;
+        background-color: var(--theme-post-border-fg);
+        transition: background-color var(--theme-transition-time) ease;
     }
 
 
@@ -397,10 +394,10 @@
         top: 3px;
         width: 20px;
         height: 20px;
-        background-color: var(--Background-3);
+        background-color: var(--color-background-3);
         border-radius: 5px;
         outline: none;
-        transition: background-color var(--transition-time) ease;
+        transition: background-color var(--theme-transition-time) ease;
     }
     li input[type='checkbox']{
         left: -5px;
