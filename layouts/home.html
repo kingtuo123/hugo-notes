@@ -3,7 +3,13 @@
     <div class="profile">
         <div class="avatar-container">
             <div class="avatar">
-                {{- readFile "static/avatar.svg" | safeHTML -}}
+                {{ $avatar := site.Params.profileAvatar }}
+                {{ $isSvg := hasSuffix $avatar ".svg" }}
+                {{ if $isSvg }}
+                    {{- urls.JoinPath "static" $avatar | readFile | safeHTML -}}
+                {{ else }}
+                    <img src="{{ $avatar }}"></img>
+                {{ end }}
             </div>
         </div>
 
