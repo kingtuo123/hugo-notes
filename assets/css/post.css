@@ -175,15 +175,15 @@
 
 
     /*****     列表     *****/
-    ul:not(.toc ul) {
+    ul {
         margin-left   : 17px;
         margin-bottom : 15px;
         transition: color var(--theme-transition-time) ease;
     }
-    li:not(.toc li) {
+    li {
         margin-top: 15px;
     }
-    ol:not(.toc ol) {
+    ol {
         margin-left   : 25px;
         margin-bottom : 15px;
     }
@@ -365,7 +365,9 @@
         color: var(--theme-post-code-fg);
         word-break: break-all;
     }
-
+    blockquote  ul {
+        margin-bottom: 0;
+    }
 
 
 
