@@ -244,7 +244,7 @@
         transition    : border-color var(--theme-transition-time) ease;
     }
     td:first-child > code {
-        margin-left: 2px;
+        margin-left: 0px;
     }
     th:last-child,
     td:last-child {
@@ -265,6 +265,7 @@
 
     /*****     `code`     *****/
     code:not(.highlight code):not(blockquote code):not(em code):not(strong code) {
+        margin: 0px 2px;
         padding: 2px 5px;
         border-radius: 5px;
         color: var(--theme-post-code-fg);
