@@ -71,7 +71,7 @@
 
     --theme-post-border-radius          : 10px;
     --theme-transition-time             : 0.3s;
-    --theme-box-shadow                  : 0.5px 0.5px 3px -1px light-dark(#000000AA, #000);
+    --theme-box-shadow                  : 0.5px 0.5px 3px -2.5px #000;
 }
 
 

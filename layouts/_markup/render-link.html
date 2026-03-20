@@ -1,8 +1,10 @@
 <!-- layouts/_default/_markup/render-link.html -->
+{{- if true -}}
 <a class="link" href="{{ .Destination | safeURL }}" {{ with .Title }}
     title="{{ . }}" {{ end }}
     {{ if not (hasPrefix .Destination "#") }}target="_blank"{{ end }}
     rel="noopener noreferrer"
 >
-    {{- .Text | safeHTML -}}
+{{- .Text | safeHTML -}}
 </a>
+{{- end -}}
