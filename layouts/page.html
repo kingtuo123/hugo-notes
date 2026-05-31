@@ -41,7 +41,9 @@
     </div>
 
     <!-- 虚线 -->
+    {{ if not .Params.toc }}
     <div class="dash-line"> </div>
+    {{ end }}
 
     {{ if .Params.toc }}
     <!-- 目录 -->

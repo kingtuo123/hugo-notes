@@ -12,8 +12,7 @@
 
 /*****     文章标题     *****/
 .post-container .post-title {
-    margin: 80px 0 0px 0;
-    padding-bottom: 80px;
+    margin: 80px 0 80px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,7 +76,7 @@
     color: var(--color-gray-2);
     border           : 1px solid var(--theme-post-toc-border-fg);
     border-radius    : var(--theme-post-border-radius);
-    margin-top       : 50px;
+    margin-top       : 0px;
     margin-bottom    : 30px;
     background-color : var(--theme-post-toc-bg);
     transition       : all var(--theme-transition-time) ease;
@@ -272,7 +271,7 @@
         color: var(--theme-post-code-fg);
         background-color: var(--theme-post-code-bg);
         border: 0px solid var(--theme-post-code-border-fg);
-        box-shadow : var(--theme-box-shadow);
+        box-shadow : var(--theme-code-shadow);
         transition: background-color var(--theme-transition-time) ease, border-color var(--theme-transition-time) ease;
     }
     code:not(table code){
@@ -358,7 +357,7 @@
         padding: 10px 10px 10px 15px;
         background-color: var(--theme-post-quote-bg);
         transition: all var(--theme-transition-time) ease;
-        box-shadow : var(--theme-box-shadow);
+        box-shadow : var(--theme-notice-shadow);
     }
     blockquote p {
         margin: 0;
