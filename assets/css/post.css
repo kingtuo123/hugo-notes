@@ -369,6 +369,16 @@
     blockquote  ul {
         margin-bottom: 0;
     }
+    blockquote .highlight {
+        margin: 0px;
+    }
+    blockquote pre code {
+        font-size: 15px;
+        display: grid;
+        .line {
+            padding: 0px 0px;
+        }
+    }
 
 
 
