@@ -218,9 +218,9 @@
         margin-top    : 10px;
     }
     h4 {
-        font-size     : 1.1rem;
+        font-size     : 1.0rem;
         color         : var(--theme-post-h4-fg);
-        margin-top    : 20px;
+        margin-top    : 15px;
         margin-bottom : 10px;
     }
     h5, h6 {
@@ -351,10 +351,10 @@
     /*****     提示 notice     *****/
     blockquote {
         color: var(--theme-post-quote-fg);
-        border-left: 4px solid var(--theme-post-quote-border-fg);
+        border-left: 3px solid var(--theme-post-quote-border-fg);
         border-radius: var(--theme-post-border-radius);
         margin: 10px 0;
-        padding: 10px 10px 10px 15px;
+        padding: 10px 10px 10px 10px;
         background-color: var(--theme-post-quote-bg);
         transition: all var(--theme-transition-time) ease;
         box-shadow : var(--theme-notice-shadow);
@@ -369,15 +369,8 @@
     blockquote  ul {
         margin-bottom: 0;
     }
-    blockquote .highlight {
-        margin: 0px;
-    }
-    blockquote pre code {
-        font-size: 15px;
-        display: grid;
-        .line {
-            padding: 0px 0px;
-        }
+    blockquote .highlight:last-child {
+        margin-bottom: 0px;
     }
 
 
