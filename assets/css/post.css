@@ -20,6 +20,7 @@
     h1 {
         font-size     : 1.7rem;
         margin-bottom : 5px;
+        text-align: center;
         transition: color var(--theme-transition-time) ease;
     }
     time {
