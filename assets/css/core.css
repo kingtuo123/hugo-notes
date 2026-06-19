@@ -36,6 +36,7 @@
     --theme-home-list-title-fg          : var(--color-foreground      );
     --theme-home-list-date-fg           : var(--color-gray-1          );
     --theme-home-list-hover-fg          : var(--color-green           );
+    --theme-home-list-draft-fg          : var(--color-yellow          );
 
 
     --theme-post-toc-bg                 : transparent;

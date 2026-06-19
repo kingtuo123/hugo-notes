@@ -133,6 +133,9 @@
             padding: 10px;
         }
         .title {
+            .draft {
+                color: var(--theme-home-list-draft-fg);
+            }
             color: var(--theme-home-list-title-fg);
             transition: color var(--theme-transition-time) ease;
             max-width: 75%;

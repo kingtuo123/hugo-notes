@@ -4,7 +4,7 @@
 <div class="post-container">
     <div class="post-title">
         <!-- 标题 -->
-        <h1>{{ if page.Params.draft }}[草稿] {{ end }}{{ .Title }}</h1>
+        <h1>{{ if page.Params.draft }}<span class="draft">[草稿]</span> {{ end }}{{ .Title }}</h1>
 
         <!-- 时间 -->
         <time datetime="{{ $date }}">{{ $dateHuman }}</time>

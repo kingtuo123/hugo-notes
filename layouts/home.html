@@ -45,7 +45,7 @@
     <div class="post-list">
         {{ range site.RegularPages }}
         <a class="list-item" draggable="false" href="{{ .RelPermalink }}">
-            <span class="title" >{{ if .Params.draft }}[草稿] {{ end }}{{ .LinkTitle }}</span>
+            <span class="title" >{{ if .Params.draft }}<span class="draft">[草稿]</span> {{ end }}{{ .LinkTitle }}</span>
             <span class="date">{{ .Date | time.Format "2006-01-02" }}</span>
         </a>
         {{ end }}

@@ -17,6 +17,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .draft {
+        color: var(--theme-home-list-draft-fg);
+    }
     h1 {
         font-size     : 1.7rem;
         margin-bottom : 5px;
