@@ -10,7 +10,7 @@
         width: 100px;
         height: 100px;
         padding: 7px;
-        box-shadow: var(--theme-box-shadow);
+        box-shadow: var(--theme-home-avatar-shadow);
         transition: background-color var(--theme-transition-time) ease;
         display: flex;
         overflow: hidden;

@@ -275,7 +275,7 @@
         color: var(--theme-post-code-fg);
         background-color: var(--theme-post-code-bg);
         border: 0px solid var(--theme-post-code-border-fg);
-        box-shadow : var(--theme-code-shadow);
+        box-shadow : var(--theme-post-code-shadow);
         transition: background-color var(--theme-transition-time) ease, border-color var(--theme-transition-time) ease;
     }
     code:not(table code){
@@ -291,9 +291,13 @@
     .highlight {
         margin: 10px 0;
         border-radius: var(--theme-post-border-radius);
-        box-shadow : var(--theme-box-shadow);
+        box-shadow : var(--theme-post-highlight-shadow);
         background-color: var(--color-background-0);
         transition: background-color var(--theme-transition-time) ease;
+    }
+    .highlight:has(.language-bash-session),
+    .highlight:has(.language-terminal) {
+        box-shadow : var(--theme-post-terminal-shadow);
     }
     pre {
         line-height: 1.65;
@@ -361,7 +365,7 @@
         padding: 10px 10px 10px 10px;
         background-color: var(--theme-post-quote-bg);
         transition: all var(--theme-transition-time) ease;
-        box-shadow : var(--theme-notice-shadow);
+        box-shadow : var(--theme-post-notice-shadow);
     }
     blockquote p {
         margin: 0;
