@@ -170,7 +170,10 @@
         opacity: 0;
     }
     :is(h1, h2, h3, h4, h5, h6) a.anchor:hover {
-        opacity: 1;
+        opacity: 0.5;
+    }
+    :is(h1, h2, h3, h4, h5, h6) > span:hover + a.anchor {
+        opacity: 0.5;
     }
 
 
