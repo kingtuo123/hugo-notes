@@ -23,6 +23,7 @@
     h1 {
         font-size     : 1.7rem;
         margin-bottom : 5px;
+        color         : var(--theme-post-h1-fg);
         text-align: center;
         transition: color var(--theme-transition-time) ease;
     }
@@ -156,18 +157,16 @@
     /*****     链接     *****/
     a.link {
         color         : var(--theme-post-link-fg);
-        padding       : 2px 5px;
+        padding       : 0px;
         border-radius : 5px;
         transition    : color var(--theme-transition-time) ease;
     }
     a.link:hover {
         background-color: var(--theme-post-link-hover-bg);
     }
-    blockquote a.link:hover {
-        background-color: transparent;
-    }
     :is(h1, h2, h3, h4, h5, h6) a.anchor {
         padding: 0 10px;
+        user-select: none;
         opacity: 0;
     }
     :is(h1, h2, h3, h4, h5, h6) a.anchor:hover {
@@ -206,29 +205,36 @@
     h2 {
         font-size     : 1.5rem;
         color         : var(--theme-post-h2-fg);
-        margin-top    : 40px;
+        margin-top    : 80px;
         margin-bottom : 10px;
     }
     h2 + h3 {
         margin-top    : 10px;
     }
     h3 {
-        font-size     : 1.3rem;
+        font-size     : 1.2rem;
         color         : var(--theme-post-h3-fg);
-        margin-top    : 30px;
+        margin-top    : 40px;
         margin-bottom : 10px;
     }
     h3 + h4 {
         margin-top    : 10px;
     }
     h4 {
-        font-size     : 1.0rem;
+        font-size     : 1.1rem;
         color         : var(--theme-post-h4-fg);
-        margin-top    : 15px;
+        margin-top    : 20px;
         margin-bottom : 10px;
     }
-    h5, h6 {
+    h5 {
         font-size     : 1rem;
+        color         : var(--theme-post-h5-fg);
+        margin-top    : 10px;
+        margin-bottom : 0px;
+    }
+    h6 {
+        font-size     : 1rem;
+        color         : var(--theme-post-h6-fg);
         margin-top    : 10px;
         margin-bottom : 0px;
     }
