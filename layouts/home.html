@@ -1,15 +1,15 @@
-{{ define "main" }}
+{{- define "main" -}}
 <div class="home-container">
     <div class="profile">
         <div class="avatar-container">
             <div class="avatar">
-                {{ $avatar := site.Params.profileAvatar }}
-                {{ $isSvg := hasSuffix $avatar ".svg" }}
-                {{ if $isSvg }}
+                {{- $avatar := site.Params.profileAvatar -}}
+                {{- $isSvg := hasSuffix $avatar ".svg" -}}
+                {{- if $isSvg -}}
                     {{- urls.JoinPath "static" $avatar | readFile | safeHTML -}}
-                {{ else }}
+                {{- else -}}
                     <img src="{{ $avatar }}"></img>
-                {{ end }}
+                {{- end -}}
             </div>
         </div>
 
@@ -43,14 +43,14 @@
     <div class="dash-line"> <span class="dash-title">笔记</span></div>
 
     <div class="post-list">
-        {{ range site.RegularPages }}
-        <a class="list-item" draggable="false" href="{{ .RelPermalink }}">
-            <span class="title" >{{ if .Params.draft }}<span class="draft">[草稿]</span> {{ end }}{{ .LinkTitle }}</span>
-            <span class="date">{{ .Date | time.Format "2006-01-02" }}</span>
+        {{- range site.RegularPages -}}
+        <a class="list-item" draggable="false" href="{{- .RelPermalink -}}" {{ if or .Params.ontop (eq .Params.ontop 0) -}}style="order: {{ .Params.ontop -}};"{{- end -}}>
+            <span class="title" > {{- if or .Params.ontop (eq .Params.ontop 0) -}}<span class="ontop">[置顶] </span>{{- end -}}{{- if .Params.draft -}}<span class="draft">[草稿] </span>{{- end -}}{{- .LinkTitle -}}</span>
+            <span class="date">{{- .Date | time.Format "2006-01-02" -}}</span>
         </a>
-        {{ end }}
+        {{- end -}}
     </div>
 
     <div class="dash-line"> </div>
 </div>
-{{ end }}
+{{- end -}}
