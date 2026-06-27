@@ -40,12 +40,12 @@
 
     </div>
 
-    <div class="dash-line"> <span class="dash-title">笔记</span></div>
+    <div class="dash-line"><span class="dash-title">笔记</span></div>
 
     <div class="post-list">
         {{- range site.RegularPages -}}
-        <a class="list-item" draggable="false" href="{{- .RelPermalink -}}" {{ if or .Params.ontop (eq .Params.ontop 0) -}}style="order: {{ .Params.ontop -}};"{{- end -}}>
-            <span class="title" > {{- if or .Params.ontop (eq .Params.ontop 0) -}}<span class="ontop">[置顶] </span>{{- end -}}{{- if .Params.draft -}}<span class="draft">[草稿] </span>{{- end -}}{{- .LinkTitle -}}</span>
+        <a class="list-item" draggable="false" href="{{- .RelPermalink -}}" {{ if .Params.ontop -}}style="order: {{ .Params.ontop -}};"{{- end -}}>
+            <span class="title">{{- if .Params.ontop -}}<span class="ontop">[置顶] </span>{{- end -}}{{- if .Params.draft -}}<span class="draft">[草稿] </span>{{- end -}}{{- .LinkTitle -}}</span>
             <span class="date">{{- .Date | time.Format "2006-01-02" -}}</span>
         </a>
         {{- end -}}

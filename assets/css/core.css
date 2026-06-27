@@ -119,8 +119,8 @@ main {
 
 
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 0px;
+    width: 5px;
+    height: 5px;
 }
 ::-webkit-scrollbar-track {
     background: transparent;
@@ -131,7 +131,7 @@ main {
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-green);
+    background: light-dark(#DBBC7F, #A7C080);
 }
 ::-webkit-scrollbar-corner {
     background: transparent;

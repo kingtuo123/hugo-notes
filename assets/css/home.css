@@ -115,7 +115,6 @@
     padding: 10px 0px;
     .list-item {
         display: flex;
-        order: 100;
         justify-content: space-between;
         align-items: center;
         padding: 10px 0px;
