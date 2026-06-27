@@ -206,7 +206,7 @@
         transition  : color var(--theme-transition-time) ease;
     }
     h2 {
-        font-size     : 1.5rem;
+        font-size     : 1.3rem;
         color         : var(--theme-post-h2-fg);
         margin-top    : 80px;
         margin-bottom : 10px;
@@ -215,7 +215,7 @@
         margin-top    : 10px;
     }
     h3 {
-        font-size     : 1.2rem;
+        font-size     : 1.1rem;
         color         : var(--theme-post-h3-fg);
         margin-top    : 40px;
         margin-bottom : 10px;
@@ -224,22 +224,53 @@
         margin-top    : 10px;
     }
     h4 {
-        font-size     : 1.1rem;
+        font-size     : 1rem;
         color         : var(--theme-post-h4-fg);
         margin-top    : 20px;
         margin-bottom : 10px;
     }
     h5 {
-        font-size     : 1rem;
+        font-size     : 0.9rem;
         color         : var(--theme-post-h5-fg);
         margin-top    : 10px;
         margin-bottom : 0px;
     }
     h6 {
-        font-size     : 1rem;
+        font-size     : 0.8rem;
         color         : var(--theme-post-h6-fg);
         margin-top    : 10px;
         margin-bottom : 0px;
+    }
+    @media (min-width: calc(1140px + 150px)) {
+        :is(h2,h3,h4,h5,h6)::before {
+            display: inline-block;
+            margin-right: 15px;
+            margin-left: -45px;
+            width: 30px;
+            font-weight: bold;
+            text-align: center;
+            opacity: 0.5;
+        }
+        h2::before {
+            font-size: 0.85rem;
+            content: 'H2';
+        }
+        h3::before {
+            font-size: 0.75rem;
+            content: 'H3';
+        }
+        h4::before {
+            font-size: 0.65rem;
+            content: 'H4';
+        }
+        h5::before {
+            font-size: 0.55rem;
+            content: 'H5';
+        }
+        h6::before {
+            font-size: 0.55rem;
+            content: 'H6';
+        }
     }
 
 
@@ -368,7 +399,7 @@
     /*****     提示 notice     *****/
     blockquote {
         color: var(--theme-post-quote-fg);
-        border-left: 3px solid var(--theme-post-quote-border-fg);
+        border-left: 2px solid var(--theme-post-quote-border-fg);
         border-radius: var(--theme-post-border-radius);
         margin: 10px 0;
         padding: 10px 10px 10px 10px;
