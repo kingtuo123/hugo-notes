@@ -335,8 +335,7 @@
         background-color: var(--color-background-0);
         transition: background-color var(--theme-transition-time) ease;
     }
-    .highlight:has(.language-bash-session),
-    .highlight:has(.language-terminal) {
+    .highlight:has(.language-bash-session) {
         box-shadow : var(--theme-post-terminal-shadow);
     }
     pre {

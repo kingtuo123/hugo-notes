@@ -115,7 +115,7 @@
 
 
 
-.highlight:has(.language-bash-session), .highlight:has(.language-shell-session){
+.highlight:has(.language-bash-session){
 --color-foreground           : light-dark(#D3C6AA, #D3C6AA);
 --color-red                  : light-dark(#E67E80, #E67E80);
 --color-orange               : light-dark(#E69875, #E69875);
