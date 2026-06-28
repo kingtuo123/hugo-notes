@@ -32,7 +32,7 @@
 
 
     --theme-icon-bg                     : var(--theme-bg              );
-    --theme-icon-fg                     : light-dark(#DBBC7F, #A7C080);
+    --theme-icon-fg                     : light-dark(#DFA000, #A7C080);
     --theme-home-list-title-fg          : var(--color-foreground      );
     --theme-home-list-date-fg           : var(--color-gray-1          );
     --theme-home-list-hover-fg          : var(--color-green           );
@@ -69,7 +69,7 @@
     --theme-footer-link-hover-fg        : var(--color-green           );
     --theme-footer-gotop-fg             : light-dark(#272E3333, #E9F0E933);
     --theme-footer-gotop-bg             : light-dark(#E6E2CC7F, #4752587F);
-    --theme-footer-gotop-hover-fg       : light-dark(#DBBC7F, #A7C080);
+    --theme-footer-gotop-hover-fg       : var(--theme-icon-fg);
     --theme-footer-gotop-hover-bg       : light-dark(#8DA10133, #A7C08033);
     --theme-footer-gotop-border-fg      : light-dark(#272E3310, #475258);
 
@@ -127,11 +127,11 @@ main {
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    background: light-dark(#A6B0A0, #434F55);
+    background: var(--color-background-3);
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: light-dark(#DBBC7F, #A7C080);
+    background: var(--theme-icon-fg);
 }
 ::-webkit-scrollbar-corner {
     background: transparent;

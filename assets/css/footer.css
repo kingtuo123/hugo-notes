@@ -50,7 +50,6 @@ footer a:hover {
 @media (min-width: 900px) {
     #back-to-top:hover  {
         color: var(--theme-footer-gotop-hover-fg);
-        /*background-color: var(--theme-footer-gotop-hover-bg);*/
     }
 }
 

@@ -77,7 +77,7 @@
 }
 .dark {
     #moon, #sun {
-        transform: translateY(200%)
+        transform: translateY(200%);
     }
 }
 
@@ -135,9 +135,11 @@
         .title {
             .ontop {
                 color: var(--theme-home-list-ontop-fg);
+                transition: color var(--theme-transition-time) ease;
             }
             .draft {
                 color: var(--theme-home-list-draft-fg);
+                transition: color var(--theme-transition-time) ease;
             }
             color: var(--theme-home-list-title-fg);
             transition: color var(--theme-transition-time) ease;
