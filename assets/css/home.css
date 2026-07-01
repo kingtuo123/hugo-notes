@@ -5,12 +5,12 @@
     justify-content: center;
     align-items: center;
     .avatar-container {
-        background-color: var(--color-background-2);
+        background-color: var(--theme-home-profile-avatar-bg);
         border-radius: 50%;
         width: 100px;
         height: 100px;
         padding: 7px;
-        box-shadow: var(--theme-home-avatar-shadow);
+        box-shadow: var(--theme-home-profile-avatar-shadow);
         transition: background-color var(--theme-transition-time) ease;
         display: flex;
         overflow: hidden;
@@ -25,6 +25,7 @@
         }
     }
     .profile-name {
+        color: var(--theme-home-profile-name-fg);
         margin: 5px 0;
         user-select: none;
         transition: color var(--theme-transition-time) ease;
@@ -32,7 +33,7 @@
     .typewriter{
         margin: 20px 0;
         #text {
-            color: var(--color-gray-2);
+            color: var(--theme-home-profile-slogan-fg);
             user-select: none;
             transition: color var(--theme-transition-time) ease;
         }
@@ -90,13 +91,13 @@
     justify-content: center;
     max-width: 800px;
     margin: 0 auto;
-    border-bottom: 1px dashed var(--color-gray-0);
+    border-bottom: 1px dashed var(--theme-home-dash-line-fg);
     transition: border-color var(--theme-transition-time) ease;
     mask: linear-gradient( 90deg, transparent, black 20%, black 80%, transparent);
     .dash-title {
         user-select: none;
         line-height: 1.8;
-        color: var(--color-gray-1);
+        color: var(--theme-home-dash-line-title-fg);
         transition: color var(--theme-transition-time) ease;
     }
 }

@@ -1,0 +1,39 @@
+{{- if .Attributes.bar -}}
+<div class="code-bar">
+    {{- $bar := split .Attributes.bar ":" -}}
+    {{- if eq (len $bar) 1 -}}
+        <span>文件</span><span>{{- .Attributes.bar -}}</span>
+    {{- else -}}
+        <span>{{- index $bar 0 | strings.TrimSpace | default "文件" -}}</span><span>{{- delimit (after 1 $bar) ":" | strings.TrimSpace -}}</span>
+    {{- end -}}
+</div>
+{{- end -}}
+
+
+{{- $result := transform.HighlightCodeBlock . -}}
+{{- if eq .Type "bash-session" -}}
+    {{- $result.Wrapped | replaceRE `<span class="gp">#</span> ` "<span class=\"gpr\"># </span>" | replaceRE `<span class="gp">\$</span> ` "<span class=\"gp\">$ </span>" | safeHTML -}}
+{{- else if eq .Type "markdown" -}}
+    {{- highlight (printf "%s\n" (trim .Inner "\n")) .Type -}}
+{{- else -}}
+    {{- $result.Wrapped -}}
+{{- end -}}
+
+
+{{- if .Attributes.copy -}}
+    <button class="copy">复制</button>
+    <script>
+        button = document.currentScript.previousElementSibling;
+        highlight = button.previousElementSibling;
+        highlight.appendChild(button);
+        button.addEventListener('click', async function () {
+            try {
+                await navigator.clipboard.writeText('{{- .Inner -}}');
+                this.textContent = '已复制';
+                setTimeout(() => { this.textContent = '复制'; }, 1200);
+            } catch (err) {
+                console.error('复制失败：', err);
+            }
+        });
+    </script>
+{{- end -}}

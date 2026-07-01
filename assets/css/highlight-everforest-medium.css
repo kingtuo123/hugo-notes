@@ -22,6 +22,7 @@
 --color-gray-0               : light-dark(#A6B0A0, #7A8478);
 --color-gray-1               : light-dark(#939F91, #859289);
 --color-gray-2               : light-dark(#829181, #9DA9A0);
+background-color: var(--color-background-0);
 .n, .cl {
 	transition: color var(--theme-transition-time) ease;
 }
@@ -104,7 +105,8 @@
 /* GenericHeading             */    .chroma .gh      { color: var(--color-green);font-weight:bold                                                                                      }
 /* GenericInserted            */    .chroma .gi      { color: var(--color-green);                                                                                                      }
 /* GenericOutput              */    .chroma .go      { color: var(--color-gray-1);                                                                                                     }
-/* GenericPrompt              */    .chroma .gp      { color: var(--color-aqua);font-weight:bold                                                                                       }
+/* GenericPrompt              */    .chroma .gp      { color: var(--color-aqua);font-weight:bold;user-select: none;                                                                    }
+/* GenericPromptRoot          */    .chroma .gpr     { color: var(--color-red);font-weight:bold;user-select: none;                                                                     }
 /* GenericStrong              */    .chroma .gs      { font-weight:bold;color: var(--color-foreground);                                                                                }
 /* GenericSubheading          */    .chroma .gu      { color: var(--color-blue);font-weight:bold                                                                                       }
 /* GenericTraceback           */    .chroma .gt      { color: var(--color-red);                                                                                                        }
@@ -139,6 +141,7 @@
 --color-gray-0               : light-dark(#7A8478, #7A8478);
 --color-gray-1               : light-dark(#859289, #859289);
 --color-gray-2               : light-dark(#9DA9A0, #9DA9A0);
+background-color: var(--color-background-0);
 /* Background                 */    .bg              { background-color: var(--color-background-0);                                                                                    }
 /* PreWrapper                 */    .chroma          { background-color: transparent; color: var(--color-foreground);                                                          }
 /* Other                      */    .chroma .x       { color: var(--color-foreground);                                                                                                 }
@@ -218,7 +221,8 @@
 /* GenericHeading             */    .chroma .gh      { color: var(--color-green);font-weight:bold                                                                                      }
 /* GenericInserted            */    .chroma .gi      { color: var(--color-green);                                                                                                      }
 /* GenericOutput              */    .chroma .go      { color: var(--color-gray-1);                                                                                                     }
-/* GenericPrompt              */    .chroma .gp      { color: var(--color-aqua);font-weight:bold                                                                                       }
+/* GenericPrompt              */    .chroma .gp      { color: var(--color-aqua);font-weight:bold;user-select: none;                                                                    }
+/* GenericPromptRoot          */    .chroma .gpr     { color: var(--color-red);font-weight:bold;user-select: none;                                                                     }
 /* GenericStrong              */    .chroma .gs      { font-weight:bold;color: var(--color-foreground);                                                                                }
 /* GenericSubheading          */    .chroma .gu      { color: var(--color-blue);font-weight:bold                                                                                       }
 /* GenericTraceback           */    .chroma .gt      { color: var(--color-red);                                                                                                        }

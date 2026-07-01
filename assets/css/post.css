@@ -28,7 +28,7 @@
         transition: color var(--theme-transition-time) ease;
     }
     time {
-        color: var(--color-gray-2);
+        color: var(--theme-post-time-fg );
         font-size: 16px;
         margin: 20px 0;
         transition: color var(--theme-transition-time) ease;
@@ -67,7 +67,7 @@
     justify-content: center;
     min-width: 100%;
     margin-bottom: 50px;
-    border-bottom: 1px dashed var(--color-gray-0);
+    border-bottom: 1px dashed var(--theme-home-dash-line-fg);
     transition: border-color var(--theme-transition-time) ease;
     mask: linear-gradient( 90deg, transparent, black 20%, black 80%, transparent);
 }
@@ -78,7 +78,7 @@
 
 /*****     目录     *****/
 .post-container .toc {
-    color: var(--color-gray-2);
+    color            : var(--theme-post-toc-fg);
     border           : 1px solid var(--theme-post-toc-border-fg);
     border-radius    : var(--theme-post-border-radius);
     margin-top       : 0px;
@@ -158,11 +158,11 @@
     a.link {
         color         : var(--theme-post-link-fg);
         padding       : 0px;
-        border-radius : 5px;
+        border-bottom : 1px solid transparent;
         transition    : color var(--theme-transition-time) ease;
     }
     a.link:hover {
-        background-color: var(--theme-post-link-hover-bg);
+          border-bottom: 1px solid var(--theme-post-link-fg);
     }
     :is(h1, h2, h3, h4, h5, h6) a.anchor {
         padding: 0 10px;
@@ -329,14 +329,14 @@
 
     /*****     语法高亮的代码     *****/
     .highlight {
+        position: relative;
         margin: 10px 0;
         border-radius: var(--theme-post-border-radius);
         box-shadow : var(--theme-post-highlight-shadow);
-        background-color: var(--color-background-0);
         transition: background-color var(--theme-transition-time) ease;
     }
     .highlight:has(.language-bash-session) {
-        box-shadow : var(--theme-post-terminal-shadow);
+        box-shadow : var(--theme-post-highlight-term-shadow);
     }
     pre {
         line-height: 1.65;
@@ -351,6 +351,87 @@
             padding: 0px 13px;
         }
     }
+
+
+
+
+
+    /*****     代码顶部栏 bar    *****/
+    .code-bar {
+        color: var(--theme-post-bar-fg);
+        font-size: 15px;
+        line-height: 35px;
+        margin-bottom: -35px;
+        margin-top: 10px;
+        background-color: transparent;
+        border-radius: var(--theme-post-border-radius) var(--theme-post-border-radius) 0 0;
+        padding-left: 6px;
+        overflow-x: auto;
+        word-break: break-all;
+        white-space: nowrap;
+        position: relative;
+        z-index: 99;
+        span:first-child {
+            color: var(--theme-post-bar-block-fg);
+            background-color: var(--theme-post-bar-block-bg);
+            box-shadow : var(--theme-post-bar-block-shadow);
+            padding: 1px 5px;
+            border-radius: 6px;
+            margin-right: 10px;
+            user-select: none;
+            transition: all var(--theme-transition-time) ease;
+        }
+        span:last-child {
+            transition: color var(--theme-transition-time) ease;
+        }
+    }
+    .code-bar:has(+ .highlight .language-bash-session) {
+        color: var(--theme-post-bar-term-fg);
+        background-color: transparent;
+        span:first-child {
+            color: var(--theme-post-bar-block-term-fg);
+            background-color: var(--theme-post-bar-block-term-bg);
+        }
+    }
+    .code-bar + .highlight {
+        margin-top: 0px;
+        padding-top: 35px;
+    }
+
+
+
+
+
+    /*****     复制按钮     *****/
+    button.copy {
+        z-index: 999;
+        opacity: 0;
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        color: var(--theme-post-bar-block-fg);
+        background-color: var(--theme-post-bar-block-bg);
+        padding: 3px 6px;
+        border-radius: 6px;
+        font-size: 15px;
+        box-shadow : var(--theme-post-bar-block-shadow);
+        transition: opacity var(--theme-transition-time) ease;;
+        @media (max-width: 900px) {
+            display: none;
+        }
+
+    }
+    .highlight:has(.language-bash-session) > button.copy {
+        color: var(--theme-post-bar-block-term-fg);
+        background-color: var(--theme-post-bar-block-term-bg);
+    }
+    .highlight:hover > button.copy {
+        opacity: 0.5;
+    }
+    .code-bar:hover + .highlight > button.copy {
+        opacity: 0.5;
+    }
+
 
 
 
@@ -450,7 +531,8 @@
         top: 3px;
         width: 20px;
         height: 20px;
-        background-color: var(--color-background-3);
+        background-color: var(--theme-post-input-bg);
+        box-shadow : var(--theme-post-code-shadow);
         border-radius: 5px;
         outline: none;
         transition: background-color var(--theme-transition-time) ease;
@@ -462,7 +544,7 @@
     }
     input[type='checkbox']:checked{
         border: none;
-        background: url("/checked.svg") no-repeat center;
+        background: url("images/checked.svg") no-repeat center;
         background-size: contain;
     }
     ul:not(.toc ul):has(input) {
