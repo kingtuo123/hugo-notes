@@ -20,20 +20,66 @@
 {{- end -}}
 
 
+{{- if or .Attributes.copy .Attributes.nonebg .Attributes.height .Attributes.hover -}}
+<script>
+    highlight = document.currentScript.previousElementSibling;
+</script>
+{{- else -}}
+    {{- return -}}
+{{- end -}}
+
+
 {{- if .Attributes.copy -}}
     <button class="copy">复制</button>
     <script>
         button = document.currentScript.previousElementSibling;
-        highlight = button.previousElementSibling;
         highlight.appendChild(button);
         button.addEventListener('click', async function () {
             try {
                 await navigator.clipboard.writeText('{{- .Inner -}}');
-                this.textContent = '已复制';
+                this.textContent = '成功';
                 setTimeout(() => { this.textContent = '复制'; }, 1200);
             } catch (err) {
                 console.error('复制失败：', err);
             }
         });
     </script>
+{{- end -}}
+
+
+{{- if .Attributes.height -}}
+<button class="expand">展开</button>
+<script>
+    button = document.currentScript.previousElementSibling;
+    highlight.appendChild(button);
+    pre = highlight.querySelector('pre');
+    pre.style.cssText = "overflow-y: auto; max-height: {{ .Attributes.height -}}vh;";
+    button.addEventListener('click', function () {
+        prevElement = this.previousElementSibling;
+        if (prevElement.tagName != 'PRE') {
+            prevElement = prevElement.previousElementSibling;
+        }
+        if (this.textContent == '展开') {
+            prevElement.style.cssText = "";
+            this.textContent = '收起'
+        } else {
+            prevElement.style.cssText = "overflow-y: auto; max-height: {{ .Attributes.height -}}vh;";
+            this.textContent = '展开'
+        }
+    });
+</script>
+{{- end -}}
+
+
+{{- if .Attributes.nonebg -}}
+<script>
+    highlight.classList.add('nonebg');
+</script>
+{{- end -}}
+
+
+{{- if .Attributes.hover -}}
+<script>
+    highlight.classList.add('hover');
+</script>
 {{- end -}}

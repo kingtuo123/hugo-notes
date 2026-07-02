@@ -338,6 +338,18 @@
     .highlight:has(.language-bash-session) {
         box-shadow : var(--theme-post-highlight-term-shadow);
     }
+    .highlight.nonebg {
+        background-color: transparent;
+        box-shadow: none;
+        border: 0;
+        .line {
+            padding: 0px 0px;
+        }
+    }
+    .highlight.hover .line:hover {
+        border-radius: 5px;
+        background-color: var(--theme-post-highlight-hover-fg);
+    }
     pre {
         line-height: 1.65;
         padding: 8px 0;
@@ -421,16 +433,46 @@
         }
 
     }
+    button.copy:has(+ button.expand) {
+        right: 12px;
+        transform: translateX(-100%);
+    }
     .highlight:has(.language-bash-session) > button.copy {
         color: var(--theme-post-bar-block-term-fg);
         background-color: var(--theme-post-bar-block-term-bg);
     }
     .highlight:hover > button.copy {
-        opacity: 0.5;
+        opacity: 1;
     }
     .code-bar:hover + .highlight > button.copy {
-        opacity: 0.5;
+        opacity: 1;
     }
+
+
+
+
+
+
+    /*****     展开按钮     *****/
+    button.expand {
+        z-index: 999;
+        opacity: 1;
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        color: var(--theme-post-bar-block-fg);
+        background-color: var(--theme-post-bar-block-bg);
+        padding: 3px 6px;
+        border-radius: 6px;
+        font-size: 15px;
+        box-shadow : var(--theme-post-bar-block-shadow);
+        transition: all var(--theme-transition-time) ease;;
+    }
+    .highlight:has(.language-bash-session) > button.expand {
+        color: var(--theme-post-bar-block-term-fg);
+        background-color: var(--theme-post-bar-block-term-bg);
+    }
+
 
 
 
@@ -499,6 +541,16 @@
     }
     blockquote .highlight:last-child {
         margin-bottom: 0px;
+    }
+    blockquote .nonebg {
+        margin: 0px;
+    }
+    blockquote .nonebg pre code {
+        font-size: 15px;
+        display: grid;
+        .line {
+            padding: 0px 0px;
+        }
     }
 
 

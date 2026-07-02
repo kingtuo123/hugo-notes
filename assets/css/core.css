@@ -81,6 +81,7 @@
     --theme-post-bar-block-shadow       : 0.5px 0.5px 3px -1px #000;
     --theme-post-highlight-shadow       : 0.5px 0.5px 3px -2.5px #000;
     --theme-post-highlight-term-shadow  : 0.5px 0.5px 3px -1px #000;
+    --theme-post-highlight-hover-fg     : light-dark(#DFA00022, #A7C08022);
     --theme-post-notice-shadow          : 0.5px 0.5px 3px -2.5px #000;
     --theme-post-input-bg               : var(--color-background-2);
 
