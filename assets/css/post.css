@@ -544,7 +544,7 @@
     }
     input[type='checkbox']:checked{
         border: none;
-        background: url("images/checked.svg") no-repeat center;
+        background: url("/images/checked.svg") no-repeat center;
         background-size: contain;
     }
     ul:not(.toc ul):has(input) {
