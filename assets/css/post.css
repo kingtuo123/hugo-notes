@@ -390,29 +390,39 @@
         font-family: var(--theme-font-highlight-mono);
         font-weight: normal;
         font-size: 0.88235rem;
-        line-height: 35px;
-        margin-bottom: -35px;
+        min-height: 2.0rem;
+        margin-bottom: -2.0rem;
         margin-top: 10px;
         background-color: transparent;
         border-radius: var(--theme-post-border-radius) var(--theme-post-border-radius) 0 0;
-        padding-left: 6px;
         overflow-x: auto;
         word-break: break-all;
         white-space: nowrap;
+        line-height: 1;
         position: relative;
+        display: flex;
+        align-items: center;
         z-index: 99;
-        span:first-child {
-            color: var(--theme-post-bar-block-fg);
-            background-color: var(--theme-post-bar-block-bg);
-            box-shadow : var(--theme-post-bar-block-shadow);
-            padding: 1px 5px;
-            border-radius: 6px;
-            margin-right: 10px;
-            user-select: none;
-            transition: all var(--theme-transition-time) ease;
-        }
-        span:last-child {
-            transition: color var(--theme-transition-time) ease;
+        div {
+            position: absolute;
+            left: 0.35294rem;
+            top: 0.35294rem;
+            display: flex;
+            align-items: center;
+            span:first-child {
+                color: var(--theme-post-bar-block-fg);
+                background-color: var(--theme-post-bar-block-bg);
+                box-shadow : var(--theme-post-bar-block-shadow);
+                border-radius: 6px;
+                padding: 4px 5px;
+                margin-right: 0.588rem;
+                user-select: none;
+                transition: all var(--theme-transition-time) ease;
+            }
+            span:last-child {
+                padding: 4px 0px;
+                transition: color var(--theme-transition-time) ease;
+            }
         }
     }
     .code-bar:has(+ .highlight .language-bash-session) {
@@ -425,7 +435,7 @@
     }
     .code-bar + .highlight {
         margin-top: 0px;
-        padding-top: 35px;
+        padding-top: 2.0rem;
     }
 
 
@@ -439,11 +449,11 @@
         z-index: 999;
         opacity: 0;
         position: absolute;
-        top: 6px;
-        right: 6px;
+        top: 0.35294rem;
+        right: 0.35294rem;
         color: var(--theme-post-bar-block-fg);
         background-color: var(--theme-post-bar-block-bg);
-        padding: 3px 6px;
+        padding: 4px 5px;
         border-radius: 6px;
         font-size: 0.88235rem;
         box-shadow : var(--theme-post-bar-block-shadow);
@@ -454,7 +464,7 @@
 
     }
     button.copy:has(+ button.expand) {
-        right: 12px;
+        right: calc(0.35294rem*2);
         transform: translateX(-100%);
     }
     .highlight:has(.language-bash-session) > button.copy {
@@ -480,11 +490,11 @@
         z-index: 999;
         opacity: 1;
         position: absolute;
-        top: 6px;
-        right: 6px;
+        top: 0.35294rem;
+        right: 0.35294rem;
         color: var(--theme-post-bar-block-fg);
         background-color: var(--theme-post-bar-block-bg);
-        padding: 3px 6px;
+        padding: 4px 5px;
         border-radius: 6px;
         font-size: 0.88235rem;
         box-shadow : var(--theme-post-bar-block-shadow);

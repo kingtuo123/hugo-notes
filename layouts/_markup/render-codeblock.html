@@ -2,9 +2,9 @@
 <div class="code-bar">
     {{- $bar := split .Attributes.bar ":" -}}
     {{- if eq (len $bar) 1 -}}
-        <span>文件</span><span>{{- .Attributes.bar -}}</span>
+        <div><span>文件</span><span>{{- .Attributes.bar -}}</span></div>
     {{- else -}}
-        <span>{{- index $bar 0 | strings.TrimSpace | default "文件" -}}</span><span>{{- delimit (after 1 $bar) ":" | strings.TrimSpace -}}</span>
+        <div><span>{{- index $bar 0 | strings.TrimSpace | default "文件" -}}</span><span>{{- delimit (after 1 $bar) ":" | strings.TrimSpace -}}</span></div>
     {{- end -}}
 </div>
 {{- end -}}
