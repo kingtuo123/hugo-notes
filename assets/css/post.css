@@ -569,13 +569,13 @@
     }
     blockquote p {
         margin: 0;
-        code {
+    }
+    blockquote code:not(.highlight code) {
             font-family: var(--theme-font-primary-mono);
             font-weight: normal;
             color: var(--theme-post-code-fg);
             word-break: break-all;
         }
-    }
     blockquote  ul {
         margin-bottom: 0;
     }
