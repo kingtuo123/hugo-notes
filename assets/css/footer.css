@@ -6,7 +6,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 80px 0 30px 0;
-    font-size: 14px;
+    font-size: 0.8235rem;
     background: var(--theme-footer-bg);
     transition: all var(--theme-transition-time) ease;
     color: var(--theme-footer-fg);

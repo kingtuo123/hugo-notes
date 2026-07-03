@@ -166,8 +166,7 @@
         .date  {
             color: var(--theme-home-list-date-fg);
             white-space: nowrap;
-            font-size: 15px;
-            font-weight: 400;
+            font-size: 0.88235rem;
             display: inline-block;
             transition: color var(--theme-transition-time) ease;
         }

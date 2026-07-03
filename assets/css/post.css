@@ -21,6 +21,8 @@
         color: var(--theme-home-list-draft-fg);
     }
     h1 {
+        font-family   : var(--theme-font-primary-bold);
+        font-weight   : normal;
         font-size     : 1.7rem;
         margin-bottom : 5px;
         color         : var(--theme-post-h1-fg);
@@ -29,7 +31,7 @@
     }
     time {
         color: var(--theme-post-time-fg );
-        font-size: 16px;
+        font-size: 1rem;
         margin: 20px 0;
         transition: color var(--theme-transition-time) ease;
     }
@@ -86,6 +88,8 @@
     background-color : var(--theme-post-toc-bg);
     transition       : all var(--theme-transition-time) ease;
     #toc-toggle {
+        font-family : var(--theme-font-primary-bold);
+        font-weight : normal;
         padding     : 10px;
         line-height : 30px;
         display     : flex;
@@ -110,6 +114,8 @@
         }
     }
     #TableOfContents {
+        font-family : var(--theme-font-primary);
+        font-weight : normal;
         line-height    : 1.8;
         padding-bottom : 15px;
         display        : none;
@@ -203,6 +209,8 @@
 
     /*****     标题 h2-h6     *****/
     h2,h3,h4,h5,h6 {
+        font-family : var(--theme-font-primary-bold);
+        font-weight : normal;
         transition  : color var(--theme-transition-time) ease;
     }
     h2 {
@@ -279,6 +287,8 @@
 
     /*****     表格     *****/
     th {
+        font-family : var(--theme-font-primary-bold);
+        font-weight : normal;
         color: var(--theme-post-table-th-fg);
     }
     th, td {
@@ -300,6 +310,8 @@
         transition: color var(--theme-transition-time) ease;
     }
     table strong {
+        font-family : var(--theme-font-primary-bold);
+        font-weight : normal;
         color: var(--theme-post-table-th-fg);
     }
 
@@ -309,6 +321,8 @@
 
     /*****     `code`     *****/
     code:not(.highlight code):not(blockquote code):not(em code):not(strong code) {
+        font-family: var(--theme-font-primary-mono);
+        font-weight: normal;
         margin: 0px 2px;
         padding: 2px 5px;
         border-radius: 5px;
@@ -351,13 +365,15 @@
         background-color: var(--theme-post-highlight-hover-fg);
     }
     pre {
-        line-height: 1.65;
         padding: 8px 0;
         overflow-x: auto;
         word-break: break-all;
     }
     pre code {
-        font-size: 15px;
+        font-family: var(--theme-font-highlight-mono);
+        font-weight: normal;
+        line-height: 1.65;
+        font-size: 0.88235rem;
         display: grid;
         .line {
             padding: 0px 13px;
@@ -371,7 +387,9 @@
     /*****     代码顶部栏 bar    *****/
     .code-bar {
         color: var(--theme-post-bar-fg);
-        font-size: 15px;
+        font-family: var(--theme-font-highlight-mono);
+        font-weight: normal;
+        font-size: 0.88235rem;
         line-height: 35px;
         margin-bottom: -35px;
         margin-top: 10px;
@@ -416,6 +434,8 @@
 
     /*****     复制按钮     *****/
     button.copy {
+        font-family: var(--theme-font-highlight-mono);
+        font-weight: normal;
         z-index: 999;
         opacity: 0;
         position: absolute;
@@ -425,7 +445,7 @@
         background-color: var(--theme-post-bar-block-bg);
         padding: 3px 6px;
         border-radius: 6px;
-        font-size: 15px;
+        font-size: 0.88235rem;
         box-shadow : var(--theme-post-bar-block-shadow);
         transition: opacity var(--theme-transition-time) ease;;
         @media (max-width: 900px) {
@@ -455,6 +475,8 @@
 
     /*****     展开按钮     *****/
     button.expand {
+        font-family: var(--theme-font-highlight-mono);
+        font-weight: normal;
         z-index: 999;
         opacity: 1;
         position: absolute;
@@ -464,7 +486,7 @@
         background-color: var(--theme-post-bar-block-bg);
         padding: 3px 6px;
         border-radius: 6px;
-        font-size: 15px;
+        font-size: 0.88235rem;
         box-shadow : var(--theme-post-bar-block-shadow);
         transition: all var(--theme-transition-time) ease;;
     }
@@ -481,10 +503,14 @@
 
     /*****     粗体字     *****/
     strong:not(table strong){
+        font-family: var(--theme-font-primary-bold);
+        font-weight: normal;
         color: var(--theme-post-strong-fg);
         transition: color var(--theme-transition-time) ease;
     }
     strong code {
+        font-family: var(--theme-font-primary-mono-bold);
+        font-weight: normal;
         color: var(--theme-post-strong-fg);
         font-style: normal;
         background-color: transparent;
@@ -496,6 +522,8 @@
 
     /*****     斜体字     *****/
     em code {
+        font-family: var(--theme-font-primary-mono);
+        font-weight: normal;
         color: var(--theme-post-em-code-fg);
         font-style: normal;
         margin: 0px 2px;
@@ -531,10 +559,12 @@
     }
     blockquote p {
         margin: 0;
-    }
-    blockquote code {
-        color: var(--theme-post-code-fg);
-        word-break: break-all;
+        code {
+            font-family: var(--theme-font-primary-mono);
+            font-weight: normal;
+            color: var(--theme-post-code-fg);
+            word-break: break-all;
+        }
     }
     blockquote  ul {
         margin-bottom: 0;
@@ -546,7 +576,7 @@
         margin: 0px;
     }
     blockquote .nonebg pre code {
-        font-size: 15px;
+        font-size: 0.88235rem;
         display: grid;
         .line {
             padding: 0px 0px;
