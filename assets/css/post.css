@@ -604,9 +604,6 @@
         background-color: var(--theme-post-border-fg);
         transition: background-color var(--theme-transition-time) ease;
     }
-    .highlight + hr {
-        margin-top: 20px;
-    }
 
 
 
