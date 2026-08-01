@@ -10,7 +10,7 @@
         {{ $Post   := resources.Get "css/post.css"   }}
         {{ $Footer := resources.Get "css/footer.css" }}
         {{ $Custom := resources.Get "css/custom.css" }}
-        {{ $Synax  := resources.Get "css/highlight-everforest-medium.css" }}
+        {{ $Synax  := resources.Get "css/highlight-everforest.css" }}
         {{ $Bundle := slice $Reset $Core $Home $Post $Footer $Custom $Synax | resources.Concat "css/Bundle.css" | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $Bundle.RelPermalink }}" integrity="{{ $Bundle.Data.Integrity }}">
 

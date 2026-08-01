@@ -42,7 +42,7 @@
     --theme-home-dash-line-fg           : var(--color-gray-0);
     --theme-home-list-title-fg          : var(--theme-fg);
     --theme-home-list-date-fg           : var(--color-gray-1);
-    --theme-home-list-hover-fg          : var(--color-green);
+    --theme-home-list-hover-fg          : var(--theme-icon-fg);
     --theme-home-list-ontop-fg          : var(--color-red);
     --theme-home-list-draft-fg          : var(--color-yellow);
 
@@ -51,7 +51,7 @@
     --theme-post-toc-fg                 : var(--color-gray-2);
     --theme-post-toc-bg                 : transparent;
     --theme-post-toc-border-fg          : var(--color-background-3);
-    --theme-post-toc-link-hover-fg      : var(--color-green);
+    --theme-post-toc-link-hover-fg      : var(--theme-icon-fg);
     --theme-post-h1-fg                  : var(--theme-fg);
     --theme-post-h2-fg                  : var(--color-orange);
     --theme-post-h3-fg                  : var(--color-yellow);
@@ -88,7 +88,7 @@
 
     --theme-footer-fg                   : var(--color-gray-1);
     --theme-footer-bg                   : var(--theme-bg);
-    --theme-footer-link-hover-fg        : var(--color-green);
+    --theme-footer-link-hover-fg        : var(--theme-icon-fg);
     --theme-footer-gotop-fg             : light-dark(#272E3333, #E9F0E933);
     --theme-footer-gotop-bg             : light-dark(#E6E2CC7F, #4752587F);
     --theme-footer-gotop-hover-fg       : var(--theme-icon-fg);
