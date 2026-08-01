@@ -114,6 +114,8 @@
     margin: 0px auto;
     border-radius: 10px;
     padding: 10px 0px;
+    color: var(--theme-home-list-title-fg);
+    transition: color var(--theme-transition-time) ease;
     .list-item {
         display: flex;
         justify-content: space-between;
@@ -142,8 +144,6 @@
                 color: var(--theme-home-list-draft-fg);
                 transition: color var(--theme-transition-time) ease;
             }
-            color: var(--theme-home-list-title-fg);
-            transition: color var(--theme-transition-time) ease;
             max-width: 75%;
             white-space: nowrap;
             overflow: hidden;
