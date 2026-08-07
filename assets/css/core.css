@@ -83,7 +83,12 @@
     --theme-post-highlight-term-shadow  : 0.5px 0.5px 3px -1px #000;
     --theme-post-highlight-hover-fg     : light-dark(#DFA00022, #A7C08022);
     --theme-post-notice-shadow          : 0.5px 0.5px 3px -2.5px #000;
-    --theme-post-input-bg               : var(--color-background-2);
+    --theme-post-input-checkbox-bg      : var(--color-background-2);
+    --theme-post-input-checkbox-sel-bg  : var(--theme-icon-fg);
+    --theme-post-input-checkbox-sel-img : light-dark(
+                                          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4.5 32 32' width='20' height='20' fill='none' stroke='%23FDF6E3' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'%3E%3C/path%3E%3C/svg%3E"),
+                                          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4.5 32 32' width='20' height='20' fill='none' stroke='%232D353B' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'%3E%3C/path%3E%3C/svg%3E")
+                                          );
 
 
     --theme-footer-fg                   : var(--color-gray-1);

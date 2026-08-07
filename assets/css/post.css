@@ -617,23 +617,23 @@
     input[type='checkbox']{
         -webkit-appearance:none;
         position: relative;
-        top: 3px;
+        top: 4.5px;
         width: 20px;
         height: 20px;
-        background-color: var(--theme-post-input-bg);
+        background-color: var(--theme-post-input-checkbox-bg);
         box-shadow : var(--theme-post-code-shadow);
         border-radius: 5px;
+        border: none;
         outline: none;
-        transition: background-color var(--theme-transition-time) ease;
     }
     li input[type='checkbox']{
         left: -5px;
-        top: 4px;
-        padding-right: 10px;
     }
     input[type='checkbox']:checked{
-        border: none;
-        background: url("/checked.svg") no-repeat center;
+        background-color: var(--theme-post-input-checkbox-sel-bg);
+        background-image: var(--theme-post-input-checkbox-sel-img);
+        background-repeat: no-repeat;
+        background-position: center;
         background-size: contain;
     }
     ul:not(.toc ul):has(input) {
