@@ -135,27 +135,30 @@ main {
 }
 
 
+/* 排除 Firefox，但仍是 WebKit 合集（含 Chrome） */
+@supports (-webkit-appearance: none) and (not (-moz-appearance: none)) {
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--color-background-5);
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--theme-icon-fg);
+    }
+    ::-webkit-scrollbar-corner {
+        background: transparent;
+        display: none;
+    }
+}
 
 
-::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-}
-::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-    background: var(--color-background-3);
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: var(--theme-icon-fg);
-}
-::-webkit-scrollbar-corner {
-    background: transparent;
-    display: none;
-}
 ::selection {
     color: var(--theme-bg);
     background: var(--theme-post-selection-bg);
