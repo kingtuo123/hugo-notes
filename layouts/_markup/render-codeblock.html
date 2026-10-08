@@ -12,7 +12,7 @@
 
 {{- $result := transform.HighlightCodeBlock . -}}
 {{- if eq .Type "bash-session" -}}
-    {{- $result.Wrapped | replaceRE `<span class="gp">#</span> ` "<span class=\"gpr\"># </span>" | replaceRE `<span class="gp">\$</span> ` "<span class=\"gp\">$ </span>" | safeHTML -}}
+    {{- $result.Wrapped | replaceRE `<span class="gp">#</span> ` "<span class=\"gpr\"># </span>" | replaceRE `<span class="gp">&gt;</span> ` "<span class=\"gp\">&gt; </span>" | replaceRE `<span class="gp">\$</span> ` "<span class=\"gp\">$ </span>" | safeHTML -}}
 {{- else if eq .Type "markdown" -}}
     {{- highlight (printf "%s\n" (trim .Inner "\n")) .Type -}}
 {{- else -}}
